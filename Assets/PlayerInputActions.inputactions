@@ -59,24 +59,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Inspect",
-                    "type": "Button",
-                    "id": "78a204f6-4006-4a04-bda3-0dee6ecbf3aa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Hold",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LowReady",
-                    "type": "Button",
-                    "id": "7e92da3f-c379-4572-a97d-d5321de28d3e",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -182,33 +164,11 @@
                 {
                     "name": "",
                     "id": "dab5ed01-449b-447f-8fb3-aa9add17c56c",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a64bf9ef-de90-479c-be15-5d5f8db6b319",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inspect",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a854b7c2-8b84-44f6-986c-824dd8e124d3",
-                    "path": "<Keyboard>/ctrl",
-                    "interactions": "MultiTap",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LowReady",
+                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
