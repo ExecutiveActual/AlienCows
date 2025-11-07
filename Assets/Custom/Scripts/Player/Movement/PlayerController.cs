@@ -1,136 +1,154 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    // ──────────────────────────────────────
+    //  SETTINGS
+    // ──────────────────────────────────────
     [Header("Movement")]
-
-    [SerializeField] private CharacterController controller;
-
-    public float Speed { get; private set; }
-    [SerializeField] private float _Speed = 5f;
-
-    public float Speed_Sprint { get; private set; }
-    [SerializeField] private float _Speed_Sprint = 7f;
-
-    public float JumpHeight { get; private set; }
-    [SerializeField] private float _JumpHeight = 2.5f;
-
+    [SerializeField] private float _walkSpeed = 5f;
+    [SerializeField] private float _sprintSpeed = 7f;
+    [SerializeField] private float _jumpHeight = 2.5f;
 
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
 
-    private Vector3 velocity;
-    private bool isGrounded;
+    // ──────────────────────────────────────
+    //  PUBLIC READ-ONLY
+    // ──────────────────────────────────────
+    public float Speed => _currentSpeed;
+    public float SpeedSprint => _sprintSpeed;
+    public float JumpHeight => _jumpHeight;
 
-    private PlayerInputActions inputActions;
-
-    private Camera mainCamera;
-
-
+    // ──────────────────────────────────────
+    //  EVENTS
+    // ──────────────────────────────────────
     public UnityEvent OnJump;
     public UnityEvent OnLand;
-    
 
+    // ──────────────────────────────────────
+    //  PRIVATE FIELDS
+    // ──────────────────────────────────────
+    private CharacterController _controller;
+    private PlayerInputActions _input;
+    private Camera _mainCam;
 
+    private Vector3 _velocity;
+    private bool _isGrounded;
+    private float _currentSpeed;   // walk or sprint
+
+    // ──────────────────────────────────────
+    //  UNITY CALLBACKS
+    // ──────────────────────────────────────
     private void Awake()
     {
-        inputActions = new PlayerInputActions();
+        _controller = GetComponent<CharacterController>();
+        _input = new PlayerInputActions();
 
-        Speed = _Speed;
-        Speed_Sprint = _Speed_Sprint;
-        JumpHeight = _JumpHeight;
-
+        // expose the serialized values (so other scripts can read them)
+        _currentSpeed = _walkSpeed;
     }
 
     private void Start()
     {
-        mainCamera = Camera.main;
-
+        _mainCam = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-
-    private void OnEnable()
-    {
-        inputActions.Player.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputActions.Player.Disable();
-    }
+    private void OnEnable() => _input.Player.Enable();
+    private void OnDisable() => _input.Player.Disable();
 
     private void Update()
     {
-        // Ground check
-        //isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        SetIsGrounded(Physics.CheckSphere(groundCheck.position, groundDistance, groundMask));
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
-        // Horizontal movement
-        Vector2 moveInput = inputActions.Player.Move.ReadValue<Vector2>();
-        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        controller.Move(move * Speed * Time.deltaTime);
-
-        // Jump
-        if (inputActions.Player.Jump.triggered && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y);
-
-            Debug.Log("Jumped");
-        }
-
-        // Gravity
-        velocity.y += Physics.gravity.y * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-
-        // Rotate player to face camera direction
-        RotatePlayerTowardsCamera();
+        GroundCheck();
+        HandleSprint();
+        MoveHorizontal();
+        HandleJump();
+        ApplyGravity();
+        RotateTowardsCamera();
     }
 
-    private void RotatePlayerTowardsCamera()
+    // ──────────────────────────────────────
+    //  GROUND CHECK
+    // ──────────────────────────────────────
+    private void GroundCheck()
     {
-        if (mainCamera != null)
-        {
-            Vector3 cameraForward = mainCamera.transform.forward;
-            cameraForward.y = 0f; // Ignore the y-axis rotation
+        bool wasGrounded = _isGrounded;
+        _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-            if (cameraForward != Vector3.zero)
-            {
-                Quaternion newRotation = Quaternion.LookRotation(cameraForward);
-                transform.rotation = newRotation;
-            }
-        }
+        if (_isGrounded && !wasGrounded) OnLand.Invoke();
+        if (!_isGrounded && wasGrounded) OnJump.Invoke();
+
+        // Small downward force when on ground to keep the controller glued
+        if (_isGrounded && _velocity.y < 0f) _velocity.y = -2f;
     }
 
-    private void SetIsGrounded(bool value)
+    // ──────────────────────────────────────
+    //  SPRINT
+    // ──────────────────────────────────────
+    private void HandleSprint()
     {
+        // Sprint is a **hold** button – we read it every frame
+        bool sprintPressed = _input.Player.Sprint.IsPressed();
 
-        if (isGrounded != value)
-        {
-            isGrounded = value;
+        // Optional: only allow sprint when moving forward
+        Vector2 move = _input.Player.Move.ReadValue<Vector2>();
+        bool movingForward = move.y > 0.1f;
 
-            Debug.Log(value ? "Landed" : "Jumped");
-
-            if (isGrounded)
-            {
-                OnLand.Invoke();
-            }
-            else
-            {
-                OnJump.Invoke();
-            }
-        }
-
+        _currentSpeed = (sprintPressed && movingForward) ? _sprintSpeed : _walkSpeed;
     }
 
+    // ──────────────────────────────────────
+    //  HORIZONTAL MOVEMENT
+    // ──────────────────────────────────────
+    private void MoveHorizontal()
+    {
+        Vector2 input = _input.Player.Move.ReadValue<Vector2>();
+
+        // Build direction relative to player (already oriented toward camera)
+        Vector3 move = transform.right * input.x + transform.forward * input.y;
+        _controller.Move(move * _currentSpeed * Time.deltaTime);
+    }
+
+    // ──────────────────────────────────────
+    //  JUMP
+    // ──────────────────────────────────────
+    private void HandleJump()
+    {
+        if (_input.Player.Jump.triggered && _isGrounded)
+        {
+            _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * Physics.gravity.y);
+            OnJump.Invoke();
+        }
+    }
+
+    // ──────────────────────────────────────
+    //  GRAVITY
+    // ──────────────────────────────────────
+    private void ApplyGravity()
+    {
+        _velocity.y += Physics.gravity.y * Time.deltaTime;
+        _controller.Move(_velocity * Time.deltaTime);
+    }
+
+    // ──────────────────────────────────────
+    //  CAMERA-ORIENTED ROTATION
+    // ──────────────────────────────────────
+    private void RotateTowardsCamera()
+    {
+        if (_mainCam == null) return;
+
+        Vector3 camForward = _mainCam.transform.forward;
+        camForward.y = 0f; // keep player upright
+
+        if (camForward.sqrMagnitude > 0.001f)
+        {
+            transform.rotation = Quaternion.LookRotation(camForward);
+        }
+    }
 }
