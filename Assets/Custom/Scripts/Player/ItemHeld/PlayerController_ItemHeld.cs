@@ -1,5 +1,8 @@
-using Unity.VisualScripting;
+using System;
+using System.Linq;
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController_ItemHeld : MonoBehaviour
 {
@@ -7,56 +10,68 @@ public class PlayerController_ItemHeld : MonoBehaviour
 
     [SerializeField] private ItemHeld itemHeld_Curr;
 
+    public event Action<InputAction.CallbackContext> OnPlayerInput;
 
     private void Awake()
     {
         inputActions = new PlayerInputActions();
     }
 
-
     private void OnEnable()
     {
         inputActions.Player.Enable();
+        SubscribeToAllActions(inputActions.Player);
     }
 
     private void OnDisable()
     {
-        inputActions.Player.Disable();
-    }
-
-
-
-    private void OnAim()
-    {
-        if (itemHeld_Curr != null)
+        if (inputActions != null)
         {
-            itemHeld_Curr.SendMessage("OnAim", SendMessageOptions.DontRequireReceiver);
+            UnsubscribeFromAllActions(inputActions.Player);
+            inputActions.Player.Disable();
         }
     }
 
-    private void OnFire()
+    private void SubscribeToAllActions(PlayerInputActions.PlayerActions playerActions)
     {
-        if (itemHeld_Curr != null)
+        var actionFields = typeof(PlayerInputActions.PlayerActions)
+            .GetFields(BindingFlags.Public | BindingFlags.Instance)
+            .Where(f => f.FieldType == typeof(InputAction));
+
+        foreach (var field in actionFields)
         {
-            itemHeld_Curr.SendMessage("OnFire", SendMessageOptions.DontRequireReceiver);
+            var action = (InputAction)field.GetValue(playerActions);
+            action.performed += OnInputPerformed;
+            action.started += OnInputPerformed;
+            action.canceled += OnInputPerformed;
         }
     }
 
-    private void OnInspect()
+    private void UnsubscribeFromAllActions(PlayerInputActions.PlayerActions playerActions)
     {
-        if (itemHeld_Curr != null)
+        var actionFields = typeof(PlayerInputActions.PlayerActions)
+            .GetFields(BindingFlags.Public | BindingFlags.Instance)
+            .Where(f => f.FieldType == typeof(InputAction));
+
+        foreach (var field in actionFields)
         {
-            itemHeld_Curr.SendMessage("OnInspect", SendMessageOptions.DontRequireReceiver);
+            var action = (InputAction)field.GetValue(playerActions);
+            action.performed -= OnInputPerformed;
+            action.started -= OnInputPerformed;
+            action.canceled -= OnInputPerformed;
         }
     }
 
-    private void OnLowReady()
+    private void OnInputPerformed(InputAction.CallbackContext context)
     {
         if (itemHeld_Curr != null)
         {
-            itemHeld_Curr.SendMessage("OnLowReady", SendMessageOptions.DontRequireReceiver);
+            OnPlayerInput?.Invoke(context);
         }
+    }
 
-
+    public void SetHeldItem(ItemHeld newItem)
+    {
+        itemHeld_Curr = newItem;
     }
 }

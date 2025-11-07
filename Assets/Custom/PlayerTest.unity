@@ -729,10 +729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7023c86817a4a74eb598d2a9d150fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  controller: {fileID: 3244412635207492575}
-  _Speed: 5
-  _Speed_Sprint: 7
-  _JumpHeight: 1
+  _walkSpeed: 4.3
+  _sprintSpeed: 7.2
+  _jumpHeight: 2.5
   groundCheck: {fileID: 8570270969246102536}
   groundDistance: 0.012
   groundMask:
