@@ -145,24 +145,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Inspect"",
-                    ""type"": ""Button"",
-                    ""id"": ""78a204f6-4006-4a04-bda3-0dee6ecbf3aa"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Hold"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""LowReady"",
-                    ""type"": ""Button"",
-                    ""id"": ""7e92da3f-c379-4572-a97d-d5321de28d3e"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -268,33 +250,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dab5ed01-449b-447f-8fb3-aa9add17c56c"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Reload"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a64bf9ef-de90-479c-be15-5d5f8db6b319"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Inspect"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a854b7c2-8b84-44f6-986c-824dd8e124d3"",
-                    ""path"": ""<Keyboard>/ctrl"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LowReady"",
+                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -311,8 +271,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
-        m_Player_Inspect = m_Player.FindAction("Inspect", throwIfNotFound: true);
-        m_Player_LowReady = m_Player.FindAction("LowReady", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -399,8 +357,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Aim;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Reload;
-    private readonly InputAction m_Player_Inspect;
-    private readonly InputAction m_Player_LowReady;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -436,14 +392,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Reload".
         /// </summary>
         public InputAction @Reload => m_Wrapper.m_Player_Reload;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Inspect".
-        /// </summary>
-        public InputAction @Inspect => m_Wrapper.m_Player_Inspect;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/LowReady".
-        /// </summary>
-        public InputAction @LowReady => m_Wrapper.m_Player_LowReady;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -488,12 +436,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Reload.started += instance.OnReload;
             @Reload.performed += instance.OnReload;
             @Reload.canceled += instance.OnReload;
-            @Inspect.started += instance.OnInspect;
-            @Inspect.performed += instance.OnInspect;
-            @Inspect.canceled += instance.OnInspect;
-            @LowReady.started += instance.OnLowReady;
-            @LowReady.performed += instance.OnLowReady;
-            @LowReady.canceled += instance.OnLowReady;
         }
 
         /// <summary>
@@ -523,12 +465,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Reload.started -= instance.OnReload;
             @Reload.performed -= instance.OnReload;
             @Reload.canceled -= instance.OnReload;
-            @Inspect.started -= instance.OnInspect;
-            @Inspect.performed -= instance.OnInspect;
-            @Inspect.canceled -= instance.OnInspect;
-            @LowReady.started -= instance.OnLowReady;
-            @LowReady.performed -= instance.OnLowReady;
-            @LowReady.canceled -= instance.OnLowReady;
         }
 
         /// <summary>
@@ -611,19 +547,5 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnReload(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Inspect" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnInspect(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "LowReady" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnLowReady(InputAction.CallbackContext context);
     }
 }
