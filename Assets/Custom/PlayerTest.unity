@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController_ItemHeld
   inputActionsAsset: {fileID: -944628639613478452, guid: 83019f54ca282104babf703c9e321d27, type: 3}
-  itemHeld_Curr: {fileID: 0}
+  handSlotManager: {fileID: 6452892099256970271}
   handSlot_Default: {fileID: 3820588398564613905}
 --- !u!1 &338753719705523558
 GameObject:
@@ -1368,6 +1368,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunController
   magazine_Capacity: 999
+  UE_OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnRecoil:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!143 &3244412635207492575
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1662,7 +1668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62836a68104ac0f429b8dbedd2cb34ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandSlot
-  _handSlotTypes: 0100000007000000
+  _handSlotTypes: 01000000
 --- !u!1 &3892278434213391936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,7 +1830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d3fbef44df7ec4e99cc44efec9d84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicInventory
-  startingItem: {fileID: 2644031237562432361, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
+  startingItem: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
 --- !u!23 &4580881635745500318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2208,7 +2214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08dc3186ddfbac442b84509c24e92820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Aim
-  slot_Aim: {fileID: 7142869216510704787}
 --- !u!23 &6144954336213507202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2544,7 +2549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62836a68104ac0f429b8dbedd2cb34ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandSlot
-  _handSlotTypes: 0200000007000000
+  _handSlotTypes: 02000000
 --- !u!23 &7253294071402311341
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2804,7 +2809,7 @@ GameObject:
   - component: {fileID: 3675088517803960441}
   - component: {fileID: 7142869216510704787}
   m_Layer: 0
-  m_Name: HandSlot_Aim_Pistol
+  m_Name: HandSlot_Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

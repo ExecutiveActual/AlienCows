@@ -16,10 +16,6 @@ public class BasicInventory : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -43,6 +39,7 @@ public class BasicInventory : MonoBehaviour
 
         // 2. Instantiate
         var go = Instantiate(prefab, hand);
+        go.transform.SetParent(hand.parent);
         var item = go.GetComponent<ItemHeld>();
 
         // 3. Tell the controller

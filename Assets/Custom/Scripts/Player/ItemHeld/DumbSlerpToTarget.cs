@@ -37,7 +37,7 @@ public class DumbSlerpToTarget : MonoBehaviour
     {
         if (SlerpTargetTransform == null)
         {
-            Debug.LogWarning("DumbSlerpToTarget: No SlerpTargetTransform assigned!", this);
+            //Debug.LogWarning("DumbSlerpToTarget: No SlerpTargetTransform assigned!", this);
             return;
         }
 

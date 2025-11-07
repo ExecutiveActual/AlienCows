@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GunController : MonoBehaviour
 {
@@ -6,6 +7,12 @@ public class GunController : MonoBehaviour
     [SerializeField] private int magazine_Capacity = 8;
     private int magazine_AmmoCurrent;
 
+    WeaponHeld weaponHeld;
+
+
+    public UnityEvent UE_OnShoot;
+
+    public UnityEvent UE_OnRecoil;
 
 
     bool isSafe;
@@ -14,6 +21,17 @@ public class GunController : MonoBehaviour
 
     private void Awake()
     {
+        weaponHeld = GetComponent<WeaponHeld>();
+    }
+
+    private void OnEnable()
+    {
+        weaponHeld.UE_OnFire.AddListener(Fire);
+    }
+
+    private void OnDisable()
+    {
+        weaponHeld.UE_OnFire.RemoveListener(Fire);
     }
 
 
@@ -23,7 +41,7 @@ public class GunController : MonoBehaviour
     }
 
 
-    private void OnFire()
+    private void Fire()
     {
 
         if (!isSafe)
@@ -35,13 +53,13 @@ public class GunController : MonoBehaviour
         }
         else
         {
-            OnSafetyOff();
+            SafetyOff();
         }
 
     }
 
 
-    private void OnSafetyOn()
+    private void SafetyOn()
     {
         isSafe = true;
 
@@ -49,7 +67,7 @@ public class GunController : MonoBehaviour
     }
 
 
-    private void OnSafetyOff()
+    private void SafetyOff()
     {
         isSafe = false;
         Debug.Log("Safety Off");
@@ -64,9 +82,13 @@ public class GunController : MonoBehaviour
         magazine_AmmoCurrent--;
 
 
-        BroadcastMessage("OnShoot", SendMessageOptions.DontRequireReceiver);
+        UE_OnShoot?.Invoke();
 
-        BroadcastMessage("OnRecoil", SendMessageOptions.DontRequireReceiver);
+        UE_OnRecoil?.Invoke();
+
+        //BroadcastMessage("OnShoot", SendMessageOptions.DontRequireReceiver);
+
+        //BroadcastMessage("OnRecoil", SendMessageOptions.DontRequireReceiver);
     }
 
 

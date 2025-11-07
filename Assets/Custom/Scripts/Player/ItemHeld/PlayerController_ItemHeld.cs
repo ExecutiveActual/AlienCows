@@ -9,10 +9,13 @@ public class PlayerController_ItemHeld : MonoBehaviour
     [Header("Assign your .inputactions asset here")]
     [SerializeField] private InputActionAsset inputActionsAsset;
 
-    [Header("Current held item (set from inventory)")]
-    [SerializeField] private ItemHeld itemHeld_Curr;
+    private ItemHeld itemHeld_Curr;
 
     [Header("Hand Slot")]
+    [SerializeField] private Camera_HandSlotManager handSlotManager;
+    public Camera_HandSlotManager HandSlotManager => handSlotManager;
+
+
     [SerializeField] private HandSlot handSlot_Default;
     public HandSlot HandSlot_Default => handSlot_Default;
 

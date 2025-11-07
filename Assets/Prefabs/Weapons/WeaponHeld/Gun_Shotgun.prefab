@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2258294730343379497
+--- !u!1 &1179685955568692817
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6405890781853638932}
-  - component: {fileID: 5601801609740544710}
-  - component: {fileID: 7564250314884083}
+  - component: {fileID: 7781530753260168711}
+  - component: {fileID: 891504550627178390}
+  m_Layer: 0
+  m_Name: GuideSlerp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7781530753260168711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179685955568692817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8244394813387516882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891504550627178390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179685955568692817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79624497a36da8439984e625b385cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
+  _SlerpTargetTransform: {fileID: 0}
+  positionSmoothTime: 0.012
+  rotationSmoothTime: 0.052
+--- !u!1 &3423769341157028790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550442565762724735}
+  - component: {fileID: 4197202319546938807}
+  - component: {fileID: 3171659753328460809}
   m_Layer: 0
   m_Name: DoubleBarrelShotgun
   m_TagString: Untagged
@@ -18,36 +65,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6405890781853638932
+--- !u!4 &1550442565762724735
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2258294730343379497}
+  m_GameObject: {fileID: 3423769341157028790}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 3187625663800195644}
+  m_Father: {fileID: 8244394813387516882}
   m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
---- !u!33 &5601801609740544710
+--- !u!33 &4197202319546938807
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2258294730343379497}
+  m_GameObject: {fileID: 3423769341157028790}
   m_Mesh: {fileID: 3814378201483603881, guid: 9caf975ff5d54d1408d22ccb4fac0d3a, type: 3}
---- !u!23 &7564250314884083
+--- !u!23 &3171659753328460809
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2258294730343379497}
+  m_GameObject: {fileID: 3423769341157028790}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -90,7 +137,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5773182356159852047
+--- !u!1 &7038711545652265243
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,10 +145,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3187625663800195644}
-  - component: {fileID: 2644031237562432361}
-  - component: {fileID: 2936802640098011662}
-  - component: {fileID: 6126491347298887697}
+  - component: {fileID: 8244394813387516882}
+  - component: {fileID: 7315239245792572772}
+  - component: {fileID: 2983947311065326849}
+  - component: {fileID: 5934541462298503294}
+  - component: {fileID: 1462431466881010126}
+  - component: {fileID: 3769459191493780230}
+  - component: {fileID: 8793236424294674}
   m_Layer: 0
   m_Name: Gun_Shotgun
   m_TagString: Untagged
@@ -109,45 +159,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3187625663800195644
+--- !u!4 &8244394813387516882
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773182356159852047}
+  m_GameObject: {fileID: 7038711545652265243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: -0.35000002, z: 0.52}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6405890781853638932}
-  - {fileID: 558561539792977554}
+  - {fileID: 1550442565762724735}
+  - {fileID: 7781530753260168711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2644031237562432361
+--- !u!114 &7315239245792572772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773182356159852047}
+  m_GameObject: {fileID: 7038711545652265243}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10675e8ca619130408c4d0176abe9e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld
   _ItemName: Shotgun
-  _defaultHandSlot: {fileID: 0}
-  _SlerpGuide: {fileID: 8769429640336714833}
---- !u!114 &2936802640098011662
+  _SlerpGuide: {fileID: 891504550627178390}
+  UE_OnFire:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnAim_Start:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnAim_Stop:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnReload:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2983947311065326849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773182356159852047}
+  m_GameObject: {fileID: 7038711545652265243}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b7b9be20de4bed4090a0140fbb7ec93, type: 3}
@@ -155,13 +216,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemHeld_SlerpGuide_Manager
   positionSmoothTime: 0.012
   rotationSmoothTime: 0.052
---- !u!114 &6126491347298887697
+--- !u!114 &5934541462298503294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5773182356159852047}
+  m_GameObject: {fileID: 7038711545652265243}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e79624497a36da8439984e625b385cf0, type: 3}
@@ -170,50 +231,50 @@ MonoBehaviour:
   _SlerpTargetTransform: {fileID: 0}
   positionSmoothTime: 0.15
   rotationSmoothTime: 0.12
---- !u!1 &7230873595070739118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 558561539792977554}
-  - component: {fileID: 8769429640336714833}
-  m_Layer: 0
-  m_Name: GuideSlerp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &558561539792977554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7230873595070739118}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3187625663800195644}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8769429640336714833
+--- !u!114 &1462431466881010126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7230873595070739118}
+  m_GameObject: {fileID: 7038711545652265243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79624497a36da8439984e625b385cf0, type: 3}
+  m_Script: {fileID: 11500000, guid: fba7b1634a91aa640998d43656d4e0c3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
-  _SlerpTargetTransform: {fileID: 0}
-  positionSmoothTime: 0.012
-  rotationSmoothTime: 0.052
+  m_EditorClassIdentifier: Assembly-CSharp::GunController
+  magazine_Capacity: 2
+  UE_OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnRecoil:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3769459191493780230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038711545652265243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dc3186ddfbac442b84509c24e92820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Aim
+  slot_Aim: {fileID: 0}
+--- !u!114 &8793236424294674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038711545652265243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3be1926441a3e44a197cf5d2672030, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Recoil
+  recoilX: 1.6
+  recoilY: -9
+  recoilZ: -0.07

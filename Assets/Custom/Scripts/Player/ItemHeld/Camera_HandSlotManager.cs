@@ -14,57 +14,20 @@ public class Camera_HandSlotManager : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-    /*
-    
-    
-    public HandSlot FindHandSlotByTypeSearch(List<HandSlotType> targetTypes)
+    public HandSlot FindSlotByType(HandSlotType targetType)
     {
-
-        foreach (HandSlot slot in handSlots)
-        {
-            foreach (HandSlotType slotType in slot.handSlotTypes)
-            {
-                foreach (HandSlotType targetType in targetTypes)
-                {
-                    if (slotType == targetType)
-                    {
-                        return slot;
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
-
-    public List<HandSlot> FindCompatibleSlots(HandSlotType targetType)
-    {
-        List<HandSlot> compatibleSlots = new List<HandSlot>();
         foreach (HandSlot slot in handSlots)
         {
             foreach (HandSlotType slotType in slot.handSlotTypes)
             {
                 if (slotType == targetType)
                 {
-                    compatibleSlots.Add(slot);
-                    break;
+                    return slot;
                 }
             }
         }
-        return compatibleSlots;
+        return null;
+
     }
-
-
-     */
-
-
 
 }

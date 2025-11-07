@@ -18,10 +18,4 @@ public enum HandSlotType
     None,
     Hip,
     Aim,
-    LowReady,
-    HighReady,
-    Inspect,
-    Oversized,
-    Pistol,
-    Rifle
 }

@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class ItemHeld : MonoBehaviour
@@ -7,31 +8,43 @@ public class ItemHeld : MonoBehaviour
     // Backing fields — private, only for serialization
     [SerializeField] private string _ItemName = "ItemName Not Set";
     //[SerializeField] private HandSlot _defaultHandSlot;
-    [SerializeField] private DumbSlerpToTarget _SlerpGuide;
+    
 
     // Public/protected access — derived classes can use
     public string ItemName { get; private set; }
     public HandSlot DefaultHandSlot { get; private set; }
-    public DumbSlerpToTarget SlerpGuide { get; private set; }
 
     // Only derived classes and this class need access
     protected PlayerController_ItemHeld playerController;
+
+    public Camera_HandSlotManager HandSlotManager { get; private set; }
+
+
+    public UnityEvent UE_OnInitialize;
+
+    public UnityEvent UE_OnDeinitialize;
+
 
     public void Initialize(PlayerController_ItemHeld controller)
     {
         playerController = controller;
         playerController.OnPlayerInput += HandlePlayerInput;
 
+        HandSlotManager = playerController.HandSlotManager;
+
         DefaultHandSlot = playerController.HandSlot_Default;
+
+        UE_OnInitialize?.Invoke();
     }
 
     public void Deinitialize()
     {
+        UE_OnDeinitialize?.Invoke();
+
         if (playerController != null)
             playerController.OnPlayerInput -= HandlePlayerInput;
         playerController = null;
 
-        Destroy(SlerpGuide?.gameObject);
     }
 
     protected virtual void HandlePlayerInput(InputAction.CallbackContext ctx)
@@ -43,13 +56,12 @@ public class ItemHeld : MonoBehaviour
     {
         ItemName = _ItemName;
         //defaultHandSlot = _defaultHandSlot;
-        SlerpGuide = _SlerpGuide;
+        
     }
 
     private void Start()
     {
-        if (SlerpGuide != null)
-            SlerpGuide.transform.SetParent(null);
+        
     }
 
     private void OnDestroy() => Deinitialize();

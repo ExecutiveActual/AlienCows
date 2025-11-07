@@ -1,13 +1,14 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponHeld_Aim : MonoBehaviour
 {
 
-    [SerializeField] private HandSlot slot_Aim;    
-    
+    private HandSlot slot_Aim;
 
-    bool isAiming = false;
+
+    WeaponHeld weaponHeld;
 
 
     private ItemHeld_SlerpGuide_Manager slerpGuide_Manager;
@@ -16,38 +17,51 @@ public class WeaponHeld_Aim : MonoBehaviour
     private void Awake()
     {
 
+        weaponHeld = GetComponent<WeaponHeld>();
+
         slerpGuide_Manager = GetComponent<ItemHeld_SlerpGuide_Manager>();
 
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        weaponHeld.UE_OnInitialize.AddListener(Initialize);
 
+        weaponHeld.UE_OnAim_Start.AddListener(Aim_Start);
+        weaponHeld.UE_OnAim_Stop.AddListener(Aim_Stop);
+    }
 
+    private void OnDisable()
+    {
+        weaponHeld.UE_OnInitialize.RemoveListener(Initialize);
+
+        weaponHeld.UE_OnAim_Start.RemoveListener(Aim_Start);
+        weaponHeld.UE_OnAim_Stop.RemoveListener(Aim_Stop);
     }
 
 
-    private void OnAim()
+    private void Initialize()
+    {
+        slot_Aim = weaponHeld.HandSlotManager.FindSlotByType(HandSlotType.Aim);
+    }
+
+
+    private void Aim_Start()
     {
 
-        if (isAiming)
-        {
-            slerpGuide_Manager.ResetSlerpGuideTarget();
-            isAiming = false;
-        }
-        else
-        {
-            slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
-            isAiming = true;
-            BroadcastMessage("OnSafetyOff", SendMessageOptions.DontRequireReceiver);
-        }
+        slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
+        BroadcastMessage("OnSafetyOff", SendMessageOptions.DontRequireReceiver);
 
     }
 
-    private void OnResetSlerpGuideTarget()
+    private void Aim_Stop()
     {
-        isAiming = false;
+        slerpGuide_Manager.ResetSlerpGuideTarget();
     }
+
+    //private void OnResetSlerpGuideTarget()
+    //{
+    //}
 
 
 }
