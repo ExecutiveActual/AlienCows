@@ -5,14 +5,23 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public CharacterController controller;
-    public float speed = 5f;
-    public float jumpHeight = 3f;
+
+    [SerializeField] private CharacterController controller;
+
+    public float Speed { get; private set; }
+    [SerializeField] private float _Speed = 5f;
+
+    public float Speed_Sprint { get; private set; }
+    [SerializeField] private float _Speed_Sprint = 7f;
+
+    public float JumpHeight { get; private set; }
+    [SerializeField] private float _JumpHeight = 2.5f;
+
 
     [Header("Ground Check")]
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private LayerMask groundMask;
 
     private Vector3 velocity;
     private bool isGrounded;
@@ -30,6 +39,10 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         inputActions = new PlayerInputActions();
+
+        Speed = _Speed;
+
+
     }
 
     private void Start()
@@ -65,12 +78,14 @@ public class PlayerController : MonoBehaviour
         // Horizontal movement
         Vector2 moveInput = inputActions.Player.Move.ReadValue<Vector2>();
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * Speed * Time.deltaTime);
 
         // Jump
         if (inputActions.Player.Jump.triggered && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
+            velocity.y = Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y);
+
+            Debug.Log("Jumped");
         }
 
         // Gravity
