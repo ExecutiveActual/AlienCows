@@ -67,6 +67,8 @@ public class PlayerController_ItemHeld : MonoBehaviour
         if (itemHeld_Curr != null)
         {
             OnPlayerInput?.Invoke(context);
+
+            Debug.Log($"Input Action: {context.action.name} - Phase: {context.phase}");
         }
     }
 
