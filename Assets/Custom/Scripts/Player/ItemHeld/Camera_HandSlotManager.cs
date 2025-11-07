@@ -10,6 +10,8 @@ public class Camera_HandSlotManager : MonoBehaviour
     private void Awake()
     {
         handSlots = _handSlots;
+
+        Debug.LogWarning("implement autofill of list");
     }
 
 

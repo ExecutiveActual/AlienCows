@@ -18,4 +18,6 @@ public enum HandSlotType
     None,
     Hip,
     Aim,
+    Lowered,
+
 }

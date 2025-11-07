@@ -5,12 +5,6 @@ using UnityEngine.Events;
 public class WeaponHeld : ItemHeld
 {
 
-    
-
-    private void Awake()
-    {
-
-    }
 
 
     // ————————————————————————————

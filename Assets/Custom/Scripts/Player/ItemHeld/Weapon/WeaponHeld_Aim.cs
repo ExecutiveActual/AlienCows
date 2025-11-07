@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class WeaponHeld_Aim : MonoBehaviour
 {
-
-    private HandSlot slot_Aim;
-
-
     WeaponHeld weaponHeld;
 
 
+    private HandSlot slot_Aim;
+
     private ItemHeld_SlerpGuide_Manager slerpGuide_Manager;
+
 
 
     private void Awake()
@@ -50,7 +49,7 @@ public class WeaponHeld_Aim : MonoBehaviour
     {
 
         slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
-        BroadcastMessage("OnSafetyOff", SendMessageOptions.DontRequireReceiver);
+        //BroadcastMessage("OnSafetyOff", SendMessageOptions.DontRequireReceiver);
 
     }
 

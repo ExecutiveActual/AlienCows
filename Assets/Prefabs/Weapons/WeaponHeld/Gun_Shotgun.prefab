@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 1462431466881010126}
   - component: {fileID: 3769459191493780230}
   - component: {fileID: 8793236424294674}
+  - component: {fileID: 4219656829207108906}
   m_Layer: 0
   m_Name: Gun_Shotgun
   m_TagString: Untagged
@@ -189,7 +190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld
   _ItemName: Shotgun
-  _SlerpGuide: {fileID: 891504550627178390}
+  UE_OnInitialize:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnDeinitialize:
+    m_PersistentCalls:
+      m_Calls: []
   UE_OnFire:
     m_PersistentCalls:
       m_Calls: []
@@ -214,8 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7b9be20de4bed4090a0140fbb7ec93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHeld_SlerpGuide_Manager
-  positionSmoothTime: 0.012
-  rotationSmoothTime: 0.052
+  _SlerpGuide: {fileID: 0}
+  positionSmoothTime_Guide: 0.012
+  rotationSmoothTime_Guide: 0.052
 --- !u!114 &5934541462298503294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,10 +251,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunController
   magazine_Capacity: 2
+  reload_Duration: 1.2
   UE_OnShoot:
     m_PersistentCalls:
       m_Calls: []
   UE_OnRecoil:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnReload_Start:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnReload_End:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &3769459191493780230
@@ -262,7 +276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08dc3186ddfbac442b84509c24e92820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Aim
-  slot_Aim: {fileID: 0}
 --- !u!114 &8793236424294674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,3 +291,15 @@ MonoBehaviour:
   recoilX: 1.6
   recoilY: -9
   recoilZ: -0.07
+--- !u!114 &4219656829207108906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038711545652265243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f6d3774cb8d8e4babe29b4190d9d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gun_ReloadAnimation

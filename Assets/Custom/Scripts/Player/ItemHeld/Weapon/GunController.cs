@@ -1,13 +1,17 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GunController : MonoBehaviour
 {
-    
+    WeaponHeld weaponHeld;
+
+
     [SerializeField] private int magazine_Capacity = 8;
     private int magazine_AmmoCurrent;
 
-    WeaponHeld weaponHeld;
+    [SerializeField] private float reload_Duration = 1.2f;
+
 
 
     public UnityEvent UE_OnShoot;
@@ -15,7 +19,17 @@ public class GunController : MonoBehaviour
     public UnityEvent UE_OnRecoil;
 
 
+    public UnityEvent UE_OnReload_Start;
+
+    public UnityEvent UE_OnReload_End;
+
+
     bool isSafe;
+
+    bool isReloading;
+
+
+    Coroutine reloadCoroutine;
 
 
 
@@ -27,11 +41,13 @@ public class GunController : MonoBehaviour
     private void OnEnable()
     {
         weaponHeld.UE_OnFire.AddListener(Fire);
+        weaponHeld.UE_OnReload.AddListener(Reload);
     }
 
     private void OnDisable()
     {
         weaponHeld.UE_OnFire.RemoveListener(Fire);
+        weaponHeld.UE_OnReload.RemoveListener(Reload);
     }
 
 
@@ -57,6 +73,40 @@ public class GunController : MonoBehaviour
         }
 
     }
+
+
+    private void Reload()
+    {
+        if (magazine_AmmoCurrent < magazine_Capacity)
+        {
+
+            if (!isReloading)
+            {
+                reloadCoroutine = StartCoroutine(ReloadRoutine());
+            }
+
+        }
+    }
+
+
+    private IEnumerator ReloadRoutine()
+    {
+        SafetyOn();
+
+        isReloading = true;
+
+        UE_OnReload_Start?.Invoke();
+
+        yield return new WaitForSeconds(reload_Duration);
+
+        UE_OnReload_End?.Invoke();
+
+        magazine_AmmoCurrent = magazine_Capacity;
+        isReloading = false;
+        SafetyOff();
+
+    }
+
 
 
     private void SafetyOn()
