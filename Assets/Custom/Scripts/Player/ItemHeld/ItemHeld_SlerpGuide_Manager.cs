@@ -39,7 +39,7 @@ public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
         this_DumbSlerpToTarget.SetSlerpTargetTransform(GetSlerpGuide().transform);
 
         // Set SlerpGuide's Target
-        GetSlerpGuide().SetSlerpTargetTransform(itemHeld.defaultHandSlot.transform);
+        GetSlerpGuide().SetSlerpTargetTransform(itemHeld.DefaultHandSlot.transform);
 
     }
 
@@ -56,7 +56,7 @@ public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
     /// </summary>
     public void ResetSlerpGuideTarget()
     {
-        GetSlerpGuide().SetSlerpTargetTransform(itemHeld.defaultHandSlot.transform);
+        GetSlerpGuide().SetSlerpTargetTransform(itemHeld.DefaultHandSlot.transform);
 
         SendMessage("OnResetSlerpGuideTarget", SendMessageOptions.DontRequireReceiver);
     }

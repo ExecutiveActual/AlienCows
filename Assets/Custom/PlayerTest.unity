@@ -246,53 +246,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &822485447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 822485448}
-  - component: {fileID: 822485449}
-  m_Layer: 0
-  m_Name: GuideSlerp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &822485448
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822485447}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1109635284}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &822485449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822485447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79624497a36da8439984e625b385cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
-  _SlerpTargetTransform: {fileID: 0}
-  positionSmoothTime: 0.012
-  rotationSmoothTime: 0.052
 --- !u!1 &854397217
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,86 +388,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108424015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1109635283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1109635284}
-  - component: {fileID: 1109635285}
-  - component: {fileID: 1109635286}
-  - component: {fileID: 1109635287}
-  m_Layer: 0
-  m_Name: Gun_Shotgun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1109635284
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109635283}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: -0.35000002, z: 0.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8985426500764320871}
-  - {fileID: 822485448}
-  m_Father: {fileID: 801018956122160076}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109635285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109635283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10675e8ca619130408c4d0176abe9e50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld
-  _ItemName: Shotgun
-  _defaultHandSlot: {fileID: 3820588398564613905}
-  _SlerpGuide: {fileID: 822485449}
---- !u!114 &1109635286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109635283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b7b9be20de4bed4090a0140fbb7ec93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemHeld_SlerpGuide_Manager
-  positionSmoothTime: 0.012
-  rotationSmoothTime: 0.052
---- !u!114 &1109635287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109635283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79624497a36da8439984e625b385cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
-  _SlerpTargetTransform: {fileID: 0}
-  positionSmoothTime: 0.15
-  rotationSmoothTime: 0.12
 --- !u!1 &2091142019
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ac120919488b34fbfccbfaabb0a316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController_ItemHeld
-  itemHeld_Curr: {fileID: 1109635285}
+  inputActionsAsset: {fileID: -944628639613478452, guid: 83019f54ca282104babf703c9e321d27, type: 3}
+  itemHeld_Curr: {fileID: 0}
+  handSlot_Default: {fileID: 3820588398564613905}
 --- !u!1 &338753719705523558
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +748,6 @@ Transform:
   - {fileID: 2342678243799011018}
   - {fileID: 3675088517803960441}
   - {fileID: 5767938198734794735}
-  - {fileID: 1109635284}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &835440811122949308
@@ -1294,6 +1168,7 @@ GameObject:
   - component: {fileID: 3244412635207492575}
   - component: {fileID: 962802469046179090}
   - component: {fileID: 264587123292622981}
+  - component: {fileID: 4538917682313510713}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1937,6 +1812,19 @@ Transform:
   - {fileID: 7377101984410547129}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4538917682313510713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2400120830908435405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d3fbef44df7ec4e99cc44efec9d84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicInventory
+  startingItem: {fileID: 2644031237562432361, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
 --- !u!23 &4580881635745500318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2155,7 +2043,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHeld
   _ItemName: Makarov
-  _defaultHandSlot: {fileID: 3820588398564613905}
   _SlerpGuide: {fileID: 1940160047056064941}
 --- !u!4 &5191631345588853857
 Transform:
@@ -2267,14 +2154,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!33 &5412621273312218050
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8645070045891796701}
-  m_Mesh: {fileID: 3814378201483603881, guid: 9caf975ff5d54d1408d22ccb4fac0d3a, type: 3}
 --- !u!4 &5767938198734794735
 Transform:
   m_ObjectHideFlags: 0
@@ -2808,55 +2687,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &7852458157198524168
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8645070045891796701}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: be4c242044ffb424a88aa1f7e9f9343c, type: 2}
-  - {fileID: 2100000, guid: be4c242044ffb424a88aa1f7e9f9343c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!23 &7890666274289307454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3043,24 +2873,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4538917682313510712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8645070045891796701
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8985426500764320871}
-  - component: {fileID: 5412621273312218050}
-  - component: {fileID: 7852458157198524168}
-  m_Layer: 0
-  m_Name: DoubleBarrelShotgun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &8701746966303257592
 Transform:
   m_ObjectHideFlags: 0
@@ -3106,21 +2918,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 600964044858231558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &8985426500764320871
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8645070045891796701}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1109635284}
-  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!4 &9014923555187823241
 Transform:
   m_ObjectHideFlags: 0

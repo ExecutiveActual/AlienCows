@@ -1,79 +1,77 @@
-using System;
-using System.Linq;
-using System.Reflection;
+﻿using System.CodeDom.Compiler;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;   // for ReadOnlyArray
 
+[RequireComponent(typeof(PlayerInput))]
 public class PlayerController_ItemHeld : MonoBehaviour
 {
-    private PlayerInputActions inputActions;
+    [Header("Assign your .inputactions asset here")]
+    [SerializeField] private InputActionAsset inputActionsAsset;
 
+    [Header("Current held item (set from inventory)")]
     [SerializeField] private ItemHeld itemHeld_Curr;
 
-    public event Action<InputAction.CallbackContext> OnPlayerInput;
+    [Header("Hand Slot")]
+    [SerializeField] private HandSlot handSlot_Default;
+    public HandSlot HandSlot_Default => handSlot_Default;
+
+
+    // One event → all items listen to this
+    public event System.Action<InputAction.CallbackContext> OnPlayerInput;
+
+    private PlayerInput _playerInput;
 
     private void Awake()
     {
-        inputActions = new PlayerInputActions();
+        _playerInput = GetComponent<PlayerInput>();
+
+        // Optional: make sure the asset is assigned in the Inspector
+        if (inputActionsAsset != null)
+            _playerInput.actions = inputActionsAsset;
     }
 
     private void OnEnable()
     {
-        inputActions.Player.Enable();
-        SubscribeToAllActions(inputActions.Player);
+        // Subscribe to **every** action in the asset (all maps)
+        foreach (var action in _playerInput.actions)
+        {
+            action.performed += Forward;
+            action.started += Forward;
+            action.canceled += Forward;
+        }
+
+        // If you only want the "Player" map, enable it explicitly:
+        // _playerInput.SwitchCurrentActionMap("Player");
     }
 
     private void OnDisable()
     {
-        if (inputActions != null)
+        foreach (var action in _playerInput.actions)
         {
-            UnsubscribeFromAllActions(inputActions.Player);
-            inputActions.Player.Disable();
+            action.performed -= Forward;
+            action.started -= Forward;
+            action.canceled -= Forward;
         }
     }
 
-    private void SubscribeToAllActions(PlayerInputActions.PlayerActions playerActions)
+    private void Forward(InputAction.CallbackContext ctx)
     {
-        var actionFields = typeof(PlayerInputActions.PlayerActions)
-            .GetFields(BindingFlags.Public | BindingFlags.Instance)
-            .Where(f => f.FieldType == typeof(InputAction));
+        // Debug – you will see this for every button press, stick move, etc.
+        //Debug.Log($"<color=cyan>[INPUT] {ctx.action.name} → {ctx.phase}</color>");
 
-        foreach (var field in actionFields)
-        {
-            var action = (InputAction)field.GetValue(playerActions);
-            action.performed += OnInputPerformed;
-            action.started += OnInputPerformed;
-            action.canceled += OnInputPerformed;
-        }
-    }
-
-    private void UnsubscribeFromAllActions(PlayerInputActions.PlayerActions playerActions)
-    {
-        var actionFields = typeof(PlayerInputActions.PlayerActions)
-            .GetFields(BindingFlags.Public | BindingFlags.Instance)
-            .Where(f => f.FieldType == typeof(InputAction));
-
-        foreach (var field in actionFields)
-        {
-            var action = (InputAction)field.GetValue(playerActions);
-            action.performed -= OnInputPerformed;
-            action.started -= OnInputPerformed;
-            action.canceled -= OnInputPerformed;
-        }
-    }
-
-    private void OnInputPerformed(InputAction.CallbackContext context)
-    {
         if (itemHeld_Curr != null)
-        {
-            OnPlayerInput?.Invoke(context);
-
-            Debug.Log($"Input Action: {context.action.name} - Phase: {context.phase}");
-        }
+            OnPlayerInput?.Invoke(ctx);
     }
 
-    public void SetHeldItem(ItemHeld newItem)
+    // Public helper used by your inventory / equip system
+    public void SetItemHeld(ItemHeld newItem) => itemHeld_Curr = newItem;
+
+    public ItemHeld GetItemHeld() => itemHeld_Curr;
+
+    public void ClearItemHeld()
     {
-        itemHeld_Curr = newItem;
+        Destroy(itemHeld_Curr.gameObject);
+        itemHeld_Curr = null;
     }
 }

@@ -1,37 +1,40 @@
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ItemHeld : MonoBehaviour
 {
-    public string ItemName { get; private set; }
+    // Backing fields — private, only for serialization
     [SerializeField] private string _ItemName = "ItemName Not Set";
-
-    public HandSlot defaultHandSlot { get; private set; }
-    [SerializeField] private HandSlot _defaultHandSlot;
-
-    public DumbSlerpToTarget SlerpGuide { get; private set; }
+    //[SerializeField] private HandSlot _defaultHandSlot;
     [SerializeField] private DumbSlerpToTarget _SlerpGuide;
 
+    // Public/protected access — derived classes can use
+    public string ItemName { get; private set; }
+    public HandSlot DefaultHandSlot { get; private set; }
+    public DumbSlerpToTarget SlerpGuide { get; private set; }
+
+    // Only derived classes and this class need access
     protected PlayerController_ItemHeld playerController;
 
     public void Initialize(PlayerController_ItemHeld controller)
     {
         playerController = controller;
         playerController.OnPlayerInput += HandlePlayerInput;
+
+        DefaultHandSlot = playerController.HandSlot_Default;
     }
 
     public void Deinitialize()
     {
         if (playerController != null)
-        {
             playerController.OnPlayerInput -= HandlePlayerInput;
-            playerController = null;
-        }
+        playerController = null;
+
+        Destroy(SlerpGuide?.gameObject);
     }
 
-    // Virtual method — derived classes override this
-    protected virtual void HandlePlayerInput(InputAction.CallbackContext context)
+    protected virtual void HandlePlayerInput(InputAction.CallbackContext ctx)
     {
         // Base does nothing
     }
@@ -39,17 +42,15 @@ public class ItemHeld : MonoBehaviour
     private void Awake()
     {
         ItemName = _ItemName;
-        defaultHandSlot = _defaultHandSlot;
+        //defaultHandSlot = _defaultHandSlot;
         SlerpGuide = _SlerpGuide;
     }
 
     private void Start()
     {
-        SlerpGuide.transform.SetParent(null);
+        if (SlerpGuide != null)
+            SlerpGuide.transform.SetParent(null);
     }
 
-    private void OnDestroy()
-    {
-        Deinitialize();
-    }
+    private void OnDestroy() => Deinitialize();
 }
