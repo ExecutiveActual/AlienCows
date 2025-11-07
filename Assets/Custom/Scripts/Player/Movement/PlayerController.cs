@@ -41,7 +41,8 @@ public class PlayerController : MonoBehaviour
         inputActions = new PlayerInputActions();
 
         Speed = _Speed;
-
+        Speed_Sprint = _Speed_Sprint;
+        JumpHeight = _JumpHeight;
 
     }
 
