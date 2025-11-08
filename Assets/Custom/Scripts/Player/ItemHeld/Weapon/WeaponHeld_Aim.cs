@@ -6,17 +6,21 @@ public class WeaponHeld_Aim : MonoBehaviour
 {
     WeaponHeld weaponHeld;
 
+    GunController gunController;
 
     private HandSlot slot_Aim;
 
     private ItemHeld_SlerpGuide_Manager slerpGuide_Manager;
 
 
+    public bool isAiming { get; private set; }
+
 
     private void Awake()
     {
 
         weaponHeld = GetComponent<WeaponHeld>();
+        gunController = GetComponent<GunController>();
 
         slerpGuide_Manager = GetComponent<ItemHeld_SlerpGuide_Manager>();
 
@@ -47,20 +51,23 @@ public class WeaponHeld_Aim : MonoBehaviour
 
     private void Aim_Start()
     {
-
-        slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
-        //BroadcastMessage("OnSafetyOff", SendMessageOptions.DontRequireReceiver);
-
+        if (!gunController.isReloading)
+        {
+            slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
+            isAiming = true;
+        }
     }
 
     private void Aim_Stop()
     {
-        slerpGuide_Manager.ResetSlerpGuideTarget();
+        if (isAiming)
+        {
+            slerpGuide_Manager.ResetSlerpGuideTarget();
+            isAiming = false;
+        }
+        
     }
 
-    //private void OnResetSlerpGuideTarget()
-    //{
-    //}
 
 
 }

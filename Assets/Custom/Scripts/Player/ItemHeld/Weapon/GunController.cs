@@ -24,9 +24,9 @@ public class GunController : MonoBehaviour
     public UnityEvent UE_OnReload_End;
 
 
-    bool isSafe;
+    public bool isSafe { get; private set; }
 
-    bool isReloading;
+    public bool isReloading { get; private set; }
 
 
     Coroutine reloadCoroutine;
