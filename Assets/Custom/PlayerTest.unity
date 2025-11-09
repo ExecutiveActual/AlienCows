@@ -371,6 +371,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7194f2a8a1745fe4a873cc8dcab277ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthManager
+  _Health_Max: 100
+  UE_OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &820927365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e00079c170f0249a9a176b3b8f9810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitZone
+  healthManager: {fileID: 0}
   damageMultiplier: 1
 --- !u!1 &854397217
 GameObject:
@@ -526,6 +534,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108424015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1794040983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1794040984}
+  - component: {fileID: 1794040985}
+  - component: {fileID: 1794040986}
+  - component: {fileID: 1794040987}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1794040984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794040983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.39136, y: 0, z: 7.78991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794040985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794040983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9fef62d5f9c0c4bb7263c4cb863b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager_Singleton
+--- !u!114 &1794040986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794040983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953e9d1fbf273d342823d3480c4932b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager_GiveInventory
+  starterWeapon: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
+  UE_OnInitializeInventory:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1794040987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794040983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744ed4e94551de4468ec95a3a781da25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager_NightCounter
 --- !u!1 &1931051649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1438,7 @@ GameObject:
   - component: {fileID: 3244412635207492575}
   - component: {fileID: 962802469046179090}
   - component: {fileID: 264587123292622981}
-  - component: {fileID: 4538917682313510713}
+  - component: {fileID: 4538917682313510714}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2013,7 +2095,7 @@ Transform:
   - {fileID: 7377101984410547129}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4538917682313510713
+--- !u!114 &4538917682313510714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2022,10 +2104,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2400120830908435405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d3fbef44df7ec4e99cc44efec9d84a, type: 3}
+  m_Script: {fileID: 11500000, guid: 08e1017f5b12843448b87c535b074d7a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicInventory
-  startingItem: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarInventory
 --- !u!23 &4580881635745500318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3227,11 +3308,12 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 376390674}
+  - {fileID: 1794040984}
   - {fileID: 854397218}
   - {fileID: 4538917682313510712}
   - {fileID: 7608284492434307645}
   - {fileID: 801018956122160076}
   - {fileID: 2091142020}
+  - {fileID: 376390674}
   - {fileID: 2131563290}
   - {fileID: 820927363}

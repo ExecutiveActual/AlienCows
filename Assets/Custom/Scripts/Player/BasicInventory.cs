@@ -3,11 +3,13 @@ using UnityEngine;
 public class BasicInventory : MonoBehaviour
 {
 
-    [Header("References")]
-    private PlayerController_ItemHeld playerController;
+    
 
     [SerializeField] private ItemHeld startingItem;
 
+
+    [Header("References")]
+    private PlayerController_ItemHeld playerController;
 
     private void Awake()
     {
@@ -19,6 +21,9 @@ public class BasicInventory : MonoBehaviour
 
     private void Update()
     {
+
+        // THIS IS GETTING REPLACED
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (startingItem != null)
