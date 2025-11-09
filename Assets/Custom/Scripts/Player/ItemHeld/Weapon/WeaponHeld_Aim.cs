@@ -32,6 +32,8 @@ public class WeaponHeld_Aim : MonoBehaviour
 
         weaponHeld.UE_OnAim_Start.AddListener(Aim_Start);
         weaponHeld.UE_OnAim_Stop.AddListener(Aim_Stop);
+
+        slerpGuide_Manager.UE_OnResetSlerpGuideTarget.AddListener(ResetSlerpGuideTarget);
     }
 
     private void OnDisable()
@@ -40,6 +42,8 @@ public class WeaponHeld_Aim : MonoBehaviour
 
         weaponHeld.UE_OnAim_Start.RemoveListener(Aim_Start);
         weaponHeld.UE_OnAim_Stop.RemoveListener(Aim_Stop);
+
+        slerpGuide_Manager.UE_OnResetSlerpGuideTarget.RemoveListener(ResetSlerpGuideTarget);
     }
 
 
@@ -53,10 +57,14 @@ public class WeaponHeld_Aim : MonoBehaviour
     {
         if (!gunController.isReloading)
         {
-            slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
-            isAiming = true;
+            if (!isAiming)
+            {
+                slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
+                isAiming = true;
+            }
         }
     }
+
 
     private void Aim_Stop()
     {
@@ -65,9 +73,13 @@ public class WeaponHeld_Aim : MonoBehaviour
             slerpGuide_Manager.ResetSlerpGuideTarget();
             isAiming = false;
         }
-        
     }
 
+
+    private void ResetSlerpGuideTarget()
+    {
+        isAiming = false;
+    }
 
 
 }

@@ -49,6 +49,7 @@ public class Gun_ReloadAnimation : MonoBehaviour
 
     private void Reload_Start()
     {
+        slerpGuide_Manager.ResetSlerpGuideTarget();
 
         slerpGuide_Manager.SetSlerpGuideTarget(slot_Lowered.transform);
 

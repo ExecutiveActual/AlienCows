@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
 
     [Tooltip("How many seconds it takes to reach ~63% of the rotation (degrees).")]
     [Range(0.001f, 2f)] public float rotationSmoothTime_Guide = 0.052f;
+
+
+    //public UnityEvent UE_OnSlerpGuideTargetChanged;
+
+    public UnityEvent UE_OnResetSlerpGuideTarget;
 
 
 
@@ -77,9 +83,10 @@ public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
     /// </summary>
     public void ResetSlerpGuideTarget()
     {
+        UE_OnResetSlerpGuideTarget?.Invoke();
+
         SlerpGuide.SetSlerpTargetTransform(itemHeld.DefaultHandSlot.transform);
 
-        //SendMessage("OnResetSlerpGuideTarget", SendMessageOptions.DontRequireReceiver);
     }
 
 

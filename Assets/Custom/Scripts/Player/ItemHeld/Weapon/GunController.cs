@@ -120,6 +120,7 @@ public class GunController : MonoBehaviour
     private void SafetyOff()
     {
         isSafe = false;
+
         Debug.Log("Safety Off");
     }
 
@@ -135,10 +136,6 @@ public class GunController : MonoBehaviour
         UE_OnShoot?.Invoke();
 
         UE_OnRecoil?.Invoke();
-
-        //BroadcastMessage("OnShoot", SendMessageOptions.DontRequireReceiver);
-
-        //BroadcastMessage("OnRecoil", SendMessageOptions.DontRequireReceiver);
     }
 
 

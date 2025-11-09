@@ -246,51 +246,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &470278857
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 470278858}
-  - component: {fileID: 470278859}
-  m_Layer: 0
-  m_Name: HandSlot_Lowered
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &470278858
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470278857}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.4166525, y: -0, z: -0, w: 0.9090659}
-  m_LocalPosition: {x: 0.21, y: -0.904, z: 0.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 801018956122160076}
-  m_LocalEulerAnglesHint: {x: 49.247, y: 0, z: 0}
---- !u!114 &470278859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470278857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62836a68104ac0f429b8dbedd2cb34ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HandSlot
-  _handSlotTypes: 03000000
 --- !u!1 &854397217
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +388,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108424015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1931051649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1931051650}
+  - component: {fileID: 1931051651}
+  m_Layer: 0
+  m_Name: HandSlot_Lowered
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1931051650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931051649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5075384, y: 0, z: 0, w: 0.8616291}
+  m_LocalPosition: {x: 0.12, y: -0.413, z: 0.221}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 801018956122160076}
+  m_LocalEulerAnglesHint: {x: 61, y: 0, z: 0}
+--- !u!114 &1931051651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931051649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62836a68104ac0f429b8dbedd2cb34ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandSlot
+  _handSlotTypes: 03000000
 --- !u!1 &2091142019
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +690,9 @@ MonoBehaviour:
   _SlerpGuide: {fileID: 0}
   positionSmoothTime_Guide: 0.012
   rotationSmoothTime_Guide: 0.052
+  UE_OnResetSlerpGuideTarget:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &655285592455188071
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +795,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2342678243799011018}
-  - {fileID: 470278858}
+  - {fileID: 1931051650}
   - {fileID: 3675088517803960441}
   - {fileID: 5767938198734794735}
   m_Father: {fileID: 0}
@@ -1178,7 +1181,7 @@ Transform:
   m_GameObject: {fileID: 3570714619249747088}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: -0.35000002, z: 0.52}
+  m_LocalPosition: {x: 0.12, y: -0.16, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1633,7 +1636,7 @@ Transform:
   m_GameObject: {fileID: 8345626121750923496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.15, z: 0.6}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2415,7 +2418,7 @@ MonoBehaviour:
   _handSlots:
   - {fileID: 3820588398564613905}
   - {fileID: 7142869216510704787}
-  - {fileID: 470278859}
+  - {fileID: 1931051651}
 --- !u!33 &6538292887257194611
 MeshFilter:
   m_ObjectHideFlags: 0
