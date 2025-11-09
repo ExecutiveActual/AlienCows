@@ -3,16 +3,29 @@ using UnityEngine;
 public class RaycastShooting : MonoBehaviour
 {
 
+    GunController gunController;
+
+
     [SerializeField] private Transform bulletSpawner;
 
 
     [SerializeField] private float damage = 1f;
 
 
-
-    private void OnShoot()
+    private void Awake()
     {
-        Shoot();
+        gunController = GetComponent<GunController>();
+    }
+
+
+
+    private void OnEnable()
+    {
+        gunController.UE_OnShoot.AddListener(Shoot);
+    }
+    private void OnDisable()
+    {
+        gunController.UE_OnShoot.RemoveListener(Shoot);
     }
 
 
