@@ -9,6 +9,9 @@ public class HotbarInventory : MonoBehaviour
     private PlayerController_ItemHeld playerController;
 
 
+    private int currentHotbarIndex = 0;
+
+
     public WeaponHeld weapon_1 { get; private set; }
     public WeaponHeld weapon_2 { get; private set; }
 
@@ -35,6 +38,8 @@ public class HotbarInventory : MonoBehaviour
         item_3 = newItems.item_3;
         item_4 = newItems.item_4;
         item_5 = newItems.item_5;
+
+        SelectHotbarSlot(1);
     }
 
 
@@ -78,9 +83,25 @@ public class HotbarInventory : MonoBehaviour
     // -----------------------------------------------------------------
     private void SelectHotbarSlot(int index)
     {
+        if (currentHotbarIndex == index)
+            return;
+
+        ItemHeld itemToEquip = GetItemHeldByIndex(index);
+
+        if (itemToEquip == null)
+            return;
+
         Debug.Log($"Hotbar slot {index} selected!");
 
-        Equip(index switch
+        currentHotbarIndex = index;
+
+        Equip(itemToEquip, playerController.HandSlot_Default.transform);
+    }
+
+
+    private ItemHeld GetItemHeldByIndex(int index)
+    {
+        return index switch
         {
             1 => weapon_1,
             2 => weapon_2,
@@ -88,7 +109,7 @@ public class HotbarInventory : MonoBehaviour
             4 => item_4,
             5 => item_5,
             _ => null
-        }, playerController.HandSlot_Default.transform);
+        };
     }
 
 

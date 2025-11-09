@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunController
   magazine_Capacity: 2
-  reload_Duration: 1.6
+  reload_Duration: 1.8
   UE_OnShoot:
     m_PersistentCalls:
       m_Calls: []
@@ -352,6 +352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RaycastShooting_Shotgun
   bulletSpawner: {fileID: 1694353608910093656}
-  damage_PerPellet: 1
+  damage_PerPellet: 12
   pellet_Count: 12
   spread_Angle: 5

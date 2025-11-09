@@ -49,7 +49,8 @@ public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
 
     private void OnDestroy()
     {
-        Destroy(SlerpGuide.gameObject);
+        if (SlerpGuide != null)
+            Destroy(SlerpGuide.gameObject);
     }
 
 
