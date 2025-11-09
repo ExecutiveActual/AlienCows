@@ -67,8 +67,6 @@ public class GameManager_GiveInventory : MonoBehaviour
             Weapon_1 = starterWeapon;
         }
 
-
-
         UE_OnInitializeInventory?.Invoke(GetHotbarInventoryItems());
     }
 

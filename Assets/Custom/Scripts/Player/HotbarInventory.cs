@@ -20,15 +20,29 @@ public class HotbarInventory : MonoBehaviour
     public ItemHeld item_5 { get; private set; }
 
 
+    GameManager_GiveInventory gameManager_GiveInventory;
+
 
     private void Awake()
     {
         if (playerController == null)
             playerController = GetComponent<PlayerController_ItemHeld>();
 
-        GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>().UE_OnInitializeInventory.AddListener(InitializeInventory);
+        
     }
 
+
+    private void Start()
+    {
+        gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
+
+        if (gameManager_GiveInventory == null)
+        {
+            Debug.Log("THATS IT IM NUKING IT");
+        }
+
+        gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
+    }
 
 
     public void InitializeInventory(HotbarInventoryItems newItems)
