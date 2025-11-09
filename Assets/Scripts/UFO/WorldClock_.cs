@@ -25,6 +25,19 @@ public class WorldClock_ : MonoBehaviour
     [Tooltip("Enable or disable Skybox color shifting based on time.")]
     public bool useSkybox = true;
 
+    [Header("Skybox Settings")]
+    [Tooltip("Exposure value when it is fully day.")]
+    public float daySkyExposure = 1f;
+
+    [Tooltip("Exposure value when it is fully night.")]
+    public float nightSkyExposure = 0.3f;
+
+    [Tooltip("Atmospheric thickness when it is day (thicker atmosphere).")]
+    public float dayAtmosphereThickness = 2.5f;
+
+    [Tooltip("Atmospheric thickness when it is night (thinner atmosphere).")]
+    public float nightAtmosphereThickness = 0.12f;
+
     [Header("Runtime Info (Read-Only)")]
     [Tooltip("Current in-game time (0 to totalCycleMinutes).")]
     public float currentTime = 0f;
@@ -76,13 +89,22 @@ public class WorldClock_ : MonoBehaviour
 
         if (useSkybox && skyboxMaterial != null)
         {
-            // Adjust procedural skybox exposure based on day-night transition
-            float targetExposure = isDay ? 1f : 0.3f;
+            // Exposure interpolation
+            float targetExposure = isDay ? daySkyExposure : nightSkyExposure;
             if (skyboxMaterial.HasProperty("_Exposure"))
             {
                 float currentExposure = skyboxMaterial.GetFloat("_Exposure");
                 float newExposure = Mathf.Lerp(currentExposure, targetExposure, Time.deltaTime * 2f);
                 skyboxMaterial.SetFloat("_Exposure", newExposure);
+            }
+
+            // Atmosphere thickness interpolation
+            if (skyboxMaterial.HasProperty("_AtmosphereThickness"))
+            {
+                float targetThickness = isDay ? dayAtmosphereThickness : nightAtmosphereThickness;
+                float currentThickness = skyboxMaterial.GetFloat("_AtmosphereThickness");
+                float newThickness = Mathf.Lerp(currentThickness, targetThickness, Time.deltaTime * 2f);
+                skyboxMaterial.SetFloat("_AtmosphereThickness", newThickness);
             }
         }
     }
