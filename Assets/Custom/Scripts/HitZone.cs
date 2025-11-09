@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class HitZone : MonoBehaviour
 {
 
-    [SerializeField] private HealthManager healthManager;
+    private HealthManager healthManager;
 
     [SerializeField] private float damageMultiplier = 1f;
 

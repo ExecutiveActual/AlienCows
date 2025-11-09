@@ -15,6 +15,7 @@ public class HealthManager : MonoBehaviour
     public UnityEvent UE_OnDeath;
 
 
+    public bool isDead { get; private set; }
 
 
 
@@ -27,7 +28,34 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        Debug.Log($"{this}, took {amount} damage!");
+        if (isDead)
+            return;
+
+        if (Health_Current <= 0f)
+        {
+            if (!isDead)
+            {
+                Debug.Log($"{this}, died!");
+                isDead = true;
+                UE_OnDeath?.Invoke();
+            }
+            return;
+        }
+
+
+        if (amount > Health_Current)
+        {
+            Health_Current = 0f;
+
+            Debug.Log($"{this}, died!");
+            isDead = true;
+            UE_OnDeath?.Invoke();
+        }
+        else
+        {
+            Health_Current -= amount;
+            Debug.Log($"{this}, took {amount} damage, health = {Health_Current}");
+        }
 
         UE_OnTakeDamage?.Invoke(amount);
     }

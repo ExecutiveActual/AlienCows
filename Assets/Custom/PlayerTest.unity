@@ -377,7 +377,19 @@ MonoBehaviour:
       m_Calls: []
   UE_OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820927359}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &820927365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e9d1fbf273d342823d3480c4932b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager_GiveInventory
-  starterWeapon: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
+  starterWeapon: {fileID: 5672335288325632639, guid: 03b2801c12988e442bd464844e3ed8d2, type: 3}
   UE_OnInitializeInventory:
     m_PersistentCalls:
       m_Calls: []
