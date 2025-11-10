@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager_GiveInventory : MonoBehaviour
+public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 {
     [SerializeField] private WeaponHeld starterWeapon;
 
@@ -58,19 +58,25 @@ public class GameManager_GiveInventory : MonoBehaviour
     }
 
 
-
-    private void Start()
+    public void OnInitializeModule()
     {
+        Debug.Log("GameManager_GiveInventory: OnInitializeModule called.");
 
-        if (GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().currentNight == 1)
+        if (GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().Night_Curr == 1)
         {
             Weapon_1 = starterWeapon;
-        }
 
-        UE_OnInitializeInventory?.Invoke(GetHotbarInventoryItems());
+            Debug.Log($"GameManager_GiveInventory: Starter weapon assigned to Weapon_1 = {Weapon_1}");
+        }
     }
 
 
+    public void InventoryCheckIn()
+    {
+        UE_OnInitializeInventory?.Invoke(GetHotbarInventoryItems());
+    }
+
+    
 }
 
 

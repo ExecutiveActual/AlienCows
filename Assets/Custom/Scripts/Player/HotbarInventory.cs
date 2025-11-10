@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,25 +28,37 @@ public class HotbarInventory : MonoBehaviour
     {
         if (playerController == null)
             playerController = GetComponent<PlayerController_ItemHeld>();
-
-        
     }
 
 
     private void OnEnable()
     {
-        gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
+
+
+    }
+
+    private void SetupGameManagerReferences()
+    {
 
         if (gameManager_GiveInventory == null)
         {
-            Debug.Log("THATS IT IM NUKING IT");
+            Debug.Log("SETTING UP GM REF IN HOTBAR INVENTORY");
+
+            gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
+
+            if (gameManager_GiveInventory == null)
+            {
+                Debug.LogWarning("THATS IT IM NUKING IT");
+            }
+
+            gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
         }
 
-        gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
     }
 
     private void OnDisable()
     {
+
         if (gameManager_GiveInventory != null)
         {
             gameManager_GiveInventory.UE_OnInitializeInventory.RemoveListener(InitializeInventory);
@@ -53,13 +66,36 @@ public class HotbarInventory : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+
+        SetupGameManagerReferences();
+
+        if (gameManager_GiveInventory == null)
+        {
+            Debug.LogWarning("FUCK!");
+        }
+        else
+        {
+            gameManager_GiveInventory.InventoryCheckIn();
+        }
+
+    }
+
+
+
     public void InitializeInventory(HotbarInventoryItems newItems)
     {
+
+        Debug.Log("InitializingInventyory");
+
         weapon_1 = newItems.weapon_1;
         weapon_2 = newItems.weapon_2;
         item_3 = newItems.item_3;
         item_4 = newItems.item_4;
         item_5 = newItems.item_5;
+
+        Debug.Log(weapon_1);
 
         SelectHotbarSlot(1);
     }
@@ -105,8 +141,13 @@ public class HotbarInventory : MonoBehaviour
     // -----------------------------------------------------------------
     private void SelectHotbarSlot(int index)
     {
+
+        Debug.Log($"Selecting hotbar slot {index}...");
+
         if (currentHotbarIndex == index)
             return;
+
+        Debug.Log($"Getting item held by index {index}...");
 
         ItemHeld itemToEquip = GetItemHeldByIndex(index);
 
