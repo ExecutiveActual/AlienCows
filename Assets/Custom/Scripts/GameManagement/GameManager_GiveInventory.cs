@@ -60,13 +60,13 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 
     public void OnInitializeModule()
     {
-        Debug.Log("GameManager_GiveInventory: OnInitializeModule called.");
+        //Debug.Log("GameManager_GiveInventory: OnInitializeModule called.");
 
         if (GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().Night_Curr == 1)
         {
             Weapon_1 = starterWeapon;
 
-            Debug.Log($"GameManager_GiveInventory: Starter weapon assigned to Weapon_1 = {Weapon_1}");
+            //Debug.Log($"GameManager_GiveInventory: Starter weapon assigned to Weapon_1 = {Weapon_1}");
         }
     }
 
