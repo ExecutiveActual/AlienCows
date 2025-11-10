@@ -42,13 +42,13 @@ public class HotbarInventory : MonoBehaviour
 
         if (gameManager_GiveInventory == null)
         {
-            Debug.Log("SETTING UP GM REF IN HOTBAR INVENTORY");
+            //Debug.Log("SETTING UP GM REF IN HOTBAR INVENTORY");
 
             gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
 
             if (gameManager_GiveInventory == null)
             {
-                Debug.LogWarning("THATS IT IM NUKING IT");
+                //Debug.LogWarning("THATS IT IM NUKING IT");
             }
 
             gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
@@ -73,7 +73,7 @@ public class HotbarInventory : MonoBehaviour
 
         if (gameManager_GiveInventory == null)
         {
-            Debug.LogWarning("FUCK!");
+            //Debug.LogWarning("FUCK!");
         }
         else
         {
@@ -142,19 +142,19 @@ public class HotbarInventory : MonoBehaviour
     private void SelectHotbarSlot(int index)
     {
 
-        Debug.Log($"Selecting hotbar slot {index}...");
+        //Debug.Log($"Selecting hotbar slot {index}...");
 
         if (currentHotbarIndex == index)
             return;
 
-        Debug.Log($"Getting item held by index {index}...");
+        //Debug.Log($"Getting item held by index {index}...");
 
         ItemHeld itemToEquip = GetItemHeldByIndex(index);
 
         if (itemToEquip == null)
             return;
 
-        Debug.Log($"Hotbar slot {index} selected!");
+        //Debug.Log($"Hotbar slot {index} selected!");
 
         currentHotbarIndex = index;
 

@@ -50,7 +50,7 @@ public class HealthManager : MonoBehaviour
         else
         {
             Health_Current -= amount;
-            Debug.Log($"{this}, took {amount} damage, health = {Health_Current}");
+            //Debug.Log($"{this}, took {amount} damage, health = {Health_Current}");
         }
 
         UE_OnTakeDamage?.Invoke(amount);
@@ -58,7 +58,7 @@ public class HealthManager : MonoBehaviour
 
     private void Death()
     {
-        Debug.Log($"{this}, died!");
+        //Debug.Log($"{this}, died!");
         isDead = true;
         UE_OnDeath?.Invoke();
 

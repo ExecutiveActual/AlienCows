@@ -1,7 +1,5 @@
-﻿using System.CodeDom.Compiler;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;   // for ReadOnlyArray
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerController_ItemHeld : MonoBehaviour
