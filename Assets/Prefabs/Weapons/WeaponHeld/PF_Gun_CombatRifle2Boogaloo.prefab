@@ -2604,8 +2604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3be1926441a3e44a197cf5d2672030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Recoil
-  recoilX: 1.6
-  recoilY: -4.5
+  recoilX: 1.2
+  recoilY: -2.1
   recoilZ: -0.09
 --- !u!114 &53257146326318375
 MonoBehaviour:
