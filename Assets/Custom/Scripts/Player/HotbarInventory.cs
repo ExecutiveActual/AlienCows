@@ -32,7 +32,7 @@ public class HotbarInventory : MonoBehaviour
     }
 
 
-    private void Start()
+    private void OnEnable()
     {
         gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
 
@@ -42,6 +42,22 @@ public class HotbarInventory : MonoBehaviour
         }
 
         gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
+    }
+
+    private void OnDisable()
+    {
+        if (gameManager_GiveInventory != null)
+        {
+            gameManager_GiveInventory.UE_OnInitializeInventory.RemoveListener(InitializeInventory);
+        }
+    }
+
+
+    private void Start()
+    {
+        
+
+        
     }
 
 
