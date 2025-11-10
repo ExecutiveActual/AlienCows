@@ -354,4 +354,4 @@ MonoBehaviour:
   bulletSpawner: {fileID: 1694353608910093656}
   damage_PerPellet: 12
   pellet_Count: 12
-  spread_Angle: 5
+  spread_Angle: 4.5
