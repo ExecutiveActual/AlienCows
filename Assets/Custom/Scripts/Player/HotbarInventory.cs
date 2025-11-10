@@ -53,14 +53,6 @@ public class HotbarInventory : MonoBehaviour
     }
 
 
-    private void Start()
-    {
-        
-
-        
-    }
-
-
     public void InitializeInventory(HotbarInventoryItems newItems)
     {
         weapon_1 = newItems.weapon_1;
