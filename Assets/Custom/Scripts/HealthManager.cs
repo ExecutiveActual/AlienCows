@@ -35,9 +35,7 @@ public class HealthManager : MonoBehaviour
         {
             if (!isDead)
             {
-                Debug.Log($"{this}, died!");
-                isDead = true;
-                UE_OnDeath?.Invoke();
+                Death();
             }
             return;
         }
@@ -47,9 +45,7 @@ public class HealthManager : MonoBehaviour
         {
             Health_Current = 0f;
 
-            Debug.Log($"{this}, died!");
-            isDead = true;
-            UE_OnDeath?.Invoke();
+            Death();
         }
         else
         {
@@ -58,6 +54,15 @@ public class HealthManager : MonoBehaviour
         }
 
         UE_OnTakeDamage?.Invoke(amount);
+    }
+
+    private void Death()
+    {
+        Debug.Log($"{this}, died!");
+        isDead = true;
+        UE_OnDeath?.Invoke();
+
+        gameObject.SetActive(false);
     }
 
 }
