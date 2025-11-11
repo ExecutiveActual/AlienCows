@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UFOSpawner_ : MonoBehaviour
+public class UFOSpawner_ : WaveSpawner
 {
     [Header("Spawner Settings")]
     public WorldClock_ worldClock;
@@ -44,6 +44,11 @@ public class UFOSpawner_ : MonoBehaviour
         SpawnWave();
     }
 
+
+    //  Hey Harsh, didn't wanna go crazy on your code so I will just request a small addition here.
+    //  Please make the spawner spawn one entity at a time with a Coroutine, instead of all at once.
+    //  After the spawner is done spawning, use:
+    //  OnSpawnerDoneSpawning();
     private void SpawnWave()
     {
         if (!ufoPrefab || spawnPoints.Length == 0) return;
@@ -73,6 +78,9 @@ public class UFOSpawner_ : MonoBehaviour
             activeUFOs.Remove(ufo.gameObject);
 
         if (activeUFOs.Count == 0)
+        {
+            OnAllWaveEntitiesDestroyed(); // Interact With WaveEventManager
             OnAllUfosDestroyed?.Invoke(); // notify AudioManager
+        }
     }
 }

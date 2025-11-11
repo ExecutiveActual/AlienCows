@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.99215686}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -626,6 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5163449061598598150}
   - component: {fileID: 7989218418195254382}
+  - component: {fileID: 1290512828472810445}
   m_Layer: 5
   m_Name: NightEndUI_
   m_TagString: Untagged
@@ -671,6 +672,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NightEnd_
   worldClock: {fileID: 0}
   fastForwardSpeed: 30
+--- !u!114 &1290512828472810445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6695121467586811760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337e96223505176468bc1806ce8def1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NightEnd_Manager
+  timeTo_NightEndScreen: 3.3
 --- !u!1 &9098789312498023346
 GameObject:
   m_ObjectHideFlags: 0

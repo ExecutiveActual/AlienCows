@@ -62,8 +62,8 @@ public class PlayerController_UI : MonoBehaviour
 
             gameManager_UI = GameManager_Singleton.Instance.GetComponent<GameManager_UI>();
 
-            gameManager_UI.UE_OnNightEnd.AddListener(SetActionMap_UI);
-            gameManager_UI.UE_OnReturnControlToPlayer.AddListener(SetActionMap_Player);
+            gameManager_UI.UE_OnSwitchControl_UI.AddListener(SetActionMap_UI);
+            gameManager_UI.UE_OnSwitchControl_Player.AddListener(SetActionMap_Player);
         }
         else
         {

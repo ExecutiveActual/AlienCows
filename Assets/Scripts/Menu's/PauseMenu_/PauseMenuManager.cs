@@ -48,7 +48,7 @@ public class PauseMenuManager : MonoBehaviour
 
         GameManager_Singleton.Instance
             .GetComponent<GameManager_UI>()
-            .UE_OnNightEnd?.Invoke();
+            .UE_OnSwitchControl_UI?.Invoke();
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -70,7 +70,7 @@ public class PauseMenuManager : MonoBehaviour
 
         GameManager_Singleton.Instance
             .GetComponent<GameManager_UI>()
-            .UE_OnReturnControlToPlayer?.Invoke();
+            .UE_OnSwitchControl_Player?.Invoke();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
