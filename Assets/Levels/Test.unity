@@ -1032,6 +1032,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
+      propertyPath: starterWeapon
+      value: 
+      objectReference: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
     - target: {fileID: 8790286996824375228, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1177,7 +1181,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: '2
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
