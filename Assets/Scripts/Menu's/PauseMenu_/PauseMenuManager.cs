@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PauseMenuManager : MonoBehaviour
 
     void Start()
     {
-        // Ensure all panels are disabled by default
+        // Make sure pause panels start hidden
         pauseMenuPanel.SetActive(false);
         settingsGameManager.SetActive(false);
         viewCollectionsManager.SetActive(false);
@@ -29,7 +30,6 @@ public class PauseMenuManager : MonoBehaviour
 
     void Update()
     {
-        // Old Input System for Escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -47,6 +47,22 @@ public class PauseMenuManager : MonoBehaviour
         viewCollectionsManager.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
+
+        // Call the GameManager event for night end (pause)
+        GameManager_Singleton.Instance
+            .GetComponent<GameManager_UI>()
+            .UE_OnNightEnd?.Invoke();
+
+        // Unlock cursor for UI interaction
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        // Ensure EventSystem exists so buttons work
+        if (EventSystem.current == null)
+        {
+            GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+            DontDestroyOnLoad(es);
+        }
     }
 
     public void ResumeGame()
@@ -56,6 +72,15 @@ public class PauseMenuManager : MonoBehaviour
         viewCollectionsManager.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+
+        // Call the GameManager event for returning control
+        GameManager_Singleton.Instance
+            .GetComponent<GameManager_UI>()
+            .UE_OnReturnControlToPlayer?.Invoke();
+
+        // Lock cursor back to center for gameplay
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // ---------- MENU NAVIGATION ----------
