@@ -31,30 +31,7 @@ public class HotbarInventory : MonoBehaviour
     }
 
 
-    private void OnEnable()
-    {
-
-
-    }
-
-    private void SetupGameManagerReferences()
-    {
-
-        if (gameManager_GiveInventory == null)
-        {
-            //Debug.Log("SETTING UP GM REF IN HOTBAR INVENTORY");
-
-            gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
-
-            if (gameManager_GiveInventory == null)
-            {
-                //Debug.LogWarning("THATS IT IM NUKING IT");
-            }
-
-            gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
-        }
-
-    }
+    
 
     private void OnDisable()
     {
@@ -82,6 +59,24 @@ public class HotbarInventory : MonoBehaviour
 
     }
 
+    private void SetupGameManagerReferences()
+    {
+
+        if (gameManager_GiveInventory == null)
+        {
+            //Debug.Log("SETTING UP GM REF IN HOTBAR INVENTORY");
+
+            gameManager_GiveInventory = GameManager_Singleton.Instance.GetComponent<GameManager_GiveInventory>();
+
+            if (gameManager_GiveInventory == null)
+            {
+                //Debug.LogWarning("THATS IT IM NUKING IT");
+            }
+
+            gameManager_GiveInventory.UE_OnInitializeInventory.AddListener(InitializeInventory);
+        }
+
+    }
 
 
     public void InitializeInventory(HotbarInventoryItems newItems)
