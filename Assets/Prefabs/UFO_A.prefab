@@ -46,35 +46,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a48b3242c44404199ef0942778f82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_
-  type: 0
   worldClock: {fileID: 0}
   spawnerRef: {fileID: 0}
   targetTag: Cow
-  showPathGizmo: 1
-  useUniqueTargets: 1
+  type: 0
   moveSpeed: 30
   rotationSpeed: 2
-  flyHeight: 12
+  flyHeight: 25
   abductRangeXZ: 2.5
-  abductHoverHeight: 10
-  orbitRadius: 25
-  orbitDegPerSec: 15
-  spiralInwardSpeed: 0.5
-  parabolaWidth: 1
-  parabolaArcHeight: 10
-  sineAmplitude: 6
-  sineFrequency: 0.5
-  sineBobAmplitudeY: 1.5
-  sineBobFrequency: 1.25
-  hyperbolaScale: 2
-  inverseScale: 20
+  hoverBeforeLiftTime: 1
+  cowLiftDuration: 10
+  postAbductionDelay: 1
   spotLight: {fileID: 951258144570178421}
   abductionLightIntensity: 150
   abductionCompleteColor: {r: 1, g: 0, b: 0, a: 1}
   blinkCount: 5
   blinkSpeed: 0.09
-  abductionRotateDuration: 10
-  rotationsDuringAbduction: 10
+  sineAmplitude: 30
+  sineFrequency: 0.5
+  orbitRadius: 25
+  orbitDegPerSec: 15
+  spiralSpeed: 3
+  fallDelay: 2
 --- !u!1 &3038244231483023724
 GameObject:
   m_ObjectHideFlags: 0

@@ -287,11 +287,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190764367}
   m_CullTransparentMesh: 1
---- !u!4 &242528661 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 308774500}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &300912521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -411,10 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1232515054}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
 --- !u!1 &342127899
@@ -442,7 +434,7 @@ Transform:
   m_GameObject: {fileID: 342127899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.9, y: 0, z: -222.6}
+  m_LocalPosition: {x: 480, y: 0, z: -120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -627,7 +619,7 @@ Transform:
   m_GameObject: {fileID: 852865478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.8, y: 0, z: 91.3}
+  m_LocalPosition: {x: 116.6, y: 0, z: 161.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -719,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 922498823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66, y: 0, z: -170}
+  m_LocalPosition: {x: 9, y: 0, z: -286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -953,6 +945,7 @@ Transform:
   m_Children:
   - {fileID: 1181236999}
   - {fileID: 1234417493}
+  - {fileID: 2030409153}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106326160
@@ -1079,17 +1072,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldClock_
   totalCycleMinutes: 2
-  dayDurationMinutes: 0.2
-  nightDurationMinutes: 1.8
+  dayMinutes: 0.1
+  nightMinutes: 1.9
+  skyboxMaterial: {fileID: 2100000, guid: 7658d8fb603f2034aa74f34794b0d243, type: 2}
   sunLight: {fileID: 1825988039}
-  dayLightIntensity: 1
-  nightLightIntensity: 0.1
-  useSkybox: 1
-  daySkyExposure: 1
-  nightSkyExposure: 0.3
+  daySunIntensity: 1
+  nightSunIntensity: 0.1
   dayAtmosphereThickness: 2.5
   nightAtmosphereThickness: 0.12
-  currentTime: 0
+  messageText: {fileID: 1743334687}
+  typingSpeed: 0.05
+  messageDisplayDuration: 2
+  enableNightMessages: 1
   isDay: 1
 --- !u!4 &1181236999
 Transform:
@@ -1142,71 +1136,6 @@ Transform:
   - {fileID: 342127900}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1232515053
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1232515054}
-  - component: {fileID: 1232515055}
-  m_Layer: 0
-  m_Name: probe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1232515054
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232515053}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.526, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 242528661}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!215 &1232515055
-ReflectionProbe:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232515053}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Type: 0
-  m_Mode: 1
-  m_RefreshMode: 0
-  m_TimeSlicingMode: 0
-  m_Resolution: 128
-  m_UpdateFrequency: 0
-  m_BoxSize: {x: 20, y: 20, z: 20}
-  m_BoxOffset: {x: 0, y: 0, z: 0}
-  m_NearClip: 0.3
-  m_FarClip: 1000
-  m_ShadowDistance: 100
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IntensityMultiplier: 1
-  m_BlendDistance: 1
-  m_HDR: 1
-  m_BoxProjection: 0
-  m_RenderDynamicObjects: 0
-  m_UseOcclusionCulling: 1
-  m_Importance: 1
-  m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &1234417491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,37 +1166,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFOSpawner_
   worldClock: {fileID: 1181236998}
-  ufoPrefab: {fileID: 999385156908533078, guid: 56be311ab28f8544b9a98a7dbe1c774f, type: 3}
+  ufoPrefab: {fileID: 999385156908533078, guid: 4d64bd78e3d85f546b6139b8b7634a35, type: 3}
   spawnPoints:
   - {fileID: 1825905001}
   - {fileID: 1538155436}
   - {fileID: 852865479}
   - {fileID: 922498824}
   - {fileID: 342127900}
-  despawnAtDay: 1
-  maxConcurrentUFOs: 0
-  waves:
-  - countA: 1
-    countB: 1
-    countC: 1
-    countD: 1
-    countE: 1
-    specificSpawnPoints: []
-    spawnInterval: 0.25
-  - countA: 3
-    countB: 2
-    countC: 0
-    countD: 1
-    countE: 2
-    specificSpawnPoints: []
-    spawnInterval: 0.25
-  - countA: 2
-    countB: 2
-    countC: 2
-    countD: 2
-    countE: 2
-    specificSpawnPoints: []
-    spawnInterval: 0.25
+  ufoCountPerWave: 5
+  nightStartDelay: 2
 --- !u!4 &1234417493
 Transform:
   m_ObjectHideFlags: 0
@@ -1594,7 +1501,7 @@ Transform:
   m_GameObject: {fileID: 1538155435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.2, y: 0, z: -20.3}
+  m_LocalPosition: {x: -143, y: 0, z: -129.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2205,7 +2112,7 @@ Transform:
   m_GameObject: {fileID: 1825905000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.4, y: 0, z: 62.3}
+  m_LocalPosition: {x: -100.2, y: 0, z: 101.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2413,6 +2320,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984412922}
   m_CullTransparentMesh: 1
+--- !u!1 &2030409152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030409153}
+  - component: {fileID: 2030409154}
+  m_Layer: 0
+  m_Name: AbductionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030409153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030409152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1002856443}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030409154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030409152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b61a110308e1fe4a84a239c36227109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbductionTracker_
+  abductCountText: {fileID: 1785332807}
+  abductionIcon: {fileID: 1984412924}
+  flickerCount: 3
+  flickerSpeed: 0.15
+  holdDuration: 1
 --- !u!1 &2134545574
 GameObject:
   m_ObjectHideFlags: 0

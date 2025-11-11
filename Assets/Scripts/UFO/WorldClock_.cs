@@ -1,111 +1,135 @@
+using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class WorldClock_ : MonoBehaviour
 {
     [Header("Time Settings")]
-    [Tooltip("Total real-time duration (in minutes) for a full in-game day-night cycle.")]
+    [Tooltip("Total length of a full day-night cycle in real minutes.")]
     public float totalCycleMinutes = 30f;
 
-    [Tooltip("Duration (in minutes) of the day period within the cycle.")]
-    public float dayDurationMinutes = 10f;
+    [Tooltip("Daytime duration in minutes.")]
+    public float dayMinutes = 10f;
 
-    [Tooltip("Duration (in minutes) of the night period within the cycle.")]
-    public float nightDurationMinutes = 20f;
+    [Tooltip("Nighttime duration in minutes.")]
+    public float nightMinutes = 20f;
 
-    [Header("Lighting Settings")]
-    [Tooltip("Directional Light representing the Sun in your scene.")]
+    [Tooltip("Optional Skybox Material with Procedural Shader.")]
+    public Material skyboxMaterial;
+
+    [Tooltip("Sun Light Reference (directional light).")]
     public Light sunLight;
 
-    [Tooltip("Sunlight intensity during the daytime.")]
-    public float dayLightIntensity = 1f;
+    [Tooltip("Sun intensity at day and night.")]
+    public float daySunIntensity = 1f;
+    public float nightSunIntensity = 0.1f;
 
-    [Tooltip("Sunlight intensity during the nighttime.")]
-    public float nightLightIntensity = 0.1f;
-
-    [Tooltip("Enable or disable Skybox color shifting based on time.")]
-    public bool useSkybox = true;
-
-    [Header("Skybox Settings")]
-    [Tooltip("Exposure value when it is fully day.")]
-    public float daySkyExposure = 1f;
-
-    [Tooltip("Exposure value when it is fully night.")]
-    public float nightSkyExposure = 0.3f;
-
-    [Tooltip("Atmospheric thickness when it is day (thicker atmosphere).")]
+    [Tooltip("Atmospheric thickness day/night (skybox).")]
     public float dayAtmosphereThickness = 2.5f;
-
-    [Tooltip("Atmospheric thickness when it is night (thinner atmosphere).")]
     public float nightAtmosphereThickness = 0.12f;
 
-    [Header("Runtime Info (Read-Only)")]
-    [Tooltip("Current in-game time (0 to totalCycleMinutes).")]
-    public float currentTime = 0f;
+    [Header("Night Message Settings")]
+    [Tooltip("TMP text that displays the 'Night X has started' message.")]
+    public TMP_Text messageText;
 
-    [Tooltip("True if it is currently daytime.")]
-    public bool isDay = true;
+    [Tooltip("Typing speed (seconds per character). Lower = faster.")]
+    public float typingSpeed = 0.05f;
 
-    // Cached reference to original skybox material (optional)
-    private Material skyboxMaterial;
+    [Tooltip("How long to keep the message visible after typing completes.")]
+    public float messageDisplayDuration = 3f;
 
-    private void Start()
+    [Tooltip("Enable or disable typewriter message feature.")]
+    public bool enableNightMessages = true;
+
+    // Runtime
+    [HideInInspector] public bool isDay = true;
+    private float currentTime;
+    private float totalCycleSeconds;
+    private bool transitioningToNight = false;
+    private int nightCount = 0;
+
+    void Start()
     {
-        currentTime = 0f;
-        skyboxMaterial = RenderSettings.skybox;
+        totalCycleSeconds = totalCycleMinutes * 60f;
 
-        if (useSkybox && skyboxMaterial == null)
+        if (messageText != null)
         {
-            Debug.Log("You are not currently using the Skybox feature.");
-            useSkybox = false;
-        }
-
-        if (sunLight == null)
-        {
-            Debug.Log("You are not currently using the Skybox feature.");
+            messageText.gameObject.SetActive(false);
+            messageText.text = "";
         }
     }
 
-    private void Update()
+    void Update()
     {
-        // Advance time based on real-time progression
-        currentTime += Time.deltaTime / 60f; // Convert seconds to minutes
-
-        if (currentTime >= totalCycleMinutes)
+        currentTime += Time.deltaTime;
+        if (currentTime > totalCycleSeconds)
+        {
             currentTime = 0f;
+            transitioningToNight = false;
+            isDay = true;
+        }
 
-        // Determine whether it's day or night
-        isDay = currentTime < dayDurationMinutes;
+        float daySeconds = dayMinutes * 60f;
+        bool nowDay = currentTime < daySeconds;
+        isDay = nowDay;
 
-        UpdateLighting();
+        // ----------------- Skybox + Light control -----------------
+        float t = nowDay
+            ? Mathf.InverseLerp(0f, daySeconds, currentTime)
+            : Mathf.InverseLerp(daySeconds, totalCycleSeconds, currentTime);
+
+        float sunIntensity = nowDay
+            ? Mathf.Lerp(daySunIntensity, nightSunIntensity, t)
+            : Mathf.Lerp(nightSunIntensity, daySunIntensity, t);
+
+        if (sunLight)
+            sunLight.intensity = sunIntensity;
+
+        if (skyboxMaterial && skyboxMaterial.shader.name.Contains("Skybox/Procedural"))
+        {
+            float atmo = nowDay
+                ? Mathf.Lerp(dayAtmosphereThickness, nightAtmosphereThickness, t)
+                : Mathf.Lerp(nightAtmosphereThickness, dayAtmosphereThickness, t);
+
+            skyboxMaterial.SetFloat("_AtmosphereThickness", atmo);
+        }
+        else if (!skyboxMaterial)
+        {
+            Debug.Log("You are not currently using the skybox feature.");
+        }
+
+        // ----------------- Detect transition into night -----------------
+        if (!transitioningToNight && !nowDay)
+        {
+            transitioningToNight = true;
+            nightCount++;
+            if (enableNightMessages && messageText != null)
+            {
+                StartCoroutine(TypeNightMessage($"Night {nightCount} has started. Stay alert!"));
+            }
+        }
+
+        // Reset flag once a full day has passed
+        if (transitioningToNight && nowDay)
+        {
+            transitioningToNight = false;
+        }
     }
 
-    private void UpdateLighting()
+    private IEnumerator TypeNightMessage(string msg)
     {
-        if (sunLight != null)
+        messageText.gameObject.SetActive(true);
+        messageText.text = "";
+
+        foreach (char c in msg)
         {
-            float targetIntensity = isDay ? dayLightIntensity : nightLightIntensity;
-            sunLight.intensity = Mathf.Lerp(sunLight.intensity, targetIntensity, Time.deltaTime * 2f);
+            messageText.text += c;
+            yield return new WaitForSeconds(typingSpeed);
         }
 
-        if (useSkybox && skyboxMaterial != null)
-        {
-            // Exposure interpolation
-            float targetExposure = isDay ? daySkyExposure : nightSkyExposure;
-            if (skyboxMaterial.HasProperty("_Exposure"))
-            {
-                float currentExposure = skyboxMaterial.GetFloat("_Exposure");
-                float newExposure = Mathf.Lerp(currentExposure, targetExposure, Time.deltaTime * 2f);
-                skyboxMaterial.SetFloat("_Exposure", newExposure);
-            }
+        yield return new WaitForSeconds(messageDisplayDuration);
 
-            // Atmosphere thickness interpolation
-            if (skyboxMaterial.HasProperty("_AtmosphereThickness"))
-            {
-                float targetThickness = isDay ? dayAtmosphereThickness : nightAtmosphereThickness;
-                float currentThickness = skyboxMaterial.GetFloat("_AtmosphereThickness");
-                float newThickness = Mathf.Lerp(currentThickness, targetThickness, Time.deltaTime * 2f);
-                skyboxMaterial.SetFloat("_AtmosphereThickness", newThickness);
-            }
-        }
+        messageText.gameObject.SetActive(false);
+        messageText.text = "";
     }
 }
