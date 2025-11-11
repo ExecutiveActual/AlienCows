@@ -1107,7 +1107,7 @@ PrefabInstance:
     - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
       propertyPath: starterWeapon
       value: 
-      objectReference: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
+      objectReference: {fileID: 5672335288325632639, guid: 03b2801c12988e442bd464844e3ed8d2, type: 3}
     - target: {fileID: 8790286996824375228, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2040,6 +2040,53 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1962215325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962215326}
+  - component: {fileID: 1962215327}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962215326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962215325}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 299.84, y: -0, z: 287.76178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962215327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962215325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6dbbdca159e827498252f91e17d59cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaveEventManager
+  OnWaveEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1984412924 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 947348682126854514, guid: 911495248552f1f4eaba818ab3003a67, type: 3}
@@ -2916,6 +2963,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1667800304}
     m_Modifications:
+    - target: {fileID: 2064964261563094329, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232838186259710515, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589372419288318644, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5163449061598598150, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3006,7 +3065,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6695121467586811760, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7498228407780029287}
+      addedObject: {fileID: 7498228407780029288}
   m_SourcePrefab: {fileID: 100100000, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
 --- !u!224 &7498228407780029285 stripped
 RectTransform:
@@ -3018,7 +3077,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6695121467586811760, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
   m_PrefabInstance: {fileID: 7498228407780029284}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7498228407780029287
+--- !u!114 &7498228407780029288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3027,10 +3086,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7498228407780029286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 337e96223505176468bc1806ce8def1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 73b9eee22596b9249b8c86d2981fa6df, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NightEnd_Manager
-  timeTo_NightEndScreen: 3.3
+  m_EditorClassIdentifier: Assembly-CSharp::NightEnd_FadeIn
+  fadeInDuration: 2
+  canvasRenderers: []
 --- !u!1001 &7707920621720054279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3091,6 +3151,10 @@ PrefabInstance:
       propertyPath: messageText
       value: 
       objectReference: {fileID: 1743334687}
+    - target: {fileID: 5191016947243865302, guid: 70cb8173e9229d648b66859e5d620ca7, type: 3}
+      propertyPath: ufoCountPerWave
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6197741625943160652, guid: 70cb8173e9229d648b66859e5d620ca7, type: 3}
       propertyPath: abductionIcon
       value: 
@@ -3252,3 +3316,4 @@ SceneRoots:
   - {fileID: 203736742090625595}
   - {fileID: 5068030915675109773}
   - {fileID: 1057027204776088564}
+  - {fileID: 1962215326}

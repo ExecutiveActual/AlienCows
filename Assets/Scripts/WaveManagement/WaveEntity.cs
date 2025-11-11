@@ -23,10 +23,20 @@ public class WaveEntity : MonoBehaviour
     }
 
 
+    private void OnDisable()
+    {
+        if (waveEventManager != null)
+        {
+            waveEventManager.Unregister_WaveEntity(this);
+        }
+    }
+
     private void OnDestroy()
     {
         if (WaveEventManager.Instance != null)
         {
+            Debug.Log("Entity On Destroy");
+
             WaveEventManager.Instance.Unregister_WaveEntity(this);
         }
     }

@@ -42,17 +42,13 @@ public class WaveEventManager : MonoBehaviour
     public void WaveSpawner_DoneSpawning(WaveSpawner waveSpawner)
     {
         //  !REWORK!
-        //Unregister_WaveSpawner(waveSpawner);
+        Unregister_WaveSpawner(waveSpawner);
         Debug.LogWarning("<color=white>Waiting for WaveSpawn Rework!</color>");
         //  !REWORK!
 
+        Debug.Log($"<color=yellow>WaveEventManager:</color> WaveSpawner done spawning: {waveSpawner.name}");
 
-
-        // If no more spawners and no more entities, wave is over
-        if (waveSpawners.Count == 0 && waveEntities.Count == 0)
-        {
-            OnWaveEnd?.Invoke();
-        }
+        
     }
 
 
@@ -66,6 +62,8 @@ public class WaveEventManager : MonoBehaviour
         if (!waveSpawners.Contains(waveSpawner))
         {
             waveSpawners.Add(waveSpawner);
+
+            Debug.Log($"<color=yellow>WaveEventManager:</color> WaveSpawner registered: {waveSpawner.name}");
         }
     }
 
@@ -97,16 +95,27 @@ public class WaveEventManager : MonoBehaviour
         if (!waveEntities.Contains(entity))
         {
             waveEntities.Add(entity);
+            Debug.Log($"<color=yellow>WaveEventManager:</color> WaveEntity registered: {entity.name}");
         }
     }
 
     // All entities spawned in wave must unregister OnDestroy
     public void Unregister_WaveEntity(WaveEntity entity)
     {
+
+        Debug.Log($"<color=yellow>WaveEventManager:</color> WaveEntity unregistered: {entity.name}");
+
         if (waveEntities.Contains(entity))
         {
             waveEntities.Remove(entity);
         }
+
+        // If no more spawners and no more entities, wave is over
+        if (waveSpawners.Count == 0 && waveEntities.Count == 0)
+        {
+            OnWaveEnd?.Invoke();
+        }
+
     }
 
     // Check if a WaveEntity is registered

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NightEnd_Manager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class NightEnd_Manager : MonoBehaviour
     [SerializeField] private float timeTo_NightEndScreen = 3.3f;
 
     Coroutine coroutine_ShowNightEndScreen;
+
+
+    public UnityEvent UE_OnNightEndScreenFadeIn;
+
 
     private void Start()
     {
@@ -25,6 +30,9 @@ public class NightEnd_Manager : MonoBehaviour
 
     private void HandleNightEnd()
     {
+
+        Debug.Log("<color=green>Night End Triggered!</color>");
+
         if (coroutine_ShowNightEndScreen != null)
         {
             //StopCoroutine(coroutine_ShowNightEndScreen);
@@ -39,9 +47,11 @@ public class NightEnd_Manager : MonoBehaviour
 
         yield return new WaitForSeconds(timeTo_NightEndScreen);
 
-        GameManager_Singleton.Instance.GetComponent<GameManager_UI>().UE_OnSwitchControl_UI?.Invoke();
+        GameManager_Singleton.Instance.GetComponent<GameManager_UI>().UE_OnSwitchControlMode_UI?.Invoke();
 
+        Debug.Log("<color=green>Invoking Night End Screen Fade-In Event!</color>");
 
+        UE_OnNightEndScreenFadeIn?.Invoke();
 
     }
 

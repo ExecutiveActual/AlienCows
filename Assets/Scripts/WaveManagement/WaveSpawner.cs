@@ -31,9 +31,12 @@ public class WaveSpawner : MonoBehaviour
 
     protected void OnSpawnerDoneSpawning()
     {
+        Debug.Log($"<color=green>WaveSpawner Done Spawning:</color> {this.name} 1");
         if (waveEventManager != null)
         {
             waveEventManager.WaveSpawner_DoneSpawning(this);
+
+            Debug.Log($"<color=green>WaveSpawner Done Spawning:</color> {this.name} 2");
         }
     }
 
@@ -41,6 +44,8 @@ public class WaveSpawner : MonoBehaviour
     //  !REWORK!
     protected void OnAllWaveEntitiesDestroyed()
     {
+        OnSpawnerDoneSpawning();
+
         Debug.LogWarning("<color=white>Waiting for WaveSpawn Rework!</color>");
     }
     //  !REWORK!

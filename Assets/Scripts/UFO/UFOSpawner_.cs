@@ -18,8 +18,11 @@ public class UFOSpawner_ : WaveSpawner
     private List<GameObject> activeUFOs = new List<GameObject>();
     private bool waveSpawned;
 
-    void Start()
+    protected override void Start()
     {
+
+        base.Start();
+
         if (!worldClock)
             worldClock = FindObjectOfType<WorldClock_>();
     }
@@ -70,6 +73,8 @@ public class UFOSpawner_ : WaveSpawner
         }
 
         Debug.Log($"[UFOSpawner_] Wave started → {activeUFOs.Count} UFOs spawned.");
+
+        OnSpawnerDoneSpawning();
     }
 
     public void NotifyUfoDestroyed(UFO_ ufo)
@@ -79,7 +84,6 @@ public class UFOSpawner_ : WaveSpawner
 
         if (activeUFOs.Count == 0)
         {
-            OnAllWaveEntitiesDestroyed(); // Interact With WaveEventManager
             OnAllUfosDestroyed?.Invoke(); // notify AudioManager
         }
     }

@@ -4,9 +4,9 @@ using UnityEngine.Events;
 public class GameManager_UI : MonoBehaviour, IGameManagerModule
 {
 
-    public UnityEvent UE_OnSwitchControl_UI;
+    public UnityEvent UE_OnSwitchControlMode_UI;
 
-    public UnityEvent UE_OnSwitchControl_Player;
+    public UnityEvent UE_OnSwitchControlMode_Player;
 
 
     public void OnInitializeModule()
