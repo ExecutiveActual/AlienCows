@@ -38,6 +38,7 @@ public class PlayerController_UI : MonoBehaviour
     {
         Debug.Log("Set ActionMap to UI");
         _input.SwitchCurrentActionMap("UI");
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void SetActionMap_Player()
