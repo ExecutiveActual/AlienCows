@@ -57,10 +57,17 @@ public class PlayerController_UI : MonoBehaviour
     {
         if (gameManager_UI == null)
         {
+
+            //Debug.Log("Setting up GameManager_UI reference in PlayerController_UI.");
+
             gameManager_UI = GameManager_Singleton.Instance.GetComponent<GameManager_UI>();
 
             gameManager_UI.UE_OnNightEnd.AddListener(SetActionMap_UI);
             gameManager_UI.UE_OnReturnControlToPlayer.AddListener(SetActionMap_Player);
+        }
+        else
+        {
+            //Debug.LogWarning("GameManager_UI reference already set in PlayerController_UI.");
         }
     }
 
