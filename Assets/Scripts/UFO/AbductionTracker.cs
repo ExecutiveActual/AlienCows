@@ -1,74 +1,92 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
+/// <summary>
+/// Tracks the number of cows abducted and updates the UI.
+/// </summary>
 public class AbductionTracker_ : MonoBehaviour
 {
-    public static AbductionTracker_ Instance { get; private set; }
+    public static AbductionTracker_ Instance;
 
     [Header("UI References")]
-    [Tooltip("TMP text that shows number of cows abducted.")]
-    public TMP_Text abductCountText;
+    [Tooltip("Text element displaying total abductions (TMP).")]
+    public TextMeshProUGUI abductionCountText;
 
-    [Tooltip("Image icon to flash when an abduction happens.")]
-    public Image abductionIcon;
+    [Tooltip("Optional abduction icon (will be hidden by default).")]
+    public UnityEngine.UI.Image abductionIcon;
 
-    [Header("Flicker Settings")]
-    [Tooltip("How many times the icon/text flickers when abduction happens.")]
-    public int flickerCount = 3;
+    [Header("Settings")]
+    [Tooltip("Prefix shown before the count.")]
+    public string prefix = "x ";
 
-    [Tooltip("Speed of each flicker (seconds).")]
-    public float flickerSpeed = 0.15f;
+    [Tooltip("Should the text fade in on first abduction?")]
+    public bool fadeInOnFirstAbduction = true;
 
-    [Tooltip("How long both stay visible after flicker ends.")]
-    public float holdDuration = 0.5f;
+    public float fadeSpeed = 2f;
 
-    private int abductedCount;
-    private Coroutine flickerRoutine;
+    [HideInInspector] public int CurrentAbductions = 0;
+
+    private bool firstShown = false;
+
+    //──────────────────────────────────────────────
 
     void Awake()
     {
-        if (Instance && Instance != this) { Destroy(gameObject); return; }
-        Instance = this;
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
 
-        if (abductCountText) abductCountText.text = "× 0";
-        if (abductionIcon) abductionIcon.enabled = false;
+        // Disabled by default
+        if (abductionCountText)
+            abductionCountText.gameObject.SetActive(false);
+
+        if (abductionIcon)
+            abductionIcon.gameObject.SetActive(false);
     }
 
-    
+    //──────────────────────────────────────────────
+
     public void RegisterAbduction()
     {
-        abductedCount++;
+        CurrentAbductions++;
 
-        if (abductCountText)
-            abductCountText.text = "× " + abductedCount;
-
-        if (flickerRoutine != null)
-            StopCoroutine(flickerRoutine);
-
-        flickerRoutine = StartCoroutine(FlickerFeedback());
-    }
-
-    private IEnumerator FlickerFeedback()
-    {
-        if (abductionIcon) abductionIcon.enabled = true;
-        if (abductCountText) abductCountText.enabled = true;
-
-        for (int i = 0; i < flickerCount; i++)
+        // Enable UI on first abduction
+        if (!firstShown)
         {
-            if (abductionIcon) abductionIcon.enabled = !abductionIcon.enabled;
-            if (abductCountText) abductCountText.enabled = !abductCountText.enabled;
-            yield return new WaitForSeconds(flickerSpeed);
+            firstShown = true;
+
+            if (abductionIcon)
+                abductionIcon.gameObject.SetActive(true);
+
+            if (abductionCountText)
+            {
+                abductionCountText.gameObject.SetActive(true);
+                if (fadeInOnFirstAbduction)
+                    StartCoroutine(FadeInTMP(abductionCountText));
+            }
         }
 
-        // Ensure both visible for holdDuration
-        if (abductionIcon) abductionIcon.enabled = true;
-        if (abductCountText) abductCountText.enabled = true;
+        UpdateText();
+    }
 
-        yield return new WaitForSeconds(holdDuration);
+    //──────────────────────────────────────────────
 
-        if (abductionIcon) abductionIcon.enabled = false;
-        if (abductCountText) abductCountText.enabled = false;
+    private void UpdateText()
+    {
+        if (abductionCountText)
+            abductionCountText.text = prefix + CurrentAbductions.ToString();
+    }
+
+    //──────────────────────────────────────────────
+    // Optional fade-in for a cinematic reveal
+    //──────────────────────────────────────────────
+    private System.Collections.IEnumerator FadeInTMP(TextMeshProUGUI tmp)
+    {
+        tmp.alpha = 0f;
+        while (tmp.alpha < 1f)
+        {
+            tmp.alpha += Time.deltaTime * fadeSpeed;
+            yield return null;
+        }
+        tmp.alpha = 1f;
     }
 }
