@@ -22,7 +22,6 @@ public class PauseMenuManager : MonoBehaviour
 
     void Start()
     {
-        // Make sure pause panels start hidden
         pauseMenuPanel.SetActive(false);
         settingsGameManager.SetActive(false);
         viewCollectionsManager.SetActive(false);
@@ -39,7 +38,6 @@ public class PauseMenuManager : MonoBehaviour
         }
     }
 
-    // ---------- CORE PAUSE LOGIC ----------
     public void OpenPauseMenu()
     {
         pauseMenuPanel.SetActive(true);
@@ -48,16 +46,13 @@ public class PauseMenuManager : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
 
-        // Call the GameManager event for night end (pause)
         GameManager_Singleton.Instance
             .GetComponent<GameManager_UI>()
             .UE_OnNightEnd?.Invoke();
 
-        // Unlock cursor for UI interaction
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        // Ensure EventSystem exists so buttons work
         if (EventSystem.current == null)
         {
             GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
@@ -73,17 +68,14 @@ public class PauseMenuManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        // Call the GameManager event for returning control
         GameManager_Singleton.Instance
             .GetComponent<GameManager_UI>()
             .UE_OnReturnControlToPlayer?.Invoke();
 
-        // Lock cursor back to center for gameplay
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    // ---------- MENU NAVIGATION ----------
     public void OpenSettings()
     {
         PlayClickSound();
@@ -115,11 +107,10 @@ public class PauseMenuManager : MonoBehaviour
     public void ExitToMainMenu()
     {
         PlayClickSound();
-        Time.timeScale = 1f; // Reset before scene switch
+        Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuSceneName);
     }
 
-    // ---------- UI SOUND HANDLERS ----------
     public void PlayHoverSound()
     {
         if (uiAudioSource && hoverSound)
