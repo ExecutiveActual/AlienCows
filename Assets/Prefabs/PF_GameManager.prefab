@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6705544980996240067}
   - component: {fileID: 6973423974121611900}
   - component: {fileID: 8583794379912040072}
+  - component: {fileID: 3396383773478696853}
   m_Layer: 0
   m_Name: PF_GameManager
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e9d1fbf273d342823d3480c4932b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager_GiveInventory
-  starterWeapon: {fileID: 7513331734120730740, guid: a25a01750dc86cc4fbbd4fd2eee3343b, type: 3}
+  starterWeapon: {fileID: 7315239245792572772, guid: 93879303d02bb4944a5083d2e4119851, type: 3}
   UE_OnInitializeInventory:
     m_PersistentCalls:
       m_Calls: []
@@ -87,3 +88,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94876588c480d0d4e9122ad04a782adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager_SceneChangeEvents
+--- !u!114 &3396383773478696853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790286996824375228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d47941a09bbd64793b09a5d1bfe924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager_UI
+  UE_OnNightEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  UE_OnReturnControlToPlayer:
+    m_PersistentCalls:
+      m_Calls: []
