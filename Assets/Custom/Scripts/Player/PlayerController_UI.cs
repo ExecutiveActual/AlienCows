@@ -45,6 +45,7 @@ public class PlayerController_UI : MonoBehaviour
     {
         Debug.Log("Set ActionMap to Player");
         _input.SwitchCurrentActionMap("Player");
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
@@ -62,8 +63,8 @@ public class PlayerController_UI : MonoBehaviour
 
             gameManager_UI = GameManager_Singleton.Instance.GetComponent<GameManager_UI>();
 
-            gameManager_UI.UE_OnSwitchControl_UI.AddListener(SetActionMap_UI);
-            gameManager_UI.UE_OnSwitchControl_Player.AddListener(SetActionMap_Player);
+            gameManager_UI.UE_OnSwitchControlMode_UI.AddListener(SetActionMap_UI);
+            gameManager_UI.UE_OnSwitchControlMode_Player.AddListener(SetActionMap_Player);
         }
         else
         {

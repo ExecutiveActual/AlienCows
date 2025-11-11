@@ -272,8 +272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
   _SlerpTargetTransform: {fileID: 0}
-  positionSmoothTime: 0.15
-  rotationSmoothTime: 0.12
+  positionSmoothTime: 0.09
+  rotationSmoothTime: 0.09
 --- !u!114 &1462431466881010126
 MonoBehaviour:
   m_ObjectHideFlags: 0
