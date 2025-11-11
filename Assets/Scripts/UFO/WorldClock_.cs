@@ -41,12 +41,12 @@ public class WorldClock_ : MonoBehaviour
     [Tooltip("Enable or disable typewriter message feature.")]
     public bool enableNightMessages = true;
 
-    // Runtime
-    [HideInInspector] public bool isDay = true;
-    private float currentTime;
-    private float totalCycleSeconds;
-    private bool transitioningToNight = false;
-    private int nightCount = 0;
+    [Header("Runtime (Debug Only)")]
+    public bool isDay = true;
+    public float currentTime;
+    public float totalCycleSeconds;
+    public bool transitioningToNight = false;
+    public int nightCount = 0;
 
     void Start()
     {
@@ -73,7 +73,6 @@ public class WorldClock_ : MonoBehaviour
         bool nowDay = currentTime < daySeconds;
         isDay = nowDay;
 
-        // ----------------- Skybox + Light control -----------------
         float t = nowDay
             ? Mathf.InverseLerp(0f, daySeconds, currentTime)
             : Mathf.InverseLerp(daySeconds, totalCycleSeconds, currentTime);
@@ -98,7 +97,6 @@ public class WorldClock_ : MonoBehaviour
             Debug.Log("You are not currently using the skybox feature.");
         }
 
-        // ----------------- Detect transition into night -----------------
         if (!transitioningToNight && !nowDay)
         {
             transitioningToNight = true;
@@ -109,7 +107,6 @@ public class WorldClock_ : MonoBehaviour
             }
         }
 
-        // Reset flag once a full day has passed
         if (transitioningToNight && nowDay)
         {
             transitioningToNight = false;
@@ -131,5 +128,33 @@ public class WorldClock_ : MonoBehaviour
 
         messageText.gameObject.SetActive(false);
         messageText.text = "";
+    }
+
+    public void ForceUpdateVisuals()
+    {
+        float totalCycleSecondsLocal = totalCycleSeconds;
+        float daySeconds = dayMinutes * 60f;
+        bool nowDay = currentTime < daySeconds;
+        isDay = nowDay;
+
+        float t = nowDay
+            ? Mathf.InverseLerp(0f, daySeconds, currentTime)
+            : Mathf.InverseLerp(daySeconds, totalCycleSecondsLocal, currentTime);
+
+        float sunIntensity = nowDay
+            ? Mathf.Lerp(daySunIntensity, nightSunIntensity, t)
+            : Mathf.Lerp(nightSunIntensity, daySunIntensity, t);
+
+        if (sunLight)
+            sunLight.intensity = sunIntensity;
+
+        if (skyboxMaterial && skyboxMaterial.shader.name.Contains("Skybox/Procedural"))
+        {
+            float atmo = nowDay
+                ? Mathf.Lerp(dayAtmosphereThickness, nightAtmosphereThickness, t)
+                : Mathf.Lerp(nightAtmosphereThickness, dayAtmosphereThickness, t);
+
+            skyboxMaterial.SetFloat("_AtmosphereThickness", atmo);
+        }
     }
 }

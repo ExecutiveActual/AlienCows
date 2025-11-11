@@ -49,7 +49,6 @@ MonoBehaviour:
   worldClock: {fileID: 0}
   spawnerRef: {fileID: 0}
   targetTag: Cow
-  type: 0
   moveSpeed: 30
   rotationSpeed: 2
   flyHeight: 25
@@ -62,11 +61,8 @@ MonoBehaviour:
   abductionCompleteColor: {r: 1, g: 0, b: 0, a: 1}
   blinkCount: 5
   blinkSpeed: 0.09
-  sineAmplitude: 30
-  sineFrequency: 0.5
-  orbitRadius: 25
-  orbitDegPerSec: 15
-  spiralSpeed: 3
+  sineAmplitude: 200
+  sineFrequency: 0.1
   fallDelay: 2
 --- !u!1 &3038244231483023724
 GameObject:
