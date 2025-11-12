@@ -3059,6 +3059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NightEndUI_
       objectReference: {fileID: 0}
+    - target: {fileID: 7989218418195254382, guid: 168eaf13f8d7d0446ad2c5f3f1991482, type: 3}
+      propertyPath: worldClock
+      value: 
+      objectReference: {fileID: 839126273}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3153,7 +3157,7 @@ PrefabInstance:
       objectReference: {fileID: 1743334687}
     - target: {fileID: 5191016947243865302, guid: 70cb8173e9229d648b66859e5d620ca7, type: 3}
       propertyPath: ufoCountPerWave
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6197741625943160652, guid: 70cb8173e9229d648b66859e5d620ca7, type: 3}
       propertyPath: abductionIcon
