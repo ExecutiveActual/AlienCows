@@ -5,11 +5,14 @@ using UnityEngine.Events;
 public class WeaponHeld : ItemHeld
 {
 
+    PlayerController_Camera cameraController;
 
 
-    // ————————————————————————————
-    // Unity Events
-    // ————————————————————————————
+    [Header("Stats")]
+
+    [SerializeField] protected float aimFOV = 60f;
+
+
 
     [Header("Input Events")]
 
@@ -54,28 +57,34 @@ public class WeaponHeld : ItemHeld
 
     protected virtual void Fire()
     {
-        Debug.Log($"<color=red>[{ItemName}] BANG!</color>");
+        //Debug.Log($"<color=red>[{ItemName}] BANG!</color>");
         // Add: spawn bullet, play sound, recoil, etc.
         UE_OnFire?.Invoke();
     }
 
     protected virtual void StartAiming()
     {
-        Debug.Log($"<color=yellow>[{ItemName}] Aiming down sights...</color>");
+        //Debug.Log($"<color=yellow>[{ItemName}] Aiming down sights...</color>");
         // Add: FOV zoom, sway reduction, ADS animation
+
+        playerController.GetComponent<PlayerController_Camera>().SetCameraFOV(aimFOV);
+
         UE_OnAim_Start?.Invoke();
     }
 
     protected virtual void StopAiming()
     {
-        Debug.Log($"<color=yellow>[{ItemName}] Stopped aiming.</color>");
+        //Debug.Log($"<color=yellow>[{ItemName}] Stopped aiming.</color>");
         // Add: reset FOV, re-enable hipfire
+
+        playerController.GetComponent<PlayerController_Camera>().ResetCameraFOV();
+
         UE_OnAim_Stop?.Invoke();
     }
 
     protected virtual void Reload()
     {
-        Debug.Log($"<color=orange>[{ItemName}] Reloading...</color>");
+        //Debug.Log($"<color=orange>[{ItemName}] Reloading...</color>");
         // Add: play reload anim, refill ammo
         UE_OnReload?.Invoke();
     }

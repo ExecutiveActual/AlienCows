@@ -31,14 +31,7 @@ public class HealthManager : MonoBehaviour
         if (isDead)
             return;
 
-        if (Health_Current <= 0f)
-        {
-            if (!isDead)
-            {
-                Death();
-            }
-            return;
-        }
+        
 
 
         if (amount > Health_Current)
@@ -51,6 +44,14 @@ public class HealthManager : MonoBehaviour
         {
             Health_Current -= amount;
             //Debug.Log($"{this}, took {amount} damage, health = {Health_Current}");
+        }
+
+        if (Health_Current <= 0f)
+        {
+            if (!isDead)
+            {
+                Death();
+            }
         }
 
         UE_OnTakeDamage?.Invoke(amount);
