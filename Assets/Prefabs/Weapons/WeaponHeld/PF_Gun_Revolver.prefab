@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHeld_SlerpGuide_Manager
   _SlerpGuide: {fileID: 0}
-  positionSmoothTime_Guide: 0.1
-  rotationSmoothTime_Guide: 0.1
+  positionSmoothTime_Guide: 0.012
+  rotationSmoothTime_Guide: 0.052
   UE_OnResetSlerpGuideTarget:
     m_PersistentCalls:
       m_Calls: []
@@ -295,8 +295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
   _SlerpTargetTransform: {fileID: 0}
-  positionSmoothTime: 0.15
-  rotationSmoothTime: 0.12
+  positionSmoothTime: 0.16
+  rotationSmoothTime: 0.21
 --- !u!114 &2700016756612899421
 MonoBehaviour:
   m_ObjectHideFlags: 0
