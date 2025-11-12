@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHeld_SlerpGuide_Manager
   _SlerpGuide: {fileID: 0}
-  positionSmoothTime_Guide: 0.012
-  rotationSmoothTime_Guide: 0.072
+  positionSmoothTime_Guide: 0.1
+  rotationSmoothTime_Guide: 0.1
   UE_OnResetSlerpGuideTarget:
     m_PersistentCalls:
       m_Calls: []
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DumbSlerpToTarget
   _SlerpTargetTransform: {fileID: 0}
-  positionSmoothTime: 0.072
+  positionSmoothTime: 0.15
   rotationSmoothTime: 0.12
 --- !u!114 &2700016756612899421
 MonoBehaviour:
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RaycastShooting
   bulletSpawner: {fileID: 6421166937678293903}
-  damage: 20
+  damage: 36
 --- !u!1 &8888518328687754563
 GameObject:
   m_ObjectHideFlags: 0

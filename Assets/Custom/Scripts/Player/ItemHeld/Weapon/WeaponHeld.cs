@@ -67,7 +67,7 @@ public class WeaponHeld : ItemHeld
         //Debug.Log($"<color=yellow>[{ItemName}] Aiming down sights...</color>");
         // Add: FOV zoom, sway reduction, ADS animation
 
-        playerController.GetComponent<PlayerController_Camera>().SetCameraFOV(aimFOV);
+        //playerController.GetComponent<PlayerController_Camera>().SetCameraFOV(aimFOV);
 
         UE_OnAim_Start?.Invoke();
     }
@@ -77,7 +77,7 @@ public class WeaponHeld : ItemHeld
         //Debug.Log($"<color=yellow>[{ItemName}] Stopped aiming.</color>");
         // Add: reset FOV, re-enable hipfire
 
-        playerController.GetComponent<PlayerController_Camera>().ResetCameraFOV();
+        //playerController.GetComponent<PlayerController_Camera>().ResetCameraFOV();
 
         UE_OnAim_Stop?.Invoke();
     }
