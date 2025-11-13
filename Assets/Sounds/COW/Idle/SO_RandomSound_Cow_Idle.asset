@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf7851a327a6144823b101e89ad065, type: 3}
+  m_Name: SO_RandomSound_Cow_Idle
+  m_EditorClassIdentifier: Assembly-CSharp::SO_RandomSound
+  soundClip:
+  - {fileID: 8300000, guid: afb3d73423aad754daedce8a53482089, type: 3}
+  - {fileID: 8300000, guid: b1f384913c234c04eb8ec491921c2b84, type: 3}
+  - {fileID: 8300000, guid: 2b0ce7707889cd0468fb9c7aebfaa69a, type: 3}
+  - {fileID: 8300000, guid: 03cd3133fd6b13247833231fced2bee1, type: 3}
