@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Cow
+  - Bale
   layers:
   - Default
   - TransparentFX
