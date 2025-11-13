@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf7851a327a6144823b101e89ad065, type: 3}
+  m_Name: SO_RandomSound_CombatRifle_Fire
+  m_EditorClassIdentifier: Assembly-CSharp::SO_RandomSound
+  soundClip:
+  - {fileID: 8300000, guid: 6bc3385bd9443904dac0323e8ad80a98, type: 3}
+  - {fileID: 8300000, guid: b36e14da78412c84887b2c86feb5b2a8, type: 3}
+  - {fileID: 8300000, guid: 0e4aca26ad1a4b849ab4bd8dfb336949, type: 3}
+  - {fileID: 8300000, guid: 04ce4e2015831c444b44daac5ffdae72, type: 3}

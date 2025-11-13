@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf7851a327a6144823b101e89ad065, type: 3}
+  m_Name: SO_RandomSound_Shotgun_Fire
+  m_EditorClassIdentifier: Assembly-CSharp::SO_RandomSound
+  soundClip:
+  - {fileID: 8300000, guid: 7b2503b6768e4d5469a5a8f93900bff6, type: 3}
+  - {fileID: 8300000, guid: 6cd27cd56ba56f242b6fa75c6078c354, type: 3}
+  - {fileID: 8300000, guid: 9ade067f6489dc049b4eba9d537ab31b, type: 3}
+  - {fileID: 8300000, guid: d32dfba145351614abc1a02b533fc832, type: 3}

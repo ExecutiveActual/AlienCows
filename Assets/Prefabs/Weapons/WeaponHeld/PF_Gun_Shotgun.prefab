@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 8793236424294674}
   - component: {fileID: 4219656829207108906}
   - component: {fileID: 2151535368951598486}
+  - component: {fileID: -9160570948531534869}
   m_Layer: 0
   m_Name: PF_Gun_Shotgun
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   UE_OnDeinitialize:
     m_PersistentCalls:
       m_Calls: []
+  aimFOV: 60
   UE_OnFire:
     m_PersistentCalls:
       m_Calls: []
@@ -355,3 +357,17 @@ MonoBehaviour:
   damage_PerPellet: 12
   pellet_Count: 12
   spread_Angle: 4.5
+--- !u!114 &-9160570948531534869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7038711545652265243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9026397e75c2fc741a8f37946863de7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gun_SoundController
+  sound_Fire: {fileID: 11400000, guid: 8fd7652b519f6ca49964ae4559a05336, type: 2}
+  sound_Reload: {fileID: 0}

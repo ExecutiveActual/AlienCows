@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 987890256592997540}
   - component: {fileID: 3027655538702533412}
   - component: {fileID: 8505605432020465626}
+  - component: {fileID: -1478950492339137666}
   m_Layer: 0
   m_Name: PF_Gun_CombatRifle
   m_TagString: Untagged
@@ -342,6 +343,7 @@ MonoBehaviour:
   UE_OnDeinitialize:
     m_PersistentCalls:
       m_Calls: []
+  aimFOV: 60
   UE_OnFire:
     m_PersistentCalls:
       m_Calls: []
@@ -466,3 +468,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RaycastShooting
   bulletSpawner: {fileID: 3787531977186559250}
   damage: 20
+--- !u!114 &-1478950492339137666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473129065887041491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9026397e75c2fc741a8f37946863de7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gun_SoundController
+  sound_Fire: {fileID: 11400000, guid: 10c6600d5b33c4240bceccea357ed901, type: 2}
+  sound_Reload: {fileID: 0}
