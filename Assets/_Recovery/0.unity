@@ -231,6 +231,7 @@ MonoBehaviour:
   notificationAudioSource: {fileID: 1330505140}
   notificationClip: {fileID: 8300000, guid: 321d0ed4c77e9f2479f8cfe440886adc, type: 3}
   notificationVolume: 1
+  soundMode: 0
   skyboxMaterial: {fileID: 2100000, guid: 7658d8fb603f2034aa74f34794b0d243, type: 2}
   sunLight: {fileID: 970161021}
   nightAtmosphereThickness: 0.095
