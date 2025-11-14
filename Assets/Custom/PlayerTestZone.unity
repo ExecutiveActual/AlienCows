@@ -278,6 +278,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
+      propertyPath: itemTable
+      value: 
+      objectReference: {fileID: 11400000, guid: 86c924c34d8c07340946c5ab71221975, type: 2}
+    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
+      propertyPath: weaponTable
+      value: 
+      objectReference: {fileID: 11400000, guid: 687b1be5f92ec3547bdd4564663e7e04, type: 2}
+    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
+      propertyPath: starterWeaponID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8790286996824375228, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
       propertyPath: m_Name
       value: PF_GameManager

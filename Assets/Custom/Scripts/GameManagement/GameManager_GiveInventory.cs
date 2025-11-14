@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 {
-    [SerializeField] private WeaponHeld starterWeapon;
+    //[SerializeField] private WeaponHeld starterWeapon;
+
+    [SerializeField] private int starterWeaponID;
+
+    [SerializeField] private SO_WeaponTable weaponTable;
+
+    [SerializeField] private SO_ItemTable itemTable;
 
 
     public WeaponHeld Weapon_1 { get; private set; }
@@ -22,24 +30,41 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
     // ----------------------------------------------------------------------
     // These should be used by the UI as the slots get items assigned to them
     // ----------------------------------------------------------------------
-    public void SetWeapon_1(WeaponHeld newWeapon)
+    public void SetWeapon_1(int newWeaponID)
     {
+        WeaponHeld newWeapon = weaponTable.GetWeaponFromID(newWeaponID);
+
+        if (newWeapon == null)
+        {
+            Debug.LogError($"GameManager_GiveInventory: SetWeapon_1 - No weapon found with ID {newWeaponID}");
+            
+            newWeapon = weaponTable.GetWeaponFromID(starterWeaponID);
+        }
         Weapon_1 = newWeapon;
+
     }
-    public void SetWeapon_2(WeaponHeld newWeapon)
+    public void SetWeapon_2(int newWeaponID)
     {
+        WeaponHeld newWeapon = weaponTable.GetWeaponFromID(newWeaponID);
+
         Weapon_2 = newWeapon;
     }
-    public void SetItem_3(ItemHeld newItem)
+    public void SetItem_3(int newItemID)
     {
+        ItemHeld newItem = itemTable.GetItemFromID(newItemID);
+
         Item_3 = newItem;
     }
-    public void SetItem_4(ItemHeld newItem)
+    public void SetItem_4(int newItemID)
     {
+        ItemHeld newItem = itemTable.GetItemFromID(newItemID);
+
         Item_4 = newItem;
     }
-    public void SetItem_5(ItemHeld newItem)
+    public void SetItem_5(int newItemID)
     {
+        ItemHeld newItem = itemTable.GetItemFromID(newItemID);
+
         Item_5 = newItem;
     }
 
@@ -64,7 +89,7 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 
         if (GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().Night_Curr == 1)
         {
-            Weapon_1 = starterWeapon;
+            SetWeapon_1(starterWeaponID);
 
             //Debug.Log($"GameManager_GiveInventory: Starter weapon assigned to Weapon_1 = {Weapon_1}");
         }
