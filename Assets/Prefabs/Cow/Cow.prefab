@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 5955898648448049601}
   - component: {fileID: 2220412803607503080}
   - component: {fileID: 709146053208929225}
+  - component: {fileID: 9158408967195148438}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -323,30 +324,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfb54e071a18d48a92766eca44ab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cow
+  worldClock: {fileID: 0}
+  debugText: {fileID: 7704472750114259039}
   wanderRadius: 10
   moveSpeed: 1.5
   targetThreshold: 0.5
-  grazingTime: 3
-  idleTime: 10
-  sleepTime: 2
-  moveProbability: 0.85
-  grazingClip: {fileID: 0}
-  idleClip: {fileID: 8300000, guid: afb3d73423aad754daedce8a53482089, type: 3}
-  sleepingClip: {fileID: 0}
-  movingClip: {fileID: 0}
-  OnGrazing:
+  idleProbability: 0.4
+  grazingProbability: 0.4
+  roamingProbability: 0.2
+  idleSound: {fileID: 0}
+  idleVolume: 1
+  grazingSound: {fileID: 0}
+  grazingVolume: 1
+  sleepSound: {fileID: 0}
+  sleepVolume: 1
+  roamingSound: {fileID: 0}
+  roamingVolume: 1
+  cowAudioSource: {fileID: 0}
+  OnCowSleep:
     m_PersistentCalls:
-      m_Calls: []
-  OnIdle:
+      m_Calls:
+      - m_Target: {fileID: 9158408967195148438}
+        m_TargetAssemblyTypeName: RandomTimerSound, Assembly-CSharp
+        m_MethodName: MuteSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCowGraze:
     m_PersistentCalls:
-      m_Calls: []
-  OnSleeping:
+      m_Calls:
+      - m_Target: {fileID: 9158408967195148438}
+        m_TargetAssemblyTypeName: RandomTimerSound, Assembly-CSharp
+        m_MethodName: MuteSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCowIdle:
     m_PersistentCalls:
-      m_Calls: []
-  OnMoving:
+      m_Calls:
+      - m_Target: {fileID: 9158408967195148438}
+        m_TargetAssemblyTypeName: RandomTimerSound, Assembly-CSharp
+        m_MethodName: UnmuteSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCowRoam:
     m_PersistentCalls:
-      m_Calls: []
-  debugText: {fileID: 7704472750114259039}
+      m_Calls:
+      - m_Target: {fileID: 9158408967195148438}
+        m_TargetAssemblyTypeName: RandomTimerSound, Assembly-CSharp
+        m_MethodName: UnmuteSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9158408967195148438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223580089623097671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2600adb4c8ebe84b8eed2463a86b698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomTimerSound
+  minInterval: 6
+  maxInterval: 9
+  sound: {fileID: 11400000, guid: b2255b0949684b94cbf4818da2a89fd8, type: 2}
 --- !u!1001 &7577002997747379405
 PrefabInstance:
   m_ObjectHideFlags: 0
