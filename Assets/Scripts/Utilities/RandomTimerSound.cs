@@ -16,6 +16,10 @@ public class RandomTimerSound : MonoBehaviour
 
     private AudioSource audioSource;
 
+
+    private bool canPlay = true;
+
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -54,8 +58,22 @@ public class RandomTimerSound : MonoBehaviour
             return;
         }
 
-        audioSource.PlayOneShot(sound.Value);
+
+        if (canPlay) audioSource.PlayOneShot(sound.Value);
     }
+
+
+    public void MuteSound()
+    {
+        canPlay = false;
+    }
+
+    public void UnmuteSound()
+    {
+        canPlay = true;
+    }
+
+
 
     // Optional: Visualize in editor
     private void OnValidate()
