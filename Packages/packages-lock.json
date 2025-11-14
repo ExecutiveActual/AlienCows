@@ -104,13 +104,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.postprocessing": {
-      "version": "https://github.com/Unity-Technologies/PostProcessing.git#v2",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "32c3155207d3fac4138b24af5c7e0e43805c6f2b"
-    },
     "com.unity.render-pipelines.core": {
       "version": "17.2.0",
       "depth": 1,

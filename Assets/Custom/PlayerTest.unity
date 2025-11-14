@@ -717,6 +717,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitZone
   damageMultiplier: 1
+--- !u!1 &1223379898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223379900}
+  - component: {fileID: 1223379899}
+  m_Layer: 0
+  m_Name: clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1223379899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223379898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7eed595f4654864d81dcbe83a325311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldClock_
+  preGameDelayAfterDelete: 0.5
+  nightDuration: 60
+  dayDuration: 60
+  totalNights: 15
+  nightNotificationMessages: []
+  notificationText: {fileID: 0}
+  typeSpeed: 0.04
+  deleteSpeed: 0.02
+  messageHoldTime: 1.5
+  notificationAudioSource: {fileID: 0}
+  notificationClip: {fileID: 0}
+  notificationVolume: 1
+  soundMode: 0
+  skyboxMaterial: {fileID: 2100000, guid: 7658d8fb603f2034aa74f34794b0d243, type: 2}
+  sunLight: {fileID: 376390673}
+  nightAtmosphereThickness: 0.15
+  dayAtmosphereThickness: 1
+  nightSunIntensity: 0.1
+  daySunIntensity: 1.2
+  transitionSpeed: 0.3
+--- !u!4 &1223379900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223379898}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 537.5536, y: 22.61812, z: 660.98303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767499541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,7 +2208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbfb54e071a18d48a92766eca44ab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cow
-  worldClock: {fileID: 0}
+  worldClock: {fileID: 1223379899}
   debugText: {fileID: 4182077962565584975}
   wanderRadius: 10
   moveSpeed: 1.5
@@ -2154,12 +2218,12 @@ MonoBehaviour:
   roamingProbability: 0.2
   idleSound: {fileID: 0}
   idleVolume: 1
-  grazingSound: {fileID: 0}
+  grazingSound: {fileID: 8300000, guid: 87e40dee0c999aa4faa7202509391093, type: 3}
   grazingVolume: 1
   sleepSound: {fileID: 0}
   sleepVolume: 1
   roamingSound: {fileID: 0}
-  roamingVolume: 1
+  roamingVolume: 0.317
   cowAudioSource: {fileID: 0}
   OnCowSleep:
     m_PersistentCalls:
@@ -2542,3 +2606,4 @@ SceneRoots:
   - {fileID: 4928506262732118231}
   - {fileID: 8027265774213047428}
   - {fileID: 163795180866202065}
+  - {fileID: 1223379900}

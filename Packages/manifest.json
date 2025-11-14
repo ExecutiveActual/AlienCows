@@ -7,7 +7,6 @@
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.inputsystem": "1.14.2",
     "com.unity.multiplayer.center": "1.0.0",
-    "com.unity.postprocessing": "https://github.com/Unity-Technologies/PostProcessing.git#v2",
     "com.unity.render-pipelines.universal": "17.2.0",
     "com.unity.shadergraph": "17.2.0",
     "com.unity.terrain-tools": "5.3.1",
