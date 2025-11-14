@@ -93,7 +93,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795210381082769277}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -13.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   _sprintSpeed: 7.2
   _jumpHeight: 1.6
   groundCheck: {fileID: 314691339850440783}
-  groundDistance: 0.012
+  groundDistance: 0.1
   groundMask:
     serializedVersion: 2
     m_Bits: 64
