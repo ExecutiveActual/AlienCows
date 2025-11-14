@@ -99,7 +99,11 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+<<<<<<< Updated upstream
     - _AtmosphereThickness: 0.095
+=======
+    - _AtmosphereThickness: 1
+>>>>>>> Stashed changes
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
