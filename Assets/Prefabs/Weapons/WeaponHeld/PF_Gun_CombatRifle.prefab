@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Recoil
   recoilX: 1.6
-  recoilY: -10
+  recoilY: -7
   recoilZ: -0.09
 --- !u!114 &3027655538702533412
 MonoBehaviour:
