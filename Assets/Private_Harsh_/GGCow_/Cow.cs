@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine.Events;
 using System.Collections;
 
-public class CowIntelligence_ : MonoBehaviour
+public class Cow : MonoBehaviour
 {
     [Header("World & Debug")]
     public WorldClock_ worldClock; // Reference to your world clock
