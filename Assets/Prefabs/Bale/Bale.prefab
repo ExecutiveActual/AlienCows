@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e58cb4b56ebc02d4a936c90f55f2053b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: dc5d66b8ce787014da22576cd7d1c40c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9e64a758678463e40a8258a3e551b589, type: 2}
     - target: {fileID: 919132149155446097, guid: e58cb4b56ebc02d4a936c90f55f2053b, type: 3}
       propertyPath: m_Name
       value: Bale
