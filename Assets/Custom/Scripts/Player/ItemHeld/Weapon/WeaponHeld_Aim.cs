@@ -12,6 +12,11 @@ public class WeaponHeld_Aim : MonoBehaviour
 
     private ItemHeld_SlerpGuide_Manager slerpGuide_Manager;
 
+    private Camera_ControllerFOV camera_ControllerFOV;
+
+
+    [SerializeField] private float aimFOV = 60f;
+
 
     public bool isAiming { get; private set; }
 
@@ -23,6 +28,8 @@ public class WeaponHeld_Aim : MonoBehaviour
         gunController = GetComponent<GunController>();
 
         slerpGuide_Manager = GetComponent<ItemHeld_SlerpGuide_Manager>();
+
+        camera_ControllerFOV = GetComponentInParent<Camera_ControllerFOV>();
 
     }
 
@@ -60,6 +67,9 @@ public class WeaponHeld_Aim : MonoBehaviour
             if (!isAiming)
             {
                 slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
+
+                camera_ControllerFOV.SetFOV(aimFOV);
+
                 isAiming = true;
             }
         }
@@ -71,6 +81,9 @@ public class WeaponHeld_Aim : MonoBehaviour
         if (isAiming)
         {
             slerpGuide_Manager.ResetSlerpGuideTarget();
+
+            camera_ControllerFOV.ResetFOV();
+
             isAiming = false;
         }
     }

@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &537827122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2555398673316276369, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
+  m_PrefabInstance: {fileID: 2614586683869457982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &877875759
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +429,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2555398673316276369, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2614586683869457991}
   m_SourcePrefab: {fileID: 100100000, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
 --- !u!114 &2614586683869457983 stripped
 MonoBehaviour:
@@ -442,12 +450,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3869564120663110219, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
   m_PrefabInstance: {fileID: 2614586683869457982}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 537827122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ad4261ab41c75a49a88ece9b32b794c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera_HandSlotManager
+--- !u!114 &2614586683869457991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537827122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545080ce33938134f9322f4e6b4bf0a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Camera_ControllerFOV
+  smoothTime: 0.3
+  minFOV: 20
+  maxFOV: 100
 --- !u!1001 &6412907347899007224
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,12 +8,6 @@ public class WeaponHeld : ItemHeld
     PlayerController_Camera cameraController;
 
 
-    [Header("Stats")]
-
-    [SerializeField] protected float aimFOV = 60f;
-
-
-
     [Header("Input Events")]
 
     public UnityEvent UE_OnFire;
@@ -67,17 +61,13 @@ public class WeaponHeld : ItemHeld
         //Debug.Log($"<color=yellow>[{ItemName}] Aiming down sights...</color>");
         // Add: FOV zoom, sway reduction, ADS animation
 
-        //playerController.GetComponent<PlayerController_Camera>().SetCameraFOV(aimFOV);
-
         UE_OnAim_Start?.Invoke();
     }
 
     protected virtual void StopAiming()
     {
         //Debug.Log($"<color=yellow>[{ItemName}] Stopped aiming.</color>");
-        // Add: reset FOV, re-enable hipfire
-
-        //playerController.GetComponent<PlayerController_Camera>().ResetCameraFOV();
+        // Add: reset FOV, re-enable hipfire 
 
         UE_OnAim_Stop?.Invoke();
     }
@@ -86,6 +76,9 @@ public class WeaponHeld : ItemHeld
     {
         //Debug.Log($"<color=orange>[{ItemName}] Reloading...</color>");
         // Add: play reload anim, refill ammo
+
+        StopAiming(); // Typically, aiming is canceled when reloading
+
         UE_OnReload?.Invoke();
     }
 }
