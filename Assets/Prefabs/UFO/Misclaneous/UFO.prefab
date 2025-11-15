@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_Abduction
   beamSpot: {fileID: 953907453412188117}
-  beamVisual: {fileID: 5163227189907976194, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+  beamVisual: {fileID: 0}
   abductionTime: 10
   liftHeight: 10
   rotateDuringAbduction: 1
