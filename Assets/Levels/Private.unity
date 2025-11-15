@@ -760,6 +760,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 833162227}
+  - {fileID: 1731037692}
+  - {fileID: 954878489}
+  - {fileID: 1225622189}
+  - {fileID: 570504028}
   m_Father: {fileID: 1761610148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145027887
@@ -3041,6 +3045,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551194414}
   m_CullTransparentMesh: 1
+--- !u!1 &570504027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 570504028}
+  m_Layer: 0
+  m_Name: 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &570504028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570504027}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -267, y: 145, z: -344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130603896}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &578292366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4504,6 +4539,7 @@ RectTransform:
   - {fileID: 1184845466}
   - {fileID: 1131503321}
   - {fileID: 1857715937}
+  - {fileID: 1285416368}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4738,6 +4774,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &954878488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954878489}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954878489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954878488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 357, y: 145, z: -344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130603896}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970161020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,7 +5714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1131503321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6141,6 +6208,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220750719}
   m_CullTransparentMesh: 1
+--- !u!1 &1225622188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225622189}
+  m_Layer: 0
+  m_Name: 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225622189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225622188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -220, y: 145, z: 304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130603896}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1228354122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
@@ -6503,6 +6601,67 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &1285416366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285416368}
+  - component: {fileID: 1285416367}
+  m_Layer: 5
+  m_Name: UFOUI_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1285416367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285416366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873abb23389b9b4458f87d5e6289ece8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UFO_UI_Manager
+  waveText: {fileID: 0}
+  ufosDownText: {fileID: 0}
+  ufosFledText: {fileID: 0}
+  cowsLostText: {fileID: 0}
+  moneyText: {fileID: 0}
+  resultPanel: {fileID: 0}
+  resultMoney: {fileID: 0}
+  resultDown: {fileID: 0}
+  resultFled: {fileID: 0}
+  resultCows: {fileID: 0}
+  resultDelay: 1
+  toastPrefab: {fileID: 0}
+  toastParent: {fileID: 0}
+--- !u!224 &1285416368
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285416366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 926648288}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1304582702
 GameObject:
   m_ObjectHideFlags: 0
@@ -9081,6 +9240,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712136905}
   m_CullTransparentMesh: 1
+--- !u!1 &1731037691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731037692}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1731037692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731037691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 352, y: 145, z: 257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 130603896}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1734399073
 GameObject:
   m_ObjectHideFlags: 0
@@ -9386,39 +9576,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1761610147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1394b66c490b0e047acf176c31f76e71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f280c39e78d7c7468aea6225cf59258, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOSpawner
+  m_EditorClassIdentifier: Assembly-CSharp::UFO_Spawner
   worldClock: {fileID: 446169013}
-  spawnPoints:
-  - {fileID: 833162227}
-  ufoPrefab: {fileID: 203826378746668011, guid: d986f22cb3af9494193b17d92e5c7d05, type: 3}
+  saucerPrefab: {fileID: 8382659703506313165, guid: edf78488edd77b1419bc551fe8546203, type: 3}
   dronePrefab: {fileID: 0}
   bossPrefab: {fileID: 0}
+  spawnPoints:
+  - {fileID: 833162227}
+  - {fileID: 1731037692}
+  - {fileID: 954878489}
+  - {fileID: 1225622189}
+  - {fileID: 570504028}
+  maxActiveUFOs: 20
   waves:
-  - ufoCount: 1
+  - saucerCount: 5
     droneCount: 0
     bossCount: 0
-    label: Wave 1
-  timeBetweenSpawns: 0.25
-  autoStartOnNight: 1
-  showDebugLogs: 0
-  onWaveStarted:
+    timeBetweenSpawns: 1
+    initialDelay: 0
+  moneyPerUFODestroyed: 50
+  cleanupDelayAfterNight: 2
+  uiManager: {fileID: 1285416367}
+  OnWaveStart:
     m_PersistentCalls:
       m_Calls: []
-  onWaveEnded:
+  OnWaveEnd:
     m_PersistentCalls:
       m_Calls: []
-  onEnemySpawned:
-    m_PersistentCalls:
-      m_Calls: []
-  onAllEnemiesEliminated:
-    m_PersistentCalls:
-      m_Calls: []
-  onBossAppeared:
-    m_PersistentCalls:
-      m_Calls: []
-  onAliveCountChanged:
+  OnAllUFOsCleared:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1771448963
