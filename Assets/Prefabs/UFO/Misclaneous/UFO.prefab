@@ -350,7 +350,7 @@ MonoBehaviour:
   rotateSpeed: 120
   dropForce: 3
   restartDelayAfterInterrupt: 2
-  abductionLoop: {fileID: 0}
+  abductionLoop: {fileID: 8300000, guid: 091b20f7473084542ad358b8e77f7c4e, type: 3}
   abductionVolume: 1
   OnCowAbducted:
     m_PersistentCalls:
@@ -404,9 +404,9 @@ MonoBehaviour:
   cowTag: Cow
   giveUpTimeout: 20
   fleeHealthThreshold: 0.3
-  moveLoopClip: {fileID: 0}
+  moveLoopClip: {fileID: 8300000, guid: fb6f928901525f04da76389a304a51ec, type: 3}
   moveLoopVolume: 1
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: d0b88b1aa818d964eb9f2fab059a045c, type: 3}
   deathVolume: 1
   OnReachedCow:
     m_PersistentCalls:
