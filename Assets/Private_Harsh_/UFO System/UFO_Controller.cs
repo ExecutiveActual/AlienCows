@@ -43,7 +43,7 @@ public class UFO_Controller : MonoBehaviour
     public UFOControllerEvent OnUFOFinished;
     public UFOControllerEvent OnCowAbducted;
 
-    // internal
+    // Internal
     private Transform currentCow;
     private Vector3 spawnPos;
     private float phase;
@@ -60,7 +60,9 @@ public class UFO_Controller : MonoBehaviour
 
     void Awake()
     {
-        spawnPos = transform.position;
+        // FIX: Spawn pos now uses the same Y level that UFO flies at (fixedY).
+        spawnPos = new Vector3(transform.position.x, fixedY, transform.position.z);
+
         phase = Random.Range(0f, Mathf.PI * 2f);
 
         abductor = GetComponent<UFO_Abduction>();
@@ -117,6 +119,7 @@ public class UFO_Controller : MonoBehaviour
             {
                 t += Time.deltaTime;
                 Hover();
+
                 if (t >= giveUpTimeout && !isAbducting)
                 {
                     ForceFleeToSpawnAndSelfDestruct();
@@ -192,6 +195,7 @@ public class UFO_Controller : MonoBehaviour
             reservedCows.Remove(currentCow);
             currentCow = null;
         }
+
         isAbducting = false;
 
         StartCoroutine(ReturnToSpawn());
@@ -201,18 +205,22 @@ public class UFO_Controller : MonoBehaviour
     {
         isReturning = true;
 
-        while (Vector3.Distance(transform.position, spawnPos) > 0.5f)
+        // FIX: Prevent zigzag movement during return
+        while (Vector3.Distance(transform.position, spawnPos) > 1f)
         {
             Vector3 dir = (spawnPos - transform.position).normalized;
             transform.position += dir * forwardSpeed * returnSpeedMultiplier * Time.deltaTime;
+
             transform.position = new Vector3(transform.position.x, fixedY, transform.position.z);
+
             yield return null;
         }
+
+        transform.position = spawnPos; // ensure perfect alignment
 
         OnUFOFinished?.Invoke(this);
         Destroy(gameObject);
     }
-
 
     // --------------------------------------------------------------
     public void ForceFleeToSpawnAndSelfDestruct()
@@ -229,7 +237,6 @@ public class UFO_Controller : MonoBehaviour
         OnUFOFled?.Invoke(this);
         StartCoroutine(ReturnToSpawn());
     }
-
 
     // --------------------------------------------------------------
     void OnDamaged(float amt)

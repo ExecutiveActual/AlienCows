@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
+    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: m_TagString
+      value: Cow
+      objectReference: {fileID: 0}
     - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -1202,6 +1206,10 @@ PrefabInstance:
     - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_Name
       value: Cow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: m_TagString
+      value: Cow
       objectReference: {fileID: 0}
     - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_LocalScale.x
@@ -2349,6 +2357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: m_TagString
+      value: Cow
+      objectReference: {fileID: 0}
     - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2561,8 +2573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldClock_
   preGameDelayAfterDelete: 0.5
-  nightDuration: 5
-  dayDuration: 15
+  nightDuration: 30
+  dayDuration: 5
   totalNights: 15
   nightNotificationMessages:
   - This is your first night out there. Keep your eyes on the fields
@@ -3459,6 +3471,10 @@ PrefabInstance:
     - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_Name
       value: Cow (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: m_TagString
+      value: Cow
       objectReference: {fileID: 0}
     - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_LocalScale.x
@@ -7788,6 +7804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: m_TagString
+      value: Cow
+      objectReference: {fileID: 0}
     - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -8452,6 +8472,10 @@ PrefabInstance:
     - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_Name
       value: Cow (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: m_TagString
+      value: Cow
       objectReference: {fileID: 0}
     - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: m_LocalScale.x
@@ -9580,7 +9604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_Spawner
   worldClock: {fileID: 446169013}
-  saucerPrefab: {fileID: 8382659703506313165, guid: edf78488edd77b1419bc551fe8546203, type: 3}
+  saucerPrefab: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
   dronePrefab: {fileID: 0}
   bossPrefab: {fileID: 0}
   spawnPoints:
@@ -11170,6 +11194,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+--- !u!1001 &8063334284469732454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 485.76184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.12733
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 430.31708
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393736792265258768, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163227189907976194, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_Name
+      value: empty shit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5163227189907976194, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86d1cbf7b9bc19d428acecb3a0d85e61, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -11185,3 +11270,4 @@ SceneRoots:
   - {fileID: 6741260147473038147}
   - {fileID: 2758912047408443890}
   - {fileID: 578292366}
+  - {fileID: 8063334284469732454}
