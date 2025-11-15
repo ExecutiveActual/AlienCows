@@ -440,6 +440,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: idleVolume
+      value: 0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamRadius
       value: 14.29
       objectReference: {fileID: 0}
@@ -463,6 +467,14 @@ PrefabInstance:
       propertyPath: roamingSound
       value: 
       objectReference: {fileID: 8300000, guid: a1b2967bd6c27864791d01536ec0768a, type: 3}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: grazingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: roamingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: cowAudioSource
       value: 
@@ -583,6 +595,135 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+--- !u!1 &49350775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49350776}
+  - component: {fileID: 49350777}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &49350776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49350775}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 539.8291, y: 7.37905, z: 673.47327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &49350777
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49350775}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &105514151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1261,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: idleVolume
+      value: 0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamRadius
       value: 14.29
       objectReference: {fileID: 0}
@@ -1143,6 +1288,14 @@ PrefabInstance:
       propertyPath: roamingSound
       value: 
       objectReference: {fileID: 8300000, guid: a1b2967bd6c27864791d01536ec0768a, type: 3}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: grazingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: roamingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: cowAudioSource
       value: 
@@ -1285,6 +1438,7 @@ GameObject:
   - component: {fileID: 315778702}
   - component: {fileID: 315778701}
   - component: {fileID: 315778700}
+  - component: {fileID: 315778703}
   m_Layer: 5
   m_Name: 'Settings '
   m_TagString: Untagged
@@ -1368,6 +1522,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &315778701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,6 +1572,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315778698}
   m_CullTransparentMesh: 1
+--- !u!114 &315778703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315778698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &330734165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2204,7 @@ GameObject:
   - component: {fileID: 394108552}
   - component: {fileID: 394108551}
   - component: {fileID: 394108550}
+  - component: {fileID: 394108553}
   m_Layer: 5
   m_Name: View Collection
   m_TagString: Untagged
@@ -2076,6 +2288,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394108551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2114,6 +2338,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394108548}
   m_CullTransparentMesh: 1
+--- !u!114 &394108553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394108548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &426125214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,7 +2496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: idleVolume
-      value: 0.646
+      value: 0.032
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamRadius
@@ -2259,11 +2528,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a1b2967bd6c27864791d01536ec0768a, type: 3}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: grazingVolume
-      value: 0.759
+      value: 0.037
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamingVolume
-      value: 0.492
+      value: 0.037
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: cowAudioSource
@@ -2720,6 +2989,7 @@ GameObject:
   - component: {fileID: 541200589}
   - component: {fileID: 541200588}
   - component: {fileID: 541200587}
+  - component: {fileID: 541200590}
   m_Layer: 5
   m_Name: Back To Main Menu
   m_TagString: Untagged
@@ -2841,6 +3111,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541200585}
   m_CullTransparentMesh: 1
+--- !u!114 &541200590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541200585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &551194414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,6 +3564,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: idleVolume
+      value: 0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamRadius
       value: 14.29
       objectReference: {fileID: 0}
@@ -3272,6 +3591,14 @@ PrefabInstance:
       propertyPath: roamingSound
       value: 
       objectReference: {fileID: 8300000, guid: a1b2967bd6c27864791d01536ec0768a, type: 3}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: grazingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: roamingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: cowAudioSource
       value: 
@@ -3573,6 +3900,7 @@ GameObject:
   - component: {fileID: 761056199}
   - component: {fileID: 761056198}
   - component: {fileID: 761056197}
+  - component: {fileID: 761056200}
   m_Layer: 5
   m_Name: BackToMainMenuButton_
   m_TagString: Untagged
@@ -3644,7 +3972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1131503322}
         m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: OpenPauseMenu
         m_Mode: 1
@@ -3694,6 +4022,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761056195}
   m_CullTransparentMesh: 1
+--- !u!114 &761056200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761056195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &804436418
 GameObject:
   m_ObjectHideFlags: 0
@@ -5496,7 +5869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1131503321
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5535,9 +5908,9 @@ MonoBehaviour:
   settingsGameManager: {fileID: 1064716366}
   viewCollectionsManager: {fileID: 1219292050}
   mainMenuSceneName: MainMenu_
-  uiAudioSource: {fileID: 0}
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  uiAudioSource: {fileID: 49350777}
+  hoverSound: {fileID: 8300000, guid: 7f577aad09f5ad8489bd96dfd5b76bac, type: 3}
+  clickSound: {fileID: 8300000, guid: 61c43e7771c87544ba8cdff4c74959b1, type: 3}
 --- !u!1 &1147515339
 GameObject:
   m_ObjectHideFlags: 0
@@ -6424,6 +6797,7 @@ GameObject:
   - component: {fileID: 1304582705}
   - component: {fileID: 1304582704}
   - component: {fileID: 1304582703}
+  - component: {fileID: 1304582706}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
@@ -6506,6 +6880,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1304582706
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304582702}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: ced5fb2feaf085543b67d3cc74826f57, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1316988495
 GameObject:
   m_ObjectHideFlags: 0
@@ -7390,6 +7861,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: idleVolume
+      value: 0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamRadius
       value: 14.29
       objectReference: {fileID: 0}
@@ -7413,6 +7888,14 @@ PrefabInstance:
       propertyPath: roamingSound
       value: 
       objectReference: {fileID: 8300000, guid: a1b2967bd6c27864791d01536ec0768a, type: 3}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: grazingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: roamingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: cowAudioSource
       value: 
@@ -7666,6 +8149,7 @@ GameObject:
   - component: {fileID: 1465376281}
   - component: {fileID: 1465376280}
   - component: {fileID: 1465376279}
+  - component: {fileID: 1465376282}
   m_Layer: 5
   m_Name: Resume Game
   m_TagString: Untagged
@@ -7749,6 +8233,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1465376280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7787,6 +8283,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465376277}
   m_CullTransparentMesh: 1
+--- !u!114 &1465376282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465376277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1131503322}
+          m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+          m_MethodName: PlayClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1478656729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8059,6 +8600,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: idleVolume
+      value: 0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: roamRadius
       value: 14.29
       objectReference: {fileID: 0}
@@ -8082,6 +8627,14 @@ PrefabInstance:
       propertyPath: roamingSound
       value: 
       objectReference: {fileID: 8300000, guid: a1b2967bd6c27864791d01536ec0768a, type: 3}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: grazingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      propertyPath: roamingVolume
+      value: 0.037
+      objectReference: {fileID: 0}
     - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       propertyPath: cowAudioSource
       value: 
@@ -10814,3 +11367,4 @@ SceneRoots:
   - {fileID: 6741260147473038147}
   - {fileID: 2758912047408443890}
   - {fileID: 578292366}
+  - {fileID: 49350776}
