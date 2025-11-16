@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UFO_UI_Manager : MonoBehaviour
@@ -25,19 +26,42 @@ public class UFO_UI_Manager : MonoBehaviour
     public GameObject toastPrefab;
     public Transform toastParent;
 
+    [Header("Blink Icons")]
+    public Image iconUFODown;
+    public Image iconUFOFled;
+    public Image iconCowLost;
+
+    public float blinkDuration = 0.4f;   // one blink cycle
+    public int blinkCount = 2;           // times to blink
+
+
     void Awake()
     {
         if (resultPanel) resultPanel.SetActive(false);
         if (waveText) waveText.gameObject.SetActive(false);
+
+        // make sure icons start hidden / transparent
+        InitIcon(iconUFODown);
+        InitIcon(iconUFOFled);
+        InitIcon(iconCowLost);
     }
 
+    void InitIcon(Image i)
+    {
+        if (i)
+        {
+            Color c = i.color;
+            c.a = 0;
+            i.color = c;
+        }
+    }
 
     // ------------------- WAVE UI -------------------
     public void ShowWaveStart(int night)
     {
         if (!waveText) return;
 
-        waveText.text = "Night " + night.ToString();
+        waveText.text = "Night " + night;
         waveText.gameObject.SetActive(true);
 
         StartCoroutine(HideWave());
@@ -49,24 +73,29 @@ public class UFO_UI_Manager : MonoBehaviour
         waveText.gameObject.SetActive(false);
     }
 
-
     // ------------------- LIVE UPDATES -------------------
     public void UpdateUFODownText(int count)
     {
         if (ufosDownText)
             ufosDownText.text = $"UFOs Down: x{count}";
+
+        Blink(iconUFODown);
     }
 
     public void UpdateUFOFledText(int count)
     {
         if (ufosFledText)
             ufosFledText.text = $"UFOs Fled: x{count}";
+
+        Blink(iconUFOFled);
     }
 
     public void UpdateCowsLostText(int count)
     {
         if (cowsLostText)
             cowsLostText.text = $"Cows Lost: x{count}";
+
+        Blink(iconCowLost);
     }
 
     public void UpdateMoneyText(int amt)
@@ -74,7 +103,6 @@ public class UFO_UI_Manager : MonoBehaviour
         if (moneyText)
             moneyText.text = "+" + amt.ToString() + "$";
     }
-
 
     // ------------------- RESULT PANEL -------------------
     public void ShowResultPanel(SpawnerResult r)
@@ -96,7 +124,6 @@ public class UFO_UI_Manager : MonoBehaviour
             if (resultCows) resultCows.text = "Cows Lost: " + r.cowsLost;
         }
     }
-
 
     // ------------------- TOAST -------------------
     public void ShowToast(string msg, float duration)
@@ -132,7 +159,7 @@ public class UFO_UI_Manager : MonoBehaviour
 
         yield return new WaitForSeconds(dur);
 
-        // typewriter reverse
+        // reverse typewriter
         for (int i = text.text.Length - 1; i >= 0; i--)
         {
             text.text = text.text.Substring(0, i);
@@ -149,5 +176,47 @@ public class UFO_UI_Manager : MonoBehaviour
         }
 
         Destroy(t);
+    }
+
+
+    // ------------------- ICON BLINK -------------------
+    void Blink(Image icon)
+    {
+        if (icon)
+            StartCoroutine(BlinkRoutine(icon));
+    }
+
+    IEnumerator BlinkRoutine(Image icon)
+    {
+        for (int b = 0; b < blinkCount; b++)
+        {
+            // fade in
+            float t = 0;
+            while (t < blinkDuration)
+            {
+                t += Time.deltaTime;
+                SetAlpha(icon, t / blinkDuration);
+                yield return null;
+            }
+
+            // fade out
+            t = 0;
+            while (t < blinkDuration)
+            {
+                t += Time.deltaTime;
+                SetAlpha(icon, 1 - (t / blinkDuration));
+                yield return null;
+            }
+        }
+
+        // end fully invisible
+        SetAlpha(icon, 0);
+    }
+
+    void SetAlpha(Image img, float a)
+    {
+        Color c = img.color;
+        c.a = a;
+        img.color = c;
     }
 }

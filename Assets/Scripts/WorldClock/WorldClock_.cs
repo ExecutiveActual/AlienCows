@@ -7,6 +7,7 @@ using System.Collections.Generic;
 /// Industrial-grade world clock that cycles through multiple nights and days.
 /// Each night is preceded by a PreGame session that displays a custom notification
 /// with typewriter-in and delete-out animations, plus an optional notification SFX.
+/// Now includes fade-in/out image indicator.
 /// </summary>
 public class WorldClock_ : MonoBehaviour
 {
@@ -18,9 +19,9 @@ public class WorldClock_ : MonoBehaviour
 
     public enum NotificationSoundMode
     {
-        PlayAtStart,   // Plays as soon as typing begins
-        PlayAtMid,     // Plays halfway through typing
-        PlayAtEnd      // Plays when the full message is typed
+        PlayAtStart,
+        PlayAtMid,
+        PlayAtEnd
     }
 
 
@@ -29,16 +30,9 @@ public class WorldClock_ : MonoBehaviour
     //===========================//
 
     [Header("Time Durations (Seconds)")]
-    [Tooltip("Time after delete animation before night gameplay starts.")]
     public float preGameDelayAfterDelete = 0.5f;
-
-    [Tooltip("Duration of each night phase.")]
     public float nightDuration = 60f;
-
-    [Tooltip("Duration of each day phase.")]
     public float dayDuration = 60f;
-
-    [Tooltip("Total number of playable nights before the cycle ends.")]
     public int totalNights = 15;
 
 
@@ -47,22 +41,25 @@ public class WorldClock_ : MonoBehaviour
     //===========================//
 
     [Header("Night Notifications")]
-    [Tooltip("Messages shown before each night. One entry per night.")]
     public List<string> nightNotificationMessages = new List<string>();
-
-    [Tooltip("TMP text element for showing notifications.")]
     public TMP_Text notificationText;
 
-    [Tooltip("Time between each letter appearing (in seconds).")]
     [Range(0.001f, 0.2f)]
     public float typeSpeed = 0.04f;
 
-    [Tooltip("Time between each letter being deleted (in seconds).")]
     [Range(0.001f, 0.2f)]
     public float deleteSpeed = 0.02f;
 
-    [Tooltip("Time message stays on-screen before deletion begins.")]
     public float messageHoldTime = 1.5f;
+
+
+    //===========================//
+    //     INDICATOR IMAGE       //
+    //===========================//
+
+    [Header("Typewriter Indicator Image (Fades In/Out)")]
+    public GameObject typeIndicatorImage;
+    public float indicatorFadeDuration = 0.35f; // public fade control
 
 
     //===========================//
@@ -70,17 +67,10 @@ public class WorldClock_ : MonoBehaviour
     //===========================//
 
     [Header("Notification Audio")]
-    [Tooltip("AudioSource used for notification playback.")]
     public AudioSource notificationAudioSource;
-
-    [Tooltip("Sound clip played once per message.")]
     public AudioClip notificationClip;
+    [Range(0f, 1f)] public float notificationVolume = 1f;
 
-    [Tooltip("Notification playback volume.")]
-    [Range(0f, 1f)]
-    public float notificationVolume = 1f;
-
-    [Tooltip("When the notification sound plays relative to typing animation.")]
     public NotificationSoundMode soundMode = NotificationSoundMode.PlayAtStart;
 
 
@@ -89,27 +79,15 @@ public class WorldClock_ : MonoBehaviour
     //===========================//
 
     [Header("Skybox & Lighting")]
-    [Tooltip("Skybox material for environment transitions.")]
     public Material skyboxMaterial;
-
-    [Tooltip("Directional light representing the sun.")]
     public Light sunLight;
 
-    [Tooltip("Atmosphere thickness at night (lower = thinner).")]
-    [Range(0f, 1f)]
-    public float nightAtmosphereThickness = 0.15f;
+    [Range(0f, 1f)] public float nightAtmosphereThickness = 0.15f;
+    [Range(0f, 1f)] public float dayAtmosphereThickness = 1f;
 
-    [Tooltip("Atmosphere thickness at day (higher = denser).")]
-    [Range(0f, 1f)]
-    public float dayAtmosphereThickness = 1f;
-
-    [Tooltip("Sunlight intensity at night.")]
     public float nightSunIntensity = 0.1f;
-
-    [Tooltip("Sunlight intensity at day.")]
     public float daySunIntensity = 1.2f;
 
-    [Tooltip("Speed of sky/lighting blend transitions.")]
     [Range(0.05f, 2f)]
     public float transitionSpeed = 0.3f;
 
@@ -118,13 +96,8 @@ public class WorldClock_ : MonoBehaviour
     //        STATE DATA         //
     //===========================//
 
-    [Tooltip("Current time session for external reference.")]
     public TimeSession currentSession { get; private set; }
-
-    [Tooltip("Current active night number.")]
     public int CurrentNight { get; private set; } = 0;
-
-    [Tooltip("True when all nights are complete.")]
     public bool IsGameComplete { get; private set; } = false;
 
     private Coroutine clockRoutine;
@@ -146,6 +119,9 @@ public class WorldClock_ : MonoBehaviour
             notificationText.color = c;
             notificationText.text = "";
         }
+
+        if (typeIndicatorImage != null)
+            typeIndicatorImage.SetActive(false);
 
         StartClock();
     }
@@ -214,8 +190,13 @@ public class WorldClock_ : MonoBehaviour
         currentSession = TimeSession.PreGame;
 
         string message = $"Night {nightIndex} - Stay Alert";
-        if (nightNotificationMessages != null && nightNotificationMessages.Count >= nightIndex && !string.IsNullOrEmpty(nightNotificationMessages[nightIndex - 1]))
+
+        if (nightNotificationMessages != null &&
+            nightNotificationMessages.Count >= nightIndex &&
+            !string.IsNullOrEmpty(nightNotificationMessages[nightIndex - 1]))
+        {
             message = nightNotificationMessages[nightIndex - 1];
+        }
 
         Debug.Log($"[WorldClock_] Pre-Game for Night {nightIndex}: \"{message}\"");
 
@@ -260,6 +241,7 @@ public class WorldClock_ : MonoBehaviour
 
         float startAtmos = 0f;
         bool hasAtmos = true;
+
         try { startAtmos = skyboxMaterial.GetFloat("_AtmosphereThickness"); }
         catch { hasAtmos = false; }
 
@@ -281,11 +263,50 @@ public class WorldClock_ : MonoBehaviour
 
 
     //===========================//
+    //    IMAGE FADE HELPERS     //
+    //===========================//
+
+    private IEnumerator FadeIndicator(bool fadeIn)
+    {
+        if (typeIndicatorImage == null)
+            yield break;
+
+        CanvasGroup cg = typeIndicatorImage.GetComponent<CanvasGroup>();
+
+        if (cg == null)
+        {
+            cg = typeIndicatorImage.AddComponent<CanvasGroup>();
+        }
+
+        typeIndicatorImage.SetActive(true);
+
+        float start = fadeIn ? 0f : 1f;
+        float end = fadeIn ? 1f : 0f;
+
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime / Mathf.Max(0.001f, indicatorFadeDuration);
+            cg.alpha = Mathf.Lerp(start, end, t);
+            yield return null;
+        }
+
+        cg.alpha = end;
+
+        if (!fadeIn)
+            typeIndicatorImage.SetActive(false);
+    }
+
+
+    //===========================//
     //       TYPEWRITER UI       //
     //===========================//
 
     private IEnumerator TypewriterIn(string message)
     {
+        StartCoroutine(FadeIndicator(true)); // fade-in indicator
+
         SetNotificationAlpha(1f);
         notificationText.text = "";
 
@@ -296,7 +317,7 @@ public class WorldClock_ : MonoBehaviour
         {
             notificationText.text += message[i];
 
-            // --- SOUND TIMING CONTROL ---
+            // SOUND
             if (!soundPlayed && notificationAudioSource != null && notificationClip != null)
             {
                 bool shouldPlay =
@@ -310,7 +331,6 @@ public class WorldClock_ : MonoBehaviour
                     soundPlayed = true;
                 }
             }
-            // ----------------------------
 
             yield return new WaitForSeconds(typeSpeed);
         }
@@ -323,9 +343,13 @@ public class WorldClock_ : MonoBehaviour
 
         while (notificationText.text.Length > 0)
         {
-            notificationText.text = notificationText.text.Substring(0, notificationText.text.Length - 1);
+            notificationText.text =
+                notificationText.text.Substring(0, notificationText.text.Length - 1);
+
             yield return new WaitForSeconds(deleteSpeed);
         }
+
+        StartCoroutine(FadeIndicator(false)); // fade-out indicator
 
         StartCoroutine(FadeOutNotification(0.2f));
         yield return new WaitForSeconds(0.2f);
@@ -355,9 +379,9 @@ public class WorldClock_ : MonoBehaviour
     {
         if (notificationText == null)
             return;
+
         Color c = notificationText.color;
         c.a = alpha;
         notificationText.color = c;
     }
 }
-
