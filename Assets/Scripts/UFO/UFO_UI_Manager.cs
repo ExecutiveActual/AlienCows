@@ -31,16 +31,20 @@ public class UFO_UI_Manager : MonoBehaviour
     public Image iconUFOFled;
     public Image iconCowLost;
 
-    public float blinkDuration = 0.4f;   // one blink cycle
-    public int blinkCount = 2;           // times to blink
+    public float blinkDuration = 0.4f;  
+    public int blinkCount = 2;
 
+    // -------- Internal Counters (for accurate results panel) --------
+    int rt_UFODown = 0;
+    int rt_UFOFled = 0;
+    int rt_CowsLost = 0;
+    int rt_Money = 0;
 
     void Awake()
     {
         if (resultPanel) resultPanel.SetActive(false);
         if (waveText) waveText.gameObject.SetActive(false);
 
-        // make sure icons start hidden / transparent
         InitIcon(iconUFODown);
         InitIcon(iconUFOFled);
         InitIcon(iconCowLost);
@@ -56,7 +60,7 @@ public class UFO_UI_Manager : MonoBehaviour
         }
     }
 
-    // ------------------- WAVE UI -------------------
+    // ------------------- WAVE -------------------
     public void ShowWaveStart(int night)
     {
         if (!waveText) return;
@@ -76,6 +80,8 @@ public class UFO_UI_Manager : MonoBehaviour
     // ------------------- LIVE UPDATES -------------------
     public void UpdateUFODownText(int count)
     {
+        rt_UFODown = count;
+
         if (ufosDownText)
             ufosDownText.text = $"UFOs Down: x{count}";
 
@@ -84,6 +90,8 @@ public class UFO_UI_Manager : MonoBehaviour
 
     public void UpdateUFOFledText(int count)
     {
+        rt_UFOFled = count;
+
         if (ufosFledText)
             ufosFledText.text = $"UFOs Fled: x{count}";
 
@@ -92,6 +100,8 @@ public class UFO_UI_Manager : MonoBehaviour
 
     public void UpdateCowsLostText(int count)
     {
+        rt_CowsLost = count;
+
         if (cowsLostText)
             cowsLostText.text = $"Cows Lost: x{count}";
 
@@ -100,6 +110,8 @@ public class UFO_UI_Manager : MonoBehaviour
 
     public void UpdateMoneyText(int amt)
     {
+        rt_Money = amt;
+
         if (moneyText)
             moneyText.text = "+" + amt.ToString() + "$";
     }
@@ -118,10 +130,11 @@ public class UFO_UI_Manager : MonoBehaviour
         {
             resultPanel.SetActive(true);
 
-            if (resultMoney) resultMoney.text = "+$" + r.moneyGained;
-            if (resultDown) resultDown.text = "UFOs Down: " + r.ufosKilled;
-            if (resultFled) resultFled.text = "UFOs Fled: " + r.ufosFled;
-            if (resultCows) resultCows.text = "Cows Lost: " + r.cowsLost;
+            // use REAL-TIME values instead of r values
+            if (resultMoney) resultMoney.text = "+$" + rt_Money;
+            if (resultDown) resultDown.text = "UFOs Down: " + rt_UFODown;
+            if (resultFled) resultFled.text = "UFOs Fled: " + rt_UFOFled;
+            if (resultCows) resultCows.text = "Cows Lost: " + rt_CowsLost;
         }
     }
 
@@ -140,7 +153,6 @@ public class UFO_UI_Manager : MonoBehaviour
 
         if (g) g.alpha = 0;
 
-        // fade in
         float a = 0;
         while (a < 1)
         {
@@ -149,7 +161,6 @@ public class UFO_UI_Manager : MonoBehaviour
             yield return null;
         }
 
-        // typewriter
         text.text = "";
         foreach (char c in msg)
         {
@@ -159,14 +170,12 @@ public class UFO_UI_Manager : MonoBehaviour
 
         yield return new WaitForSeconds(dur);
 
-        // reverse typewriter
         for (int i = text.text.Length - 1; i >= 0; i--)
         {
             text.text = text.text.Substring(0, i);
             yield return new WaitForSeconds(0.015f);
         }
 
-        // fade out
         a = 1;
         while (a > 0)
         {
@@ -177,7 +186,6 @@ public class UFO_UI_Manager : MonoBehaviour
 
         Destroy(t);
     }
-
 
     // ------------------- ICON BLINK -------------------
     void Blink(Image icon)
@@ -190,7 +198,6 @@ public class UFO_UI_Manager : MonoBehaviour
     {
         for (int b = 0; b < blinkCount; b++)
         {
-            // fade in
             float t = 0;
             while (t < blinkDuration)
             {
@@ -199,7 +206,6 @@ public class UFO_UI_Manager : MonoBehaviour
                 yield return null;
             }
 
-            // fade out
             t = 0;
             while (t < blinkDuration)
             {
@@ -209,7 +215,6 @@ public class UFO_UI_Manager : MonoBehaviour
             }
         }
 
-        // end fully invisible
         SetAlpha(icon, 0);
     }
 
