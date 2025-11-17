@@ -15740,7 +15740,7 @@ PrefabInstance:
       objectReference: {fileID: 3335782784822194121}
     - target: {fileID: 4567836483396353737, guid: 0e40a012ebfb0d247a4e4016653bb97f, type: 3}
       propertyPath: dayDuration
-      value: 35
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4567836483396353737, guid: 0e40a012ebfb0d247a4e4016653bb97f, type: 3}
       propertyPath: dayTitleText
@@ -15764,7 +15764,7 @@ PrefabInstance:
       objectReference: {fileID: 2035547190}
     - target: {fileID: 4567836483396353737, guid: 0e40a012ebfb0d247a4e4016653bb97f, type: 3}
       propertyPath: nightDuration
-      value: 40
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4567836483396353737, guid: 0e40a012ebfb0d247a4e4016653bb97f, type: 3}
       propertyPath: continueButton
