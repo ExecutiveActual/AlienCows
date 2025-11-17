@@ -9,13 +9,15 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
     private string saveFileName = "player_save_data.json";
 
 
+    public bool IsNewGame = true;
+
 
     private void Awake()
     {
 
         PlayerData_Curr = ScriptableObject.CreateInstance<SO_PlayerData>();
 
-        PlayerData newPlayerData = new PlayerData(1, 5, 3, new int[] { 1, 23, 5 });
+        PlayerData newPlayerData = new PlayerData(1, 5, 3, new int[] { 1 });
 
         PlayerData_Curr.FromPlayerDataClass(newPlayerData);
 
@@ -23,10 +25,17 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
 
         if (!LoadFromFile(saveFileName))
         {
-            
+
+            IsNewGame = true;
+
             SaveToFile(saveFileName);
 
             Debug.Log("No save file found. Created new save data.");
+        }
+        else
+        {
+            IsNewGame = false;
+            Debug.Log("Save file loaded successfully.");
         }
 
     }

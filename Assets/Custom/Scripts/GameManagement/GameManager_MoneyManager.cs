@@ -6,8 +6,7 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
 
     public int CurrentMoney { get; private set; } = 0;
 
-    protected SO_PlayerData currentPlayerSaveData;
-
+    SO_PlayerData currentPlayerSaveData;
 
     GameManager_SaveSystem saveSystemInstance;
 
