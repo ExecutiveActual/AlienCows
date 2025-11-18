@@ -9,6 +9,10 @@ public class MainMenuManager : MonoBehaviour
     public GameObject settingsGameManager;
     public GameObject aboutGameManager;
 
+    [Header("Start Game Panels")]
+    public GameObject newGameConfirmation;   // you have this
+    public GameObject loadGameManager;       // you have this
+
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
@@ -19,9 +23,9 @@ public class MainMenuManager : MonoBehaviour
     public AudioClip buttonClickSound;
 
     [Header("Volume Controls")]
-    [Range(0f, 1f)] public float musicVolume = 1f;   // background music
-    [Range(0f, 1f)] public float clickVolume = 1f;   // click sound
-    [Range(0f, 1f)] public float hoverVolume = 1f;   // hover sound
+    [Range(0f, 1f)] public float musicVolume = 1f;
+    [Range(0f, 1f)] public float clickVolume = 1f;
+    [Range(0f, 1f)] public float hoverVolume = 1f;
 
     [Header("Scene Settings")]
     public string newGameSceneName;
@@ -29,6 +33,11 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         EnableOnly(mainMenuManager);
+
+        // hide panels on start
+        if (newGameConfirmation) newGameConfirmation.SetActive(false);
+        if (loadGameManager) loadGameManager.SetActive(false);
+
         PlayBackgroundMusic();
     }
 
@@ -40,12 +49,17 @@ public class MainMenuManager : MonoBehaviour
         aboutGameManager.SetActive(target == aboutGameManager);
     }
 
-    // --- Main Menu ---
+    //---------------------------
+    // MAIN MENU
+    //---------------------------
 
     public void OnStartGamePressed()
     {
         PlayClickSound();
         EnableOnly(startGameManager);
+
+        newGameConfirmation.SetActive(false);
+        loadGameManager.SetActive(false);
     }
 
     public void OnSettingsPressed()
@@ -66,40 +80,76 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    // --- Sub Menu ---
-
     public void OnBackToMainMenuPressed()
     {
         PlayClickSound();
         EnableOnly(mainMenuManager);
     }
 
+    //---------------------------
+    // START GAME OPTIONS
+    //---------------------------
+
     public void OnNewGamePressed()
     {
         PlayClickSound();
-        if (!string.IsNullOrEmpty(newGameSceneName))
-            SceneManager.LoadScene(newGameSceneName);
-        else
-            Debug.LogWarning("Scene name not assigned in inspector.");
+        startGameManager.SetActive(false);
+        newGameConfirmation.SetActive(true);
     }
 
-    // --- Audio ---
+    public void OnNewGameYesPressed()
+    {
+        PlayClickSound();
+        SceneManager.LoadScene(newGameSceneName);
+    }
+
+    public void OnNewGameNoPressed()
+    {
+        PlayClickSound();
+        newGameConfirmation.SetActive(false);
+        startGameManager.SetActive(true);
+    }
+
+    public void OnLoadGamePressed()
+    {
+        PlayClickSound();
+        startGameManager.SetActive(false);
+        loadGameManager.SetActive(true);
+    }
+
+    public void OnLoadGameYesPressed()
+    {
+        PlayClickSound();
+        Debug.Log("Loading last saved game...");
+        // your loading logic later
+    }
+
+    public void OnLoadGameNoPressed()
+    {
+        PlayClickSound();
+        loadGameManager.SetActive(false);
+        startGameManager.SetActive(true);
+    }
+
+    //---------------------------
+    // AUDIO
+    //---------------------------
 
     public void PlayHoverSound()
     {
-        if (buttonHoverSound != null && sfxSource != null)
+        if (buttonHoverSound && sfxSource)
             sfxSource.PlayOneShot(buttonHoverSound, hoverVolume);
     }
 
     void PlayClickSound()
     {
-        if (buttonClickSound != null && sfxSource != null)
+        if (buttonClickSound && sfxSource)
             sfxSource.PlayOneShot(buttonClickSound, clickVolume);
     }
 
     void PlayBackgroundMusic()
     {
-        if (musicSource != null && backgroundMusic != null)
+        if (musicSource && backgroundMusic)
         {
             musicSource.clip = backgroundMusic;
             musicSource.volume = musicVolume;
