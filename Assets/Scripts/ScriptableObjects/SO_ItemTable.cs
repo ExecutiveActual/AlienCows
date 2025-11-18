@@ -15,6 +15,11 @@ public class SO_ItemTable : ScriptableObject
     public ItemHeld GetItemFromID(int ID)
     {
 
+        if (ID == 0)
+        {
+            return null;
+        }
+
         if (ItemDictionary == null)
         {
             ItemDictionary = new Dictionary<int, ItemHeld>();

@@ -30,8 +30,16 @@ public class MainMenuManager : MonoBehaviour
     [Header("Scene Settings")]
     public string newGameSceneName;
 
+
+
+    private GameManager_SaveSystem saveSystemInstance;
+
+
     void Start()
     {
+
+        saveSystemInstance = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
+
         EnableOnly(mainMenuManager);
 
         // hide panels on start
@@ -100,6 +108,9 @@ public class MainMenuManager : MonoBehaviour
     public void OnNewGameYesPressed()
     {
         PlayClickSound();
+
+        saveSystemInstance.WipeSaveGame();
+
         SceneManager.LoadScene(newGameSceneName);
     }
 
@@ -121,7 +132,9 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayClickSound();
         Debug.Log("Loading last saved game...");
-        // your loading logic later
+
+        SceneManager.LoadScene(newGameSceneName);
+
     }
 
     public void OnLoadGameNoPressed()

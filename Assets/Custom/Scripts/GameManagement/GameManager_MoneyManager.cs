@@ -4,9 +4,6 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
 {
 
 
-    public int CurrentMoney { get; private set; } = 0;
-
-    SO_PlayerData currentPlayerSaveData;
 
     GameManager_SaveSystem saveSystemInstance;
 
@@ -16,10 +13,7 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
 
         saveSystemInstance = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
 
-
-        currentPlayerSaveData = saveSystemInstance.PlayerData_Curr;
-
-
+        //saveSystemInstance.UE_OnUpdateSaveData.AddListener(UpdateSaveData);
 
         //ReadFromSaveData(currentPlayerSaveData);
 
@@ -28,9 +22,9 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
 
     private void Start()
     {
-        ReadFromSaveData(currentPlayerSaveData);
+        ReadFromSaveData(saveSystemInstance.PlayerData_Curr);
 
-        Debug.Log($"Money Manager initialized. Current money: {CurrentMoney}");
+        Debug.Log($"Money Manager initialized. Current money: {saveSystemInstance.PlayerData_Curr.MoneyAmount}");
     }
 
 
@@ -39,21 +33,27 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
         if (Input.GetKeyDown(KeyCode.M))
         {
             AddMoney(100);
-            Debug.Log($"Added 100 money. Current money: {CurrentMoney}");
+            Debug.Log($"Added 100 money. Current money: {saveSystemInstance.PlayerData_Curr.MoneyAmount}");
         }
+    }
+
+
+    private void UpdateSaveData()
+    {
+        ReadFromSaveData(saveSystemInstance.PlayerData_Curr);
     }
 
 
     public void AddMoney(int amount)
     {
-        CurrentMoney += amount;
+        saveSystemInstance.PlayerData_Curr.MoneyAmount += amount;
     }
 
     public bool SpendMoney(int amount)
     {
-        if (CurrentMoney >= amount)
+        if (saveSystemInstance.PlayerData_Curr.MoneyAmount >= amount)
         {
-            CurrentMoney -= amount;
+            saveSystemInstance.PlayerData_Curr.MoneyAmount -= amount;
             return true;
         }
         return false;
@@ -61,8 +61,8 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
 
     public void RemoveMoney(int amount)
     {
-        CurrentMoney -= amount;
-        if (CurrentMoney < 0) CurrentMoney = 0;
+        saveSystemInstance.PlayerData_Curr.MoneyAmount -= amount;
+        if (saveSystemInstance.PlayerData_Curr.MoneyAmount < 0) saveSystemInstance.PlayerData_Curr.MoneyAmount = 0;
     }
 
 
@@ -70,17 +70,17 @@ public class GameManager_MoneyManager : MonoBehaviour, IGameManagerModule, IGM_S
 
     public void ReadFromSaveData(SO_PlayerData data)
     {
-        CurrentMoney = data.MoneyAmount;
+        saveSystemInstance.PlayerData_Curr.MoneyAmount = data.MoneyAmount;
     }
 
     public void WriteToSaveData(SO_PlayerData data)
     {
-        data.MoneyAmount = CurrentMoney;
+        data.MoneyAmount = saveSystemInstance.PlayerData_Curr.MoneyAmount;
     }
 
 
     private void OnApplicationQuit()
     {
-        WriteToSaveData(currentPlayerSaveData);
+        WriteToSaveData(saveSystemInstance.PlayerData_Curr);
     }
 }

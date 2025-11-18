@@ -16,6 +16,11 @@ public class SO_WeaponTable : ScriptableObject
     public WeaponHeld GetWeaponFromID(int ID)
     {
 
+        if (ID == 0)
+        {
+            return null;
+        }
+
         if (WeaponDictionary == null)
         {
             WeaponDictionary = new Dictionary<int, WeaponHeld>();

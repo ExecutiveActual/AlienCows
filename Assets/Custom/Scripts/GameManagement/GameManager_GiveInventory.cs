@@ -71,6 +71,8 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 
     public HotbarInventoryItems GetHotbarInventoryItems()
     {
+        ImportHotbarFromSave();
+
         HotbarInventoryItems hotbarItems = new HotbarInventoryItems
         {
             weapon_1 = Weapon_1,
@@ -83,16 +85,40 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
     }
 
 
+    private void ImportHotbarFromSave()
+    {
+
+        GameManager_SaveSystem saveSystem = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
+
+        if (saveSystem != null)
+        {
+
+            Weapon_1 = weaponTable.GetWeaponFromID(saveSystem.PlayerData_Curr.SavedHotbar[0]);
+
+            Weapon_2 = weaponTable.GetWeaponFromID(saveSystem.PlayerData_Curr.SavedHotbar[1]);
+
+            Item_3 = itemTable.GetItemFromID(saveSystem.PlayerData_Curr.SavedHotbar[2]);
+
+            Item_4 = itemTable.GetItemFromID(saveSystem.PlayerData_Curr.SavedHotbar[3]);
+
+            Item_5 = itemTable.GetItemFromID(saveSystem.PlayerData_Curr.SavedHotbar[4]);
+
+        }
+
+    }
+
+
+
     public void OnInitializeModule()
     {
         //Debug.Log("GameManager_GiveInventory: OnInitializeModule called.");
 
-        if (GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().Night_Curr == 1)
-        {
-            SetWeapon_1(starterWeaponID);
+        //if (GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>().PlayerData_Curr.NightNumber == 0)
+        //{
+        //    SetWeapon_1(starterWeaponID);
 
-            //Debug.Log($"GameManager_GiveInventory: Starter weapon assigned to Weapon_1 = {Weapon_1}");
-        }
+        //    //Debug.Log($"GameManager_GiveInventory: Starter weapon assigned to Weapon_1 = {Weapon_1}");
+        //}
     }
 
 

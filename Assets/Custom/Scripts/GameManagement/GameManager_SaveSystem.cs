@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.IO;
+using System;
+using UnityEngine.Events;
+
 
 public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
 {
@@ -9,66 +12,120 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
     private string saveFileName = "player_save_data.json";
 
 
-    public bool IsNewGame = true;
+    GameManager_NightCounter gm_NightCounter;
+
+
+
+    //public UnityEvent UE_OnUpdateSaveData;
+
+
 
 
     private void Awake()
     {
-
         PlayerData_Curr = ScriptableObject.CreateInstance<SO_PlayerData>();
 
-        PlayerData newPlayerData = new PlayerData(1, 5, 3, new int[] { 1 });
-
+        PlayerData newPlayerData = new PlayerData();
         PlayerData_Curr.FromPlayerDataClass(newPlayerData);
-
-
 
         if (!LoadFromFile(saveFileName))
         {
-
-            IsNewGame = true;
-
+            
             SaveToFile(saveFileName);
-
             Debug.Log("No save file found. Created new save data.");
         }
         else
         {
-            IsNewGame = false;
             Debug.Log("Save file loaded successfully.");
         }
 
+        UpdateSaveData();
     }
 
 
 
     public void OnInitializeModule()
     {
-
+        gm_NightCounter = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>();
     }
 
 
-
-    private void SaveToFile(string fileName)
+    public bool IsNewGame()
     {
-        string jsonData = JsonUtility.ToJson(PlayerData_Curr.ToPlayerDataClass());
-        File.WriteAllText($"{Application.dataPath}/{fileName}", jsonData);
-    }
 
-    private bool LoadFromFile(string fileName)
-    {
-        if (File.Exists($"{Application.dataPath}/{fileName}"))
+        if (PlayerData_Curr.NightNumber == 0)
         {
-            string jsonData = File.ReadAllText($"{Application.dataPath}/{fileName}");
-
-            PlayerData_Curr.FromPlayerDataClass(JsonUtility.FromJson<PlayerData>(jsonData));
             return true;
         }
         else
         {
-            Debug.LogWarning("Save file not found: " + $"{Application.dataPath}/{fileName}");
             return false;
         }
+
+    }
+
+
+    private void UpdateSaveData()
+    {
+        //UE_OnUpdateSaveData.Invoke();
+    }
+
+
+    private string GetSavePath(string fileName)
+    {
+        return Path.Combine(Application.persistentDataPath, fileName);
+    }
+
+
+    public void WipeSaveGame()
+    {
+        // Option A: Delete the file entirely (recommended - guarantees fresh start)
+        string path = GetSavePath(saveFileName);
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("Save file deleted: " + path);
+        }
+
+        // Reset in-memory data
+        PlayerData_Curr = ScriptableObject.CreateInstance<SO_PlayerData>();
+        PlayerData newPlayerData = new PlayerData();
+        PlayerData_Curr.FromPlayerDataClass(newPlayerData);
+
+        // Optionally save the fresh data immediately
+        SaveToFile(saveFileName);
+
+        UpdateSaveData();
+
+        Debug.Log("Save game has been completely wiped and reset!");
+    }
+
+    private void SaveToFile(string fileName)
+    {
+        string path = GetSavePath(fileName);
+        string jsonData = JsonUtility.ToJson(PlayerData_Curr.ToPlayerDataClass(), true);
+        File.WriteAllText(path, jsonData);
+        //Debug.Log("Game saved to: " + path);
+    }
+
+    private bool LoadFromFile(string fileName)
+    {
+        string path = GetSavePath(fileName);
+        if (File.Exists(path))
+        {
+            string jsonData = File.ReadAllText(path);
+            PlayerData loaded = JsonUtility.FromJson<PlayerData>(jsonData);
+            if (loaded != null)
+            {
+                PlayerData_Curr.FromPlayerDataClass(loaded);
+                UpdateSaveData();
+                //Debug.Log("Save file loaded from: " + path);
+                return true;
+            }
+        }
+
+        Debug.LogWarning("No save file found at: " + path);
+        return false;
     }
 
     private void OnApplicationQuit()
@@ -76,21 +133,4 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
         SaveToFile(saveFileName);
     }
 
-}
-
-
-public class PlayerData
-{
-    public int NightNumber;
-    public int MoneyAmount;
-    public int CowAmount;
-    public int[] UnlockedItems;
-
-    public PlayerData(int nightNumber, int moneyAmount, int cowAmount, int[] unlockedItems)
-    {
-        NightNumber = nightNumber;
-        MoneyAmount = moneyAmount;
-        CowAmount = cowAmount;
-        UnlockedItems = unlockedItems;
-    }
 }

@@ -82,7 +82,7 @@ public class HotbarInventory : MonoBehaviour
     public void InitializeInventory(HotbarInventoryItems newItems)
     {
 
-        Debug.Log("InitializingInventyory");
+        Debug.Log("InitializingInventory");
 
         weapon_1 = newItems.weapon_1;
         weapon_2 = newItems.weapon_2;
