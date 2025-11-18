@@ -9,12 +9,19 @@ public class MainMenuManager : MonoBehaviour
     public GameObject settingsGameManager;
     public GameObject aboutGameManager;
 
-    [Header("Audio")]
+    [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
+
+    [Header("Audio Clips")]
     public AudioClip backgroundMusic;
     public AudioClip buttonHoverSound;
     public AudioClip buttonClickSound;
+
+    [Header("Volume Controls")]
+    [Range(0f, 1f)] public float musicVolume = 1f;   // background music
+    [Range(0f, 1f)] public float clickVolume = 1f;   // click sound
+    [Range(0f, 1f)] public float hoverVolume = 1f;   // hover sound
 
     [Header("Scene Settings")]
     public string newGameSceneName;
@@ -33,7 +40,7 @@ public class MainMenuManager : MonoBehaviour
         aboutGameManager.SetActive(target == aboutGameManager);
     }
 
-    // --- Main Menu Buttons ---
+    // --- Main Menu ---
 
     public void OnStartGamePressed()
     {
@@ -59,7 +66,7 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    // --- Sub Menu Buttons ---
+    // --- Sub Menu ---
 
     public void OnBackToMainMenuPressed()
     {
@@ -76,18 +83,18 @@ public class MainMenuManager : MonoBehaviour
             Debug.LogWarning("Scene name not assigned in inspector.");
     }
 
-    // --- Audio Handlers ---
+    // --- Audio ---
 
     public void PlayHoverSound()
     {
         if (buttonHoverSound != null && sfxSource != null)
-            sfxSource.PlayOneShot(buttonHoverSound);
+            sfxSource.PlayOneShot(buttonHoverSound, hoverVolume);
     }
 
     void PlayClickSound()
     {
         if (buttonClickSound != null && sfxSource != null)
-            sfxSource.PlayOneShot(buttonClickSound);
+            sfxSource.PlayOneShot(buttonClickSound, clickVolume);
     }
 
     void PlayBackgroundMusic()
@@ -95,6 +102,7 @@ public class MainMenuManager : MonoBehaviour
         if (musicSource != null && backgroundMusic != null)
         {
             musicSource.clip = backgroundMusic;
+            musicSource.volume = musicVolume;
             musicSource.loop = true;
             musicSource.Play();
         }
