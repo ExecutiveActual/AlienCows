@@ -27,7 +27,7 @@ public class NightSceneManager : MonoBehaviour
 
     private void SpawnCows(int amount)
     {
-
+        GetComponent<NightSceneManager_SpawnCows>().SpawnCows(amount);
     }
 
     public void SetNightNumber(int nightNumber)
