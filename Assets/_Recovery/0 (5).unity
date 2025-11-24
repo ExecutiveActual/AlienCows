@@ -30763,6 +30763,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1800197887}
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1800197888}
     - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -33783,6 +33789,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1959555446}
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1959555447}
     - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -34121,6 +34133,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1304432799}
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1304432800}
     - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -97391,9 +97409,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1199377524}
-    - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1199377530}
   m_SourcePrefab: {fileID: 100100000, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
 --- !u!1 &1199377522 stripped
 GameObject:
@@ -97442,7 +97457,7 @@ MonoBehaviour:
   yHeight: 35
   searchInterval: 1
   maxSearchDistance: 1000
-  moveSpeed: 25
+  moveSpeed: 50
   returnSpeed: 15
   zigzagAmplitude: 75
   zigzagFrequency: 2
@@ -97487,36 +97502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitZone
   damageMultiplier: 1
---- !u!114 &1199377530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199377522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1053a2463fcdd499e41035a7330e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
-  cowTag: Cow
-  yHeight: 12
-  searchInterval: 1
-  maxSearchDistance: 60
-  moveSpeed: 6
-  returnSpeed: 6
-  zigzagAmplitude: 2
-  zigzagFrequency: 2
-  forwardFollowOffset: 0
-  zigzagPhase: 0
-  detectionRadius: 3.5
-  liftSpeed: 4
-  abductDuration: 10
-  cowAttachOffset: {x: 0, y: -0.5, z: 0}
-  dropHeight: 0.1
-  dropAcceleration: 20
-  dropMaxSpeed: 10
-  abductFX: {fileID: 0}
 --- !u!1 &1200457065
 GameObject:
   m_ObjectHideFlags: 0
@@ -105832,6 +105817,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302881411}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1304432796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+  m_PrefabInstance: {fileID: 419661437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1304432799
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304432796}
+  serializedVersion: 5
+  m_Mass: 0.1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &1304432800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304432796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0c3a660cd1ef14aadfe0a80f5698a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicGravityController
+  normalGravityScale: 1
+  abductedGravityScale: 0.1
+  gravityLerpSpeed: 5
+  upwardLiftForce: 15
+  maxUpwardSpeed: 12
+  isAbducted: 0
 --- !u!1 &1308233238
 GameObject:
   m_ObjectHideFlags: 0
@@ -106156,6 +106191,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1410790634}
+    - targetCorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1410790635}
     - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -114748,6 +114789,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410636107}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1410790631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+  m_PrefabInstance: {fileID: 1310757771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1410790634
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410790631}
+  serializedVersion: 5
+  m_Mass: 0.1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &1410790635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410790631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0c3a660cd1ef14aadfe0a80f5698a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicGravityController
+  normalGravityScale: 1
+  abductedGravityScale: 0.1
+  gravityLerpSpeed: 5
+  upwardLiftForce: 15
+  maxUpwardSpeed: 12
+  isAbducted: 0
 --- !u!1 &1412496013
 GameObject:
   m_ObjectHideFlags: 0
@@ -118542,9 +118633,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1443676093}
-    - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1443676099}
   m_SourcePrefab: {fileID: 100100000, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
 --- !u!1 &1443676091 stripped
 GameObject:
@@ -118593,7 +118681,7 @@ MonoBehaviour:
   yHeight: 35
   searchInterval: 1
   maxSearchDistance: 1000
-  moveSpeed: 25
+  moveSpeed: 50
   returnSpeed: 15
   zigzagAmplitude: 75
   zigzagFrequency: 2
@@ -118638,36 +118726,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitZone
   damageMultiplier: 1
---- !u!114 &1443676099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443676091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1053a2463fcdd499e41035a7330e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
-  cowTag: Cow
-  yHeight: 12
-  searchInterval: 1
-  maxSearchDistance: 60
-  moveSpeed: 6
-  returnSpeed: 6
-  zigzagAmplitude: 2
-  zigzagFrequency: 2
-  forwardFollowOffset: 0
-  zigzagPhase: 0
-  detectionRadius: 3.5
-  liftSpeed: 4
-  abductDuration: 10
-  cowAttachOffset: {x: 0, y: -0.5, z: 0}
-  dropHeight: 0.1
-  dropAcceleration: 20
-  dropMaxSpeed: 10
-  abductFX: {fileID: 0}
 --- !u!1 &1445232901
 GameObject:
   m_ObjectHideFlags: 0
@@ -136600,7 +136658,7 @@ MonoBehaviour:
   yHeight: 35
   searchInterval: 1
   maxSearchDistance: 1000
-  moveSpeed: 25
+  moveSpeed: 50
   returnSpeed: 15
   zigzagAmplitude: 75
   zigzagFrequency: 2
@@ -150708,6 +150766,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797154963}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1800197884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+  m_PrefabInstance: {fileID: 387662480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1800197887
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800197884}
+  serializedVersion: 5
+  m_Mass: 0.1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &1800197888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800197884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0c3a660cd1ef14aadfe0a80f5698a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicGravityController
+  normalGravityScale: 1
+  abductedGravityScale: 0.1
+  gravityLerpSpeed: 5
+  upwardLiftForce: 15
+  maxUpwardSpeed: 12
+  isAbducted: 0
 --- !u!1 &1800234081
 GameObject:
   m_ObjectHideFlags: 0
@@ -152364,45 +152472,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1629651339}
-    - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1831320637}
   m_SourcePrefab: {fileID: 100100000, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
 --- !u!4 &1831320634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4901142752570638296, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
   m_PrefabInstance: {fileID: 1831320633}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1831320637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629651323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1053a2463fcdd499e41035a7330e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
-  cowTag: Cow
-  yHeight: 12
-  searchInterval: 1
-  maxSearchDistance: 60
-  moveSpeed: 6
-  returnSpeed: 6
-  zigzagAmplitude: 2
-  zigzagFrequency: 2
-  forwardFollowOffset: 0
-  zigzagPhase: 0
-  detectionRadius: 3.5
-  liftSpeed: 4
-  abductDuration: 10
-  cowAttachOffset: {x: 0, y: -0.5, z: 0}
-  dropHeight: 0.1
-  dropAcceleration: 20
-  dropMaxSpeed: 10
-  abductFX: {fileID: 0}
 --- !u!1 &1834729973
 GameObject:
   m_ObjectHideFlags: 0
@@ -160061,10 +160136,10 @@ PrefabInstance:
       addedObject: {fileID: 1923520763}
     - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1923520761}
+      addedObject: {fileID: 1923520762}
     - targetCorrespondingSourceObject: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1923520767}
+      addedObject: {fileID: 1923520761}
   m_SourcePrefab: {fileID: 100100000, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
 --- !u!1 &1923520759 stripped
 GameObject:
@@ -160097,6 +160172,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 22.210917, y: 9.016025, z: 21.426048}
   m_Center: {x: -0.071608685, y: -1.1058655, z: 0.3265831}
+--- !u!114 &1923520762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923520759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2713b3c9f4b7bcb4081cdcfd6c64d567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
+  cowTag: Cow
+  yHeight: 35
+  searchInterval: 1
+  maxSearchDistance: 1000
+  moveSpeed: 50
+  returnSpeed: 15
+  zigzagAmplitude: 75
+  zigzagFrequency: 2
+  forwardFollowOffset: 0
+  zigzagPhase: 0
+  detectionRadius: 3.5
+  abductDuration: 7
+  liftForceMin: 10
+  liftForceMax: 25
+  abductGravityMin: 0.3
+  abductGravityMax: -0.2
+  abductFX: {fileID: 990744991}
 --- !u!114 &1923520763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160129,36 +160233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitZone
   damageMultiplier: 1
---- !u!114 &1923520767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923520759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1053a2463fcdd499e41035a7330e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
-  cowTag: Cow
-  yHeight: 12
-  searchInterval: 1
-  maxSearchDistance: 60
-  moveSpeed: 6
-  returnSpeed: 6
-  zigzagAmplitude: 2
-  zigzagFrequency: 2
-  forwardFollowOffset: 0
-  zigzagPhase: 0
-  detectionRadius: 3.5
-  liftSpeed: 4
-  abductDuration: 10
-  cowAttachOffset: {x: 0, y: -0.5, z: 0}
-  dropHeight: 0.1
-  dropAcceleration: 20
-  dropMaxSpeed: 10
-  abductFX: {fileID: 990744991}
 --- !u!1 &1923660200
 GameObject:
   m_ObjectHideFlags: 0
@@ -162739,6 +162813,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957225514}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1959555443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
+  m_PrefabInstance: {fileID: 418254663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1959555446
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959555443}
+  serializedVersion: 5
+  m_Mass: 0.1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &1959555447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959555443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0c3a660cd1ef14aadfe0a80f5698a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicGravityController
+  normalGravityScale: 1
+  abductedGravityScale: 0.1
+  gravityLerpSpeed: 5
+  upwardLiftForce: 15
+  maxUpwardSpeed: 12
+  isAbducted: 0
 --- !u!1 &1960126640
 GameObject:
   m_ObjectHideFlags: 0
