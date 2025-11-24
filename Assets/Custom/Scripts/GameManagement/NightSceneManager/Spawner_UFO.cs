@@ -26,9 +26,11 @@ public class Spawner_UFO : MonoBehaviour
 
     private int spawnAmount = 0;
 
-    private List<UFO_WaveRegistry> waveRegistry;
+    private List<UFO_WaveRegistry> waveRegistry = new List<UFO_WaveRegistry>();
 
     Coroutine spawnCoroutine;
+
+    private bool isDoneSpawning = false; 
 
 
 
@@ -48,6 +50,8 @@ public class Spawner_UFO : MonoBehaviour
 
         if (spawnCoroutine == null)
         {
+            isDoneSpawning = false;
+
             spawnCoroutine = StartCoroutine(spawnRoutine());
         }
 
@@ -75,6 +79,8 @@ public class Spawner_UFO : MonoBehaviour
             yield return new WaitForSeconds(spawnDelay);
 
         }
+
+        isDoneSpawning = true;
 
         Debug.Log("UFO   DOne");
 
