@@ -228,7 +228,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -272,7 +272,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -413,8 +413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2600adb4c8ebe84b8eed2463a86b698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomTimerSound
-  minInterval: 6
-  maxInterval: 9
+  minInterval: 9
+  maxInterval: 25
   sound: {fileID: 11400000, guid: b2255b0949684b94cbf4818da2a89fd8, type: 2}
 --- !u!1001 &7577002997747379405
 PrefabInstance:

@@ -43,6 +43,11 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
     }
 
 
+    private void Start()
+    {
+        Debug.Log($"Game Save folder: {GetSavePath(saveFileName)}");
+    }
+
 
     public void OnInitializeModule()
     {

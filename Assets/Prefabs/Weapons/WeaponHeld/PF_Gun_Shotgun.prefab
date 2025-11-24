@@ -231,7 +231,6 @@ MonoBehaviour:
   UE_OnDeinitialize:
     m_PersistentCalls:
       m_Calls: []
-  aimFOV: 60
   UE_OnFire:
     m_PersistentCalls:
       m_Calls: []
@@ -315,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08dc3186ddfbac442b84509c24e92820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHeld_Aim
+  aimFOV: 60
 --- !u!114 &8793236424294674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
