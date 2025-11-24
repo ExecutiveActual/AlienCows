@@ -2241,6 +2241,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30422274}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &31392942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31392943}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (60)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &31392943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31392942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 391.1, y: 0, z: 359.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &31398183
 GameObject:
   m_ObjectHideFlags: 0
@@ -7447,6 +7478,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97912916}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &98065500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98065501}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (57)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &98065501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98065500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 350.1, y: 0, z: 325.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &98362608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98362609}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &98362609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98362608}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 372, y: 0, z: 355.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99679427
 GameObject:
   m_ObjectHideFlags: 0
@@ -9131,6 +9224,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109882448}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &111445858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111445859}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (25)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &111445859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111445858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 318.9, y: 0, z: 337.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114898634
 GameObject:
   m_ObjectHideFlags: 0
@@ -9935,11 +10059,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125866314}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!4 &126476993 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9173004674620237720, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
-  m_PrefabInstance: {fileID: 8104407587924487536}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &130308370
 GameObject:
   m_ObjectHideFlags: 0
@@ -16813,6 +16932,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &219023231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219023232}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (38)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219023232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219023231}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 272.3, y: 0, z: 346.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &221871105
 GameObject:
   m_ObjectHideFlags: 0
@@ -18912,6 +19062,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241781626}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &242735655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242735656}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (47)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &242735656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242735655}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 309.5, y: 0, z: 359.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245453676
 GameObject:
   m_ObjectHideFlags: 0
@@ -22278,6 +22459,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &284688724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284688725}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &284688725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284688724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 355.2, y: 0, z: 433.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286960337
 GameObject:
   m_ObjectHideFlags: 0
@@ -23504,6 +23716,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305407713}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &305455766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305455767}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (33)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &305455767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305455766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 257.6, y: 0, z: 312.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305977682
 GameObject:
   m_ObjectHideFlags: 0
@@ -26631,6 +26874,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329360698}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &329673232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329673233}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (50)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329673233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329673232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 252, y: 0, z: 392}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &330883983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330883984}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330883984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330883983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 304.7, y: 0, z: 414.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331195938
 GameObject:
   m_ObjectHideFlags: 0
@@ -27435,6 +27740,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334610884}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &335317029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335317030}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (29)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &335317030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335317029}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 222.6, y: 0, z: 312.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335469528
 GameObject:
   m_ObjectHideFlags: 0
@@ -27934,6 +28270,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339668743}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &340119183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340119184}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340119184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340119183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2382, y: 0, z: 629}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341052167
 GameObject:
   m_ObjectHideFlags: 0
@@ -28135,6 +28502,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341421809}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &341995752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341995753}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341995753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341995752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 434.7, y: 0, z: 397.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342427718
 GameObject:
   m_ObjectHideFlags: 0
@@ -28537,6 +28935,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346090673}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &347489588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347489589}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &347489589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347489588}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -417, y: 0, z: 1960}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &348124197
 GameObject:
   m_ObjectHideFlags: 0
@@ -28916,6 +29345,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354146222}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &354639510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354639511}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (36)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &354639511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354639510}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 237.1, y: 0, z: 307.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354788202
 GameObject:
   m_ObjectHideFlags: 0
@@ -30591,6 +31051,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377715606}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &379049708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379049709}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (58)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379049709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379049708}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 351.4, y: 0, z: 352.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &381771515
 GameObject:
   m_ObjectHideFlags: 0
@@ -30792,115 +31283,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385911016}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1001 &387662480
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1315851105}
-    m_Modifications:
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: idleSound
-      value: 
-      objectReference: {fileID: 8300000, guid: afb3d73423aad754daedce8a53482089, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: sleepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 03daa60a85c3d5547b8e276156081f41, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: grazingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 87e40dee0c999aa4faa7202509391093, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: roamingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d482511c8d7d8fa4d97f56c7c4eafdee, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: cowAudioSource
-      value: 
-      objectReference: {fileID: 637814438}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_Name
-      value: Cow
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_TagString
-      value: Cow
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -77.38333
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.3560104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 22.239807
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
---- !u!4 &387662481 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 387662480}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &388866949
 GameObject:
   m_ObjectHideFlags: 0
@@ -32853,6 +33235,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409953187}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &410689548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410689549}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410689549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410689548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 249.9, y: 0, z: 290.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411892199
 GameObject:
   m_ObjectHideFlags: 0
@@ -33120,6 +33533,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412166789}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &413110763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 413110764}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &413110764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413110763}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.6, y: 0, z: 275.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413319696
 GameObject:
   m_ObjectHideFlags: 0
@@ -33812,120 +34256,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418138797}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &418254663
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1315851105}
-    m_Modifications:
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: idleSound
-      value: 
-      objectReference: {fileID: 8300000, guid: afb3d73423aad754daedce8a53482089, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: sleepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 03daa60a85c3d5547b8e276156081f41, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: grazingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 87e40dee0c999aa4faa7202509391093, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: roamingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d482511c8d7d8fa4d97f56c7c4eafdee, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: cowAudioSource
-      value: 
-      objectReference: {fileID: 418254665}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_Name
-      value: Cow (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_TagString
-      value: Cow
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -60.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.3560104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 39.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
---- !u!4 &418254664 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 418254663}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &418254665 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2220412803607503080, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 418254663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419383096
 GameObject:
   m_ObjectHideFlags: 0
@@ -34150,120 +34480,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419513559}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &419661437
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1315851105}
-    m_Modifications:
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: idleSound
-      value: 
-      objectReference: {fileID: 8300000, guid: afb3d73423aad754daedce8a53482089, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: sleepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 03daa60a85c3d5547b8e276156081f41, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: grazingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 87e40dee0c999aa4faa7202509391093, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: roamingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d482511c8d7d8fa4d97f56c7c4eafdee, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: cowAudioSource
-      value: 
-      objectReference: {fileID: 419661439}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_Name
-      value: Cow (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_TagString
-      value: Cow
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -31.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.3560104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 62.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
---- !u!4 &419661438 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 419661437}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &419661439 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2220412803607503080, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 419661437}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421375760
 GameObject:
   m_ObjectHideFlags: 0
@@ -35967,6 +36183,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440931184}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &441945566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441945567}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (54)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441945567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441945566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.5, y: 0, z: 371.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442742517
 GameObject:
   m_ObjectHideFlags: 0
@@ -37382,6 +37629,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453737421}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &456166068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456166069}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &456166069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456166068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 334, y: 0, z: 454.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458130190
 GameObject:
   m_ObjectHideFlags: 0
@@ -39725,6 +40003,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482206323}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &483139134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483139135}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483139135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483139134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 367.7, y: 0, z: 329.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483445201
 GameObject:
   m_ObjectHideFlags: 0
@@ -40935,6 +41244,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493291224}
   m_CullTransparentMesh: 1
+--- !u!1 &493668776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493668777}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (32)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &493668777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493668776}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 279.3, y: 0, z: 309.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493833814
 GameObject:
   m_ObjectHideFlags: 0
@@ -43206,6 +43546,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515307814}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &516041144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516041145}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (49)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516041145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516041144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 255.4, y: 0, z: 361.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &516108734
 GameObject:
   m_ObjectHideFlags: 0
@@ -47940,6 +48311,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560413063}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &564241558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564241559}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (45)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &564241559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564241558}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 278.2, y: 0, z: 323.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565102350
 GameObject:
   m_ObjectHideFlags: 0
@@ -48670,10 +49072,41 @@ MonoBehaviour:
   typeSpeed: 0.05
   stayDuration: 2
   deleteSpeed: 0.04
-  audioSource: {fileID: 637814438}
+  audioSource: {fileID: 0}
   startSound: {fileID: 8300000, guid: 321d0ed4c77e9f2479f8cfe440886adc, type: 3}
   notificationText: Its your first night stay alert !!! Press W A S D to Move Around.
   backgroundTargetAlpha: 0.35
+--- !u!1 &570937852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 570937853}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &570937853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570937852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 280.3, y: 0, z: 444.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570999111
 GameObject:
   m_ObjectHideFlags: 0
@@ -49277,6 +49710,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574925574}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &575380851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575380852}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (35)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575380852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575380851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 227.1, y: 0, z: 322.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575538064
 GameObject:
   m_ObjectHideFlags: 0
@@ -53956,6 +54420,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631068296}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &631217171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 631217172}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (64)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &631217172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631217171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 344.2, y: 0, z: 469.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &633299089
 GameObject:
   m_ObjectHideFlags: 0
@@ -54180,11 +54675,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633379910}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!82 &637814438 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2220412803607503080, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 387662480}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &639659519
 GameObject:
   m_ObjectHideFlags: 0
@@ -55322,6 +55812,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650811357}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &652022515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652022516}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (59)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652022516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652022515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 378.9, y: 0, z: 345.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &652104505
 GameObject:
   m_ObjectHideFlags: 0
@@ -55434,6 +55955,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652104505}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &652869180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652869181}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652869181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652869180}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 242.2, y: 0, z: 317.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &653768636
 GameObject:
   m_ObjectHideFlags: 0
@@ -61902,6 +62454,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739566502}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &741234339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741234340}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &741234340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741234339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2889, y: 0, z: -1125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &742294788
 GameObject:
   m_ObjectHideFlags: 0
@@ -64762,6 +65345,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780082393}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &782354195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782354196}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (46)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782354196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782354195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 295.7, y: 0, z: 342.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783629318
 GameObject:
   m_ObjectHideFlags: 0
@@ -71132,6 +71746,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853454866}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &853478879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 853478880}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (55)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853478880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853478879}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 327.1, y: 0, z: 377.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &853683429
 GameObject:
   m_ObjectHideFlags: 0
@@ -73467,6 +74112,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892010308}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &892942356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892942357}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (51)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892942357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892942356}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 269.1, y: 0, z: 383.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894855633
 GameObject:
   m_ObjectHideFlags: 0
@@ -78564,6 +79240,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969195093}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &969273313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969273314}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969273314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969273313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 413, y: 0, z: 429}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971361875
 GameObject:
   m_ObjectHideFlags: 0
@@ -82467,6 +83174,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001970928}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1002183420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1002183421}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1002183421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002183420}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 298.4, y: 0, z: 303.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1002674268
 GameObject:
   m_ObjectHideFlags: 0
@@ -84253,6 +84991,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029938240}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1031641549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031641550}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031641550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031641549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 321.4, y: 0, z: 491.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1036248554
 GameObject:
   m_ObjectHideFlags: 0
@@ -85815,6 +86584,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050520150}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1051143661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051143662}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051143662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051143661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 385.5, y: 0, z: 426.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051779072
 GameObject:
   m_ObjectHideFlags: 0
@@ -86306,6 +87106,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053794812}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1055985941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055985942}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055985942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055985941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 334.2, y: 0, z: 294.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058538347
 GameObject:
   m_ObjectHideFlags: 0
@@ -86484,6 +87315,303 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059953502}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1001 &1060734319
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373133800039290512, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476885974339772762, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 207.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476885974339772762, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 369
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841551295238995121, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_Name
+      value: NightSceneManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1121625029}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 330883984}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1761896130}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 570937853}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1031641550}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622367921}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1234193159}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 456166069}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1267908660}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1564378771}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1517355125}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 284688725}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969273314}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1051143662}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1258301552}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1987837425}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341995753}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1755557421}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1584166222}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 98362609}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 483139135}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1055985942}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1002183421}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1598609464}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 111445859}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911461083}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 413110764}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1755718268}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 335317030}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 652869181}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664249716}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 493668777}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 305455767}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1594049467}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 575380852}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 354639511}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 410689549}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 219023232}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2028598992}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1671289133}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2057170838}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1454662850}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1980611661}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1176236107}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 564241559}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782354196}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 242735656}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1928508918}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 516041145}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 329673233}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 892942357}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2143445959}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1571424373}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 441945567}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 853478880}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2094780990}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 98065501}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 379049709}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 652022516}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 31392943}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1484350647}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1512921839}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2138774486}
+    - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 631217172}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1661571605}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1631864715}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1065457048}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 340119184}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1383732897}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 741234340}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1608418855}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045244364}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1461004266}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1086748855}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 347489589}
+    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1582170707}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
 --- !u!1 &1063632151
 GameObject:
   m_ObjectHideFlags: 0
@@ -86685,6 +87813,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064984517}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1065457047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065457048}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065457048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065457047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1979, y: 0, z: 1221}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066143729
 GameObject:
   m_ObjectHideFlags: 0
@@ -88359,6 +89518,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085405616}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1086748854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086748855}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086748855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086748854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 493, y: 0, z: 2543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1090508202
 GameObject:
   m_ObjectHideFlags: 0
@@ -91182,6 +92372,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120856685}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1121625028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1121625029}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1121625029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121625028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 221.4, y: 0, z: 383.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121704160
 GameObject:
   m_ObjectHideFlags: 0
@@ -96135,6 +97356,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176128283}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1176236106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176236107}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (44)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1176236107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176236106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 237.3, y: 0, z: 361.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177072170
 GameObject:
   m_ObjectHideFlags: 0
@@ -97497,6 +98749,10 @@ PrefabInstance:
     - target: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       propertyPath: m_Name
       value: UFO (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3752558859939776663, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -100920,6 +102176,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233909470}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1234193158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234193159}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234193159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234193158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 345.7, y: 0, z: 500.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235233438
 GameObject:
   m_ObjectHideFlags: 0
@@ -103074,6 +104361,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257124427}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1258301551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258301552}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1258301552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258301551}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 382.3, y: 0, z: 390.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1259049570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103781,6 +105099,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263146395}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!4 &1264426498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+  m_PrefabInstance: {fileID: 1060734319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1264880464
 GameObject:
   m_ObjectHideFlags: 0
@@ -103893,6 +105216,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264880464}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1267908659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267908660}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267908660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267908659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 385.4, y: 0, z: 457.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1268398816
 GameObject:
   m_ObjectHideFlags: 0
@@ -106185,120 +107539,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309195564}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1310757771
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1315851105}
-    m_Modifications:
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: idleSound
-      value: 
-      objectReference: {fileID: 8300000, guid: afb3d73423aad754daedce8a53482089, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: sleepSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 03daa60a85c3d5547b8e276156081f41, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: grazingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 87e40dee0c999aa4faa7202509391093, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: roamingSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d482511c8d7d8fa4d97f56c7c4eafdee, type: 3}
-    - target: {fileID: 709146053208929225, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: cowAudioSource
-      value: 
-      objectReference: {fileID: 1310757773}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_Name
-      value: Cow (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_TagString
-      value: Cow
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -101.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.3560104
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 102.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5153347655360940213, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
---- !u!4 &1310757772 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 1310757771}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1310757773 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2220412803607503080, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-  m_PrefabInstance: {fileID: 1310757771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312006671
 GameObject:
   m_ObjectHideFlags: 0
@@ -106829,41 +108069,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315180210}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &1315851104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1315851105}
-  m_Layer: 0
-  m_Name: Cows
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1315851105
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1315851104}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 389.36334, y: 4.23401, z: 261.06018}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 387662481}
-  - {fileID: 418254664}
-  - {fileID: 1310757772}
-  - {fileID: 419661438}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318276660
 GameObject:
   m_ObjectHideFlags: 0
@@ -111513,6 +112718,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382087542}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1383732896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383732897}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383732897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383732896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3031, y: 0, z: -454}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384386175
 GameObject:
   m_ObjectHideFlags: 0
@@ -118649,6 +119885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UFO (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3752558859939776663, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 1674605174618723714, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -119683,6 +120923,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451230666}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1454662849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454662850}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (42)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1454662850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454662849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 233.9, y: 0, z: 329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456481955
 GameObject:
   m_ObjectHideFlags: 0
@@ -120197,6 +121468,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460054974}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1461004265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461004266}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461004266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461004265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1853, y: 0, z: 89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461271411
 GameObject:
   m_ObjectHideFlags: 0
@@ -122870,6 +124172,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484278613}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1484350646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484350647}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (61)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1484350647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484350646}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 364, y: 0, z: 385}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484846554
 GameObject:
   m_ObjectHideFlags: 0
@@ -124544,17 +125877,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504426594}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!114 &1505701803 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3869564120663110219, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
-  m_PrefabInstance: {fileID: 7538891841458885431}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ad4261ab41c75a49a88ece9b32b794c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Camera_HandSlotManager
 --- !u!1 &1507583094
 GameObject:
   m_ObjectHideFlags: 0
@@ -125158,6 +126480,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511238054}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1512921838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512921839}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (62)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512921839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512921838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 329.1, y: 0, z: 437.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1517355124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517355125}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1517355125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517355124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 342.6, y: 0, z: 406.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518001833
 GameObject:
   m_ObjectHideFlags: 0
@@ -131486,6 +132870,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563580796}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1564378770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564378771}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1564378771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564378770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 360.9, y: 0, z: 459.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1565133981
 GameObject:
   m_ObjectHideFlags: 0
@@ -132155,6 +133570,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570715603}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1571424372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571424373}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (53)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571424373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571424372}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.7, y: 0, z: 396.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571438726
 GameObject:
   m_ObjectHideFlags: 0
@@ -133539,6 +134985,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581983976}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1582170706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582170707}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1582170707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582170706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 0, z: 1960}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1584166221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584166222}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1584166222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584166221}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 413, y: 0, z: 402.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1589563506
 GameObject:
   m_ObjectHideFlags: 0
@@ -134030,6 +135538,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592681437}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1594049466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1594049467}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (34)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1594049467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594049466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 218.4, y: 0, z: 326.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1595845913
 GameObject:
   m_ObjectHideFlags: 0
@@ -134343,6 +135882,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596550062}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1598609463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598609464}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598609464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598609463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 336, y: 0, z: 321}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599152536
 GameObject:
   m_ObjectHideFlags: 0
@@ -134989,6 +136559,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607414115}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1608418854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608418855}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608418855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608418854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3925, y: 0, z: -42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610690191
 GameObject:
   m_ObjectHideFlags: 0
@@ -135938,6 +137539,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622354910}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1622367920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622367921}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622367921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622367920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 365.1, y: 0, z: 490.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624417339
 GameObject:
   m_ObjectHideFlags: 0
@@ -136763,17 +138395,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 22.210917, y: 9.016025, z: 21.426048}
   m_Center: {x: -0.071608685, y: -1.1058655, z: 0.3265831}
---- !u!114 &1632031019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6354213061055931865, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
-  m_PrefabInstance: {fileID: 7538891841458885431}
+--- !u!1 &1631864714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62836a68104ac0f429b8dbedd2cb34ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HandSlot
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631864715}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1631864715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631864714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1456, y: 0, z: 1479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633909339
 GameObject:
   m_ObjectHideFlags: 0
@@ -139319,6 +140971,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661003969}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1661571604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661571605}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661571605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661571604}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 80, y: 0, z: 1287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662157588
 GameObject:
   m_ObjectHideFlags: 0
@@ -139609,6 +141292,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663074795}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1664249715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664249716}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664249716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664249715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.2, y: 0, z: 303.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667019511
 GameObject:
   m_ObjectHideFlags: 0
@@ -140468,6 +142182,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670636777}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1671289132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671289133}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (40)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671289133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671289132}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 213.7, y: 0, z: 354.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1674743779
 GameObject:
   m_ObjectHideFlags: 0
@@ -147517,6 +149262,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754533398}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1755557420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755557421}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755557421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755557420}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 407, y: 0, z: 378.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1755718267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755718268}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755718268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755718267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 235.6, y: 0, z: 294.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756705541
 GameObject:
   m_ObjectHideFlags: 0
@@ -148143,6 +149950,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761864505}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1761896129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761896130}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761896130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761896129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 248.7, y: 0, z: 410.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762190398
 GameObject:
   m_ObjectHideFlags: 0
@@ -152470,6 +154308,10 @@ PrefabInstance:
     - target: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
       propertyPath: m_Name
       value: UFO
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3752558859939776663, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -159300,6 +161142,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911296944}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1911461082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911461083}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (26)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1911461083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911461082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 269.9, y: 0, z: 292.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1913409828
 GameObject:
   m_ObjectHideFlags: 0
@@ -160172,6 +162045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UFO (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3752558859939776663, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 1674605174618723714, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -160667,6 +162544,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927677046}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1928508917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928508918}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (48)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928508918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928508917}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 250.1, y: 0, z: 370}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928566380
 GameObject:
   m_ObjectHideFlags: 0
@@ -162980,6 +164888,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960126640}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1961962962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+  m_PrefabInstance: {fileID: 1060734319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1962693967
 GameObject:
   m_ObjectHideFlags: 0
@@ -164051,6 +165964,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976362085}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1980611660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980611661}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (43)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1980611661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980611660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 247.5, y: 0, z: 330.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1981085371
 GameObject:
   m_ObjectHideFlags: 0
@@ -164683,6 +166627,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987210142}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &1987837424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987837425}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1987837425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987837424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 393.4, y: 0, z: 411.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988528015
 GameObject:
   m_ObjectHideFlags: 0
@@ -167856,6 +169831,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022977437}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &2028598991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028598992}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (39)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028598992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028598991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 204.7, y: 0, z: 342.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029161384
 GameObject:
   m_ObjectHideFlags: 0
@@ -169487,6 +171493,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043646134}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &2045244363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045244364}
+  m_Layer: 0
+  m_Name: UFO SpawnPoint (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045244364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045244363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3982, y: 0, z: 1000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264426498}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045369179
 GameObject:
   m_ObjectHideFlags: 0
@@ -170647,6 +172684,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057144518}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &2057170837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057170838}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (41)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2057170838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057170837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 219, y: 0, z: 345.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2057851771
 GameObject:
   m_ObjectHideFlags: 0
@@ -172254,6 +174322,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091786117}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2094780989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094780990}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (56)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094780990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094780989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 336.3, y: 0, z: 339}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095171504
 GameObject:
   m_ObjectHideFlags: 0
@@ -175126,6 +177225,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137869865}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &2138774485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138774486}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (63)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138774486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138774485}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 303.5, y: 0, z: 464.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139027299
 GameObject:
   m_ObjectHideFlags: 0
@@ -175416,6 +177546,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143313860}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
+--- !u!1 &2143445958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143445959}
+  m_Layer: 0
+  m_Name: CowSpawnPoint (52)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143445959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143445958}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 274.8, y: 0, z: 409.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961962962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143476258
 GameObject:
   m_ObjectHideFlags: 0
@@ -175729,7 +177890,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146759999}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &7538891841458885431
+--- !u!1001 &7163994120433110420
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -175737,25 +177898,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2028752529213051228, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2555398673316276369, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 7780619771872012588, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 276.0617
+      value: 294.6343
       objectReference: {fileID: 0}
     - target: {fileID: 7780619771872012588, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7780619771872012588, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 246.51492
+      value: 271.22195
       objectReference: {fileID: 0}
     - target: {fileID: 7780619771872012588, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -175790,7 +177947,90 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
---- !u!1001 &8104407587924487536
+--- !u!114 &7163994120433110421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6354213061055931865, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
+  m_PrefabInstance: {fileID: 7163994120433110420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62836a68104ac0f429b8dbedd2cb34ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandSlot
+--- !u!114 &7163994120433110422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3869564120663110219, guid: 5f0797978250fbc459c1e623399cce7e, type: 3}
+  m_PrefabInstance: {fileID: 7163994120433110420}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad4261ab41c75a49a88ece9b32b794c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Camera_HandSlotManager
+--- !u!1001 &8360889053279939709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7819599495519286816, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_Name
+      value: CinemachineCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263730633410769529, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 8902696579872355284}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 294.6343
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 271.22195
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+--- !u!1001 &8902696579872355283
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -175800,19 +178040,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1795210381082769277, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2498771408299927713, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 276.0617
+      value: 294.6343
       objectReference: {fileID: 0}
     - target: {fileID: 2498771408299927713, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2498771408299927713, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 246.51492
+      value: 271.22195
       objectReference: {fileID: 0}
     - target: {fileID: 2498771408299927713, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: m_LocalRotation.w
@@ -175845,82 +178085,27 @@ PrefabInstance:
     - target: {fileID: 3349926504140721491, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: handSlotManager
       value: 
-      objectReference: {fileID: 1505701803}
+      objectReference: {fileID: 7163994120433110422}
     - target: {fileID: 3349926504140721491, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
       propertyPath: handSlot_Default
       value: 
-      objectReference: {fileID: 1632031019}
+      objectReference: {fileID: 7163994120433110421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
---- !u!1001 &9219924887922782942
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7819599495519286816, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_Name
-      value: CinemachineCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263730633410769529, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: Target.TrackingTarget
-      value: 
-      objectReference: {fileID: 126476993}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 276.0617
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 246.51492
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 44.588
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052744390270975697, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 849fe5b9e9f665e4a9e370816a6acbaa, type: 3}
+--- !u!4 &8902696579872355284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9173004674620237720, guid: bdb4e5e58d962274c965cacb546c0001, type: 3}
+  m_PrefabInstance: {fileID: 8902696579872355283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 219016307}
+  - {fileID: 1060734319}
   - {fileID: 1443042856}
   - {fileID: 282511444}
   - {fileID: 1614972761}
@@ -175931,8 +178116,7 @@ SceneRoots:
   - {fileID: 1199377521}
   - {fileID: 1923520758}
   - {fileID: 1156581535}
-  - {fileID: 1315851105}
-  - {fileID: 7538891841458885431}
-  - {fileID: 9219924887922782942}
-  - {fileID: 8104407587924487536}
   - {fileID: 161326229}
+  - {fileID: 7163994120433110420}
+  - {fileID: 8360889053279939709}
+  - {fileID: 8902696579872355283}
