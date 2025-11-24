@@ -10,8 +10,8 @@ public class MainMenuManager : MonoBehaviour
     public GameObject aboutGameManager;
 
     [Header("Start Game Panels")]
-    public GameObject newGameConfirmation;   // you have this
-    public GameObject loadGameManager;       // you have this
+    public GameObject newGameConfirmation;
+    public GameObject loadGameManager;
 
     [Header("Audio Sources")]
     public AudioSource musicSource;
@@ -30,19 +30,15 @@ public class MainMenuManager : MonoBehaviour
     [Header("Scene Settings")]
     public string newGameSceneName;
 
-
-
     private GameManager_SaveSystem saveSystemInstance;
-
 
     void Start()
     {
-
         saveSystemInstance = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
 
         EnableOnly(mainMenuManager);
 
-        // hide panels on start
+        // Hide panels on start
         if (newGameConfirmation) newGameConfirmation.SetActive(false);
         if (loadGameManager) loadGameManager.SetActive(false);
 
@@ -65,7 +61,6 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayClickSound();
         EnableOnly(startGameManager);
-
         newGameConfirmation.SetActive(false);
         loadGameManager.SetActive(false);
     }
@@ -80,6 +75,12 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayClickSound();
         EnableOnly(aboutGameManager);
+    }
+
+    public void OnCreditsPressed()
+    {
+        PlayClickSound();
+        SceneManager.LoadScene("Credits"); // Loads the Credits scene
     }
 
     public void OnExitGamePressed()
@@ -108,9 +109,7 @@ public class MainMenuManager : MonoBehaviour
     public void OnNewGameYesPressed()
     {
         PlayClickSound();
-
         saveSystemInstance.WipeSaveGame();
-
         SceneManager.LoadScene(newGameSceneName);
     }
 
@@ -132,9 +131,7 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayClickSound();
         Debug.Log("Loading last saved game...");
-
         SceneManager.LoadScene(newGameSceneName);
-
     }
 
     public void OnLoadGameNoPressed()
