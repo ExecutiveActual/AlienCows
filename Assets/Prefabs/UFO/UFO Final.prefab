@@ -665,28 +665,13 @@ PrefabInstance:
       addedObject: {fileID: 6897369110208080563}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5632987323575204099}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2439802272271297607}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6722619830611461077}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5578627989006782631}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7160570143462623822}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8719888690719042367}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7755887268570172576}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4205646097026099312}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4068706931397563463}
@@ -793,68 +778,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5632987323575204099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492351226530281602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e00079c170f0249a9a176b3b8f9810, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HitZone
-  damageMultiplier: 1
---- !u!114 &2439802272271297607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492351226530281602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7194f2a8a1745fe4a873cc8dcab277ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthManager
-  _Health_Max: 500
-  UE_OnTakeDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  UE_OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &6722619830611461077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492351226530281602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1053a2463fcdd499e41035a7330e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
-  cowTag: Cow
-  yHeight: 35
-  searchInterval: 1
-  maxSearchDistance: 5000
-  moveSpeed: 15
-  returnSpeed: 15
-  zigzagAmplitude: 50
-  zigzagFrequency: 2
-  forwardFollowOffset: 0
-  zigzagPhase: 0
-  detectionRadius: 45
-  liftSpeed: 4
-  abductDuration: 10
-  cowAttachOffset: {x: 0, y: 0, z: 0}
-  dropHeight: 10
-  dropAcceleration: 20
-  dropMaxSpeed: 10
-  abductFX: {fileID: 0}
 --- !u!114 &5578627989006782631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,25 +790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b34c6d2edacac54581bb4045d3e81ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_WaveRegistry
---- !u!114 &7160570143462623822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492351226530281602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7194f2a8a1745fe4a873cc8dcab277ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthManager
-  _Health_Max: 100
-  UE_OnTakeDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  UE_OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8719888690719042367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,35 +822,6 @@ MonoBehaviour:
   UE_OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4205646097026099312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7492351226530281602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2713b3c9f4b7bcb4081cdcfd6c64d567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UFOController_
-  cowTag: Cow
-  yHeight: 35
-  searchInterval: 1
-  maxSearchDistance: 1000
-  moveSpeed: 25
-  returnSpeed: 15
-  zigzagAmplitude: 75
-  zigzagFrequency: 2
-  forwardFollowOffset: 0
-  zigzagPhase: 0
-  detectionRadius: 3.5
-  abductDuration: 7
-  liftForceMin: 10
-  liftForceMax: 25
-  abductGravityMin: 0.3
-  abductGravityMax: -0.2
-  abductFX: {fileID: 1729735530243415442}
 --- !u!114 &4068706931397563463
 MonoBehaviour:
   m_ObjectHideFlags: 0

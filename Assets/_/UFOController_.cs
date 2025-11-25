@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// UFOController_
-/// Handles chasing, abducting, beam FX, and realistic cow dropping when UFO dies.
-/// </summary>
 [RequireComponent(typeof(HealthManager))]
 public class UFOController_ : MonoBehaviour
 {
@@ -30,11 +26,6 @@ public class UFOController_ : MonoBehaviour
     public float liftSpeed = 4f;
     public float abductDuration = 10f;
     public Vector3 cowAttachOffset = new Vector3(0f, -0.5f, 0f);
-    public float dropHeight = 0.1f;
-
-    [Header("Drop Physics (no Rigidbody)")]
-    public float dropAcceleration = 20f;   // gravity-like acceleration
-    public float dropMaxSpeed = 10f;       // terminal velocity
 
     [Header("FX References")]
     public ParticleSystem abductFX;
@@ -54,6 +45,7 @@ public class UFOController_ : MonoBehaviour
     private static readonly HashSet<int> claimedTargets = new HashSet<int>();
     private static readonly object claimLock = new object();
 
+    // ---------------- UNITY ----------------
     private void Awake()
     {
         healthManager = GetComponent<HealthManager>();
@@ -80,7 +72,7 @@ public class UFOController_ : MonoBehaviour
 
     private void Update()
     {
-        // Keep UFO height fixed
+        // Keep UFO fixed at flight height
         Vector3 pos = transform.position;
         pos.y = yHeight;
         transform.position = pos;
@@ -94,7 +86,7 @@ public class UFOController_ : MonoBehaviour
                 HandleChasing();
                 break;
             case UFOState.Abducting:
-                // Handled by coroutine
+                // handled by coroutine
                 break;
             case UFOState.Returning:
                 HandleReturning();
@@ -162,32 +154,29 @@ public class UFOController_ : MonoBehaviour
             return;
         }
 
-        MoveZigZagTowards(currentTarget.position, moveSpeed);
+        // Move above the cow's XZ position
+        Vector3 targetPos = new Vector3(currentTarget.position.x, yHeight, currentTarget.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
-        Vector3 ufoXZ = new Vector3(transform.position.x, 0, transform.position.z);
-        Vector3 cowXZ = new Vector3(currentTarget.position.x, 0, currentTarget.position.z);
+        // Rotate only on Y axis (stay level)
+        Vector3 toCow = currentTarget.position - transform.position;
+        toCow.y = 0f;
+        if (toCow.sqrMagnitude > 0.001f)
+        {
+            Quaternion lookRot = Quaternion.LookRotation(toCow.normalized, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 2f);
+        }
 
-        if (Vector3.Distance(ufoXZ, cowXZ) <= detectionRadius)
+        // Begin abduction only when perfectly above cow
+        float distanceXZ = Vector3.Distance(
+            new Vector3(transform.position.x, 0, transform.position.z),
+            new Vector3(currentTarget.position.x, 0, currentTarget.position.z)
+        );
+
+        if (distanceXZ < 0.5f)
         {
             if (abductRoutine == null)
                 abductRoutine = StartCoroutine(AbductCow(currentTarget));
-        }
-    }
-
-    private void MoveZigZagTowards(Vector3 target, float speed)
-    {
-        Vector3 dir = (new Vector3(target.x, 0, target.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized;
-        Vector3 perp = Vector3.Cross(dir, Vector3.up).normalized;
-
-        float oscillation = Mathf.Sin((Time.time + localPhase) * zigzagFrequency) * zigzagAmplitude;
-        Vector3 approach = new Vector3(target.x, yHeight, target.z) + perp * oscillation + dir * forwardFollowOffset;
-
-        transform.position = Vector3.MoveTowards(transform.position, approach, speed * Time.deltaTime);
-
-        if ((approach - transform.position).sqrMagnitude > 0.001f)
-        {
-            Quaternion targetRot = Quaternion.LookRotation((approach - transform.position).normalized, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 4f);
         }
     }
 
@@ -206,19 +195,26 @@ public class UFOController_ : MonoBehaviour
             yield break;
         }
 
-        // lift
-        Vector3 targetPos = transform.position + cowAttachOffset;
-        while (cow != null && Vector3.Distance(cow.position, targetPos) > 0.05f)
+        // Lock directly above cow
+        Vector3 hoverPos = new Vector3(cow.position.x, yHeight, cow.position.z);
+        while (Vector3.Distance(transform.position, hoverPos) > 0.05f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, hoverPos, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        // Lift cow
+        Vector3 attachPoint = transform.position + cowAttachOffset;
+        while (cow != null && Vector3.Distance(cow.position, attachPoint) > 0.05f)
         {
             if (healthManager.isDead)
             {
                 StopFX();
-                DropCow(cow);
+                cow.SetParent(null);
                 yield break;
             }
 
-            targetPos = transform.position + cowAttachOffset;
-            cow.position = Vector3.MoveTowards(cow.position, targetPos, liftSpeed * Time.deltaTime);
+            cow.position = Vector3.MoveTowards(cow.position, attachPoint, liftSpeed * Time.deltaTime);
             yield return null;
         }
 
@@ -234,10 +230,11 @@ public class UFOController_ : MonoBehaviour
             if (healthManager.isDead)
             {
                 StopFX();
-                DropCow(cow);
+                cow.SetParent(null);
                 yield break;
             }
 
+            transform.position = hoverPos;
             timer += Time.deltaTime;
             yield return null;
         }
@@ -250,46 +247,6 @@ public class UFOController_ : MonoBehaviour
         currentTarget = null;
         abductRoutine = null;
         currentState = UFOState.Returning;
-    }
-
-    private void StopFX()
-    {
-        if (abductFX != null && abductFX.isPlaying)
-            abductFX.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-    }
-
-    // ---------------- DROP ----------------
-    private void DropCow(Transform cow)
-    {
-        if (cow == null) return;
-        cow.SetParent(null);
-        StartCoroutine(DropToGround(cow));
-        ReleaseClaim();
-        abductRoutine = null;
-    }
-
-    private IEnumerator DropToGround(Transform cow)
-    {
-        float verticalSpeed = 0f;
-        while (cow != null && cow.position.y > dropHeight)
-        {
-            // accelerate downward
-            verticalSpeed += dropAcceleration * Time.deltaTime;
-            verticalSpeed = Mathf.Min(verticalSpeed, dropMaxSpeed);
-
-            cow.position -= new Vector3(0f, verticalSpeed * Time.deltaTime, 0f);
-
-            // stop at ground
-            if (cow.position.y <= dropHeight)
-            {
-                Vector3 p = cow.position;
-                p.y = dropHeight;
-                cow.position = p;
-                break;
-            }
-
-            yield return null;
-        }
     }
 
     // ---------------- RETURNING ----------------
@@ -307,6 +264,36 @@ public class UFOController_ : MonoBehaviour
         }
     }
 
+    // ---------------- UTILITIES ----------------
+    private void MoveZigZagTowards(Vector3 target, float speed)
+    {
+        Vector3 dir = (new Vector3(target.x, 0, target.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized;
+        Vector3 perp = Vector3.Cross(dir, Vector3.up).normalized;
+
+        float oscillation = Mathf.Sin((Time.time + localPhase) * zigzagFrequency) * zigzagAmplitude;
+        Vector3 approach = new Vector3(target.x, yHeight, target.z) + perp * oscillation + dir * forwardFollowOffset;
+
+        transform.position = Vector3.MoveTowards(transform.position, approach, speed * Time.deltaTime);
+
+        // Rotate only around Y (stay level)
+        if ((approach - transform.position).sqrMagnitude > 0.001f)
+        {
+            Vector3 flatDir = approach - transform.position;
+            flatDir.y = 0f;
+            if (flatDir.sqrMagnitude > 0.001f)
+            {
+                Quaternion targetRot = Quaternion.LookRotation(flatDir.normalized, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 4f);
+            }
+        }
+    }
+
+    private void StopFX()
+    {
+        if (abductFX != null && abductFX.isPlaying)
+            abductFX.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+    }
+
     private void ReleaseClaim()
     {
         if (currentTarget == null) return;
@@ -319,12 +306,15 @@ public class UFOController_ : MonoBehaviour
 
     private void OnUFODestroyed()
     {
-        if (currentState == UFOState.Abducting && currentTarget != null)
-            DropCow(currentTarget);
-
         StopFX();
         ReleaseClaim();
-        Destroy(gameObject); // permanently destroy UFO
+        StartCoroutine(DestroyAfterFrame());
+    }
+
+    private IEnumerator DestroyAfterFrame()
+    {
+        yield return null;
+        Destroy(gameObject);
     }
 
     private void OnDestroy()
