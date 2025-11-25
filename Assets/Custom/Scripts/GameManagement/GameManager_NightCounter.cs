@@ -38,6 +38,11 @@ public class GameManager_NightCounter : MonoBehaviour, IGameManagerModule
 
     public int GetCurrentNightNumber()
     {
+        if (saveSystemInstance.PlayerData_Curr.NightNumber == 0)
+        {
+            return 1;
+        }
+
         return saveSystemInstance.PlayerData_Curr.NightNumber;
     }
 
