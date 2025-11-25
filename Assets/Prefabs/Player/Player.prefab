@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _walkSpeed: 4.3
-  _sprintSpeed: 7.2
+  _sprintSpeed: 9.3
   _jumpHeight: 1.6
   groundCheck: {fileID: 314691339850440783}
   groundDistance: 0.1

@@ -11,15 +11,10 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 
     [SerializeField] private SO_WeaponTable weaponTable;
 
-    [SerializeField] private SO_ItemTable itemTable;
-
 
     public WeaponHeld Weapon_1 { get; private set; }
     public WeaponHeld Weapon_2 { get; private set; }
-
-    public ItemHeld Item_3 { get; private set; }
-    public ItemHeld Item_4 { get; private set; }
-    public ItemHeld Item_5 { get; private set; }
+    public WeaponHeld Weapon_3 { get; private set; }
 
 
 
@@ -49,23 +44,11 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 
         Weapon_2 = newWeapon;
     }
-    public void SetItem_3(int newItemID)
+    public void SetWeapon_3(int newWeaponID)
     {
-        ItemHeld newItem = itemTable.GetItemFromID(newItemID);
+        WeaponHeld newWeapon = weaponTable.GetWeaponFromID(newWeaponID);
 
-        Item_3 = newItem;
-    }
-    public void SetItem_4(int newItemID)
-    {
-        ItemHeld newItem = itemTable.GetItemFromID(newItemID);
-
-        Item_4 = newItem;
-    }
-    public void SetItem_5(int newItemID)
-    {
-        ItemHeld newItem = itemTable.GetItemFromID(newItemID);
-
-        Item_5 = newItem;
+        Weapon_3 = newWeapon;
     }
 
 
@@ -77,9 +60,7 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
         {
             weapon_1 = Weapon_1,
             weapon_2 = Weapon_2,
-            item_3 = Item_3,
-            item_4 = Item_4,
-            item_5 = Item_5
+            weapon_3 = Weapon_3
         };
         return hotbarItems;
     }
@@ -97,11 +78,8 @@ public class GameManager_GiveInventory : MonoBehaviour, IGameManagerModule
 
             Weapon_2 = weaponTable.GetWeaponFromID(saveSystem.PlayerData_Curr.SavedHotbar[1]);
 
-            Item_3 = itemTable.GetItemFromID(saveSystem.PlayerData_Curr.SavedHotbar[2]);
+            Weapon_3 = weaponTable.GetWeaponFromID(saveSystem.PlayerData_Curr.SavedHotbar[2]);
 
-            Item_4 = itemTable.GetItemFromID(saveSystem.PlayerData_Curr.SavedHotbar[3]);
-
-            Item_5 = itemTable.GetItemFromID(saveSystem.PlayerData_Curr.SavedHotbar[4]);
 
         }
 
@@ -135,7 +113,5 @@ public struct HotbarInventoryItems
 {
     public WeaponHeld weapon_1;
     public WeaponHeld weapon_2;
-    public ItemHeld item_3;
-    public ItemHeld item_4;
-    public ItemHeld item_5;
+    public WeaponHeld weapon_3;
 }

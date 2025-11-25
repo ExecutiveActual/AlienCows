@@ -15,10 +15,8 @@ public class HotbarInventory : MonoBehaviour
 
     public WeaponHeld weapon_1 { get; private set; }
     public WeaponHeld weapon_2 { get; private set; }
+    public WeaponHeld weapon_3 { get; private set; }
 
-    public ItemHeld item_3 { get; private set; }
-    public ItemHeld item_4 { get; private set; }
-    public ItemHeld item_5 { get; private set; }
 
 
     GameManager_GiveInventory gameManager_GiveInventory;
@@ -86,9 +84,7 @@ public class HotbarInventory : MonoBehaviour
 
         weapon_1 = newItems.weapon_1;
         weapon_2 = newItems.weapon_2;
-        item_3 = newItems.item_3;
-        item_4 = newItems.item_4;
-        item_5 = newItems.item_5;
+        weapon_3 = newItems.weapon_3;
 
         Debug.Log(weapon_1);
 
@@ -123,7 +119,7 @@ public class HotbarInventory : MonoBehaviour
         if (!char.IsDigit(keyChar)) return;
 
         int slotIndex = keyChar - '0';
-        if (slotIndex < 1 || slotIndex > 5) return;
+        if (slotIndex < 1 || slotIndex > 3) return;
 
         // -------------------------------------------------------------
         // 3. Your hotbar logic
@@ -163,9 +159,7 @@ public class HotbarInventory : MonoBehaviour
         {
             1 => weapon_1,
             2 => weapon_2,
-            3 => item_3,
-            4 => item_4,
-            5 => item_5,
+            3 => weapon_3,
             _ => null
         };
     }

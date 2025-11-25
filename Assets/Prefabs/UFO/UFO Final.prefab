@@ -837,7 +837,7 @@ MonoBehaviour:
   cowTag: Cow
   yHeight: 35
   searchInterval: 1
-  maxSearchDistance: 900
+  maxSearchDistance: 5000
   moveSpeed: 15
   returnSpeed: 15
   zigzagAmplitude: 50
@@ -848,9 +848,6 @@ MonoBehaviour:
   liftSpeed: 4
   abductDuration: 10
   cowAttachOffset: {x: 0, y: -0.5, z: 0}
-  dropHeight: 10
-  dropAcceleration: 20
-  dropMaxSpeed: 10
   abductFX: {fileID: 1729735530243415442}
 --- !u!4 &7832319481119302200 stripped
 Transform:

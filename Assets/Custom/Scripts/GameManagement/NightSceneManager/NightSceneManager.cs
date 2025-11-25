@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class NightSceneManager : MonoBehaviour
@@ -37,6 +38,26 @@ public class NightSceneManager : MonoBehaviour
 
     }
 
+
+    public void OnAllWavesComplete()
+    {
+
+        Debug.Log("All Waves Complete!");
+
+
+        //Check other shit
+
+        StartCoroutine(WaitForTransition());
+
+
+    }
+
+    private IEnumerator WaitForTransition()
+    {
+        yield return new WaitForSeconds(3f);
+
+        GameManager_Singleton.Instance.GetComponent<GameManager_SceneChangeEvents>().ChangeScene("Day Scene");
+    }
 
 
 }

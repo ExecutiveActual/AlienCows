@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3396383773478696853}
   - component: {fileID: 926916810568844917}
   - component: {fileID: 7577386463505219020}
+  - component: {fileID: 3399783289526668318}
   m_Layer: 0
   m_Name: PF_GameManager
   m_TagString: Untagged
@@ -64,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager_GiveInventory
   starterWeaponID: 1
   weaponTable: {fileID: 11400000, guid: 687b1be5f92ec3547bdd4564663e7e04, type: 2}
-  itemTable: {fileID: 11400000, guid: 86c924c34d8c07340946c5ab71221975, type: 2}
   UE_OnInitializeInventory:
     m_PersistentCalls:
       m_Calls: []
@@ -137,3 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a196fb64b2e95f4e9907a3d940578b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager_SaveSystem
+--- !u!114 &3399783289526668318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790286996824375228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01289215d0f77e4f8529bb66005f114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GM_UnlockWeapons

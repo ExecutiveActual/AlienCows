@@ -7047,6 +7047,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1041486255}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (11)
@@ -7107,14 +7115,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -56.906
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1041486255}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -8897,6 +8897,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 141874531}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (6)
@@ -8957,14 +8965,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -12.42
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 141874531}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -24047,6 +24047,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1004038031}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (3)
@@ -24107,14 +24115,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.717
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1004038031}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -44669,6 +44669,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1033284580}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (1)
@@ -44733,14 +44741,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1033284580}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -63223,6 +63223,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1534108646}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (14)
@@ -63283,14 +63291,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.368
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1534108646}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -78874,6 +78874,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1081430856}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (2)
@@ -78934,14 +78942,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 27.46
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1081430856}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -81152,6 +81152,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 2016341086}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final
@@ -81212,14 +81220,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 17.939
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 2016341086}
     m_RemovedComponents:
     - {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
     - {fileID: 7755887268570172576, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
@@ -85763,6 +85763,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1501704728}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (9)
@@ -85823,14 +85831,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.48
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1501704728}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -100321,6 +100321,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 301840689}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (4)
@@ -100385,14 +100393,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 301840689}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -100678,6 +100678,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1192507108}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (7)
@@ -100738,14 +100746,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 7.669
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1192507108}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -105007,6 +105007,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1156250502}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (12)
@@ -105067,14 +105075,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 27.46
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1156250502}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -116058,6 +116058,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 322462802}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (15)
@@ -116118,14 +116126,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 28.504
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 322462802}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -127745,6 +127745,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 28422488}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (13)
@@ -127805,14 +127813,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -56.906
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 28422488}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -157437,6 +157437,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1867265763}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (5)
@@ -157497,14 +157505,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 35.514
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1867265763}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -161657,7 +161657,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -175780,6 +175780,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 1753754811}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (8)
@@ -175840,14 +175848,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.546
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 1753754811}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
@@ -176675,6 +176675,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: MinDistance
+      value: 4.554138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+      propertyPath: abductFX
+      value: 
+      objectReference: {fileID: 2111985484}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final (10)
@@ -176735,14 +176743,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 50.984
       objectReference: {fileID: 0}
-    - target: {fileID: 262046015974374310, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: MinDistance
-      value: 4.554138
-      objectReference: {fileID: 0}
-    - target: {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
-      propertyPath: abductFX
-      value: 
-      objectReference: {fileID: 2111985484}
     m_RemovedComponents:
     - {fileID: 2106816776401648128, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
     - {fileID: 196725588262459101, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}

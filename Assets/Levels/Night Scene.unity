@@ -12191,7 +12191,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d54f74238965c514e9bde0a1a4284a14, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.066
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -28417,37 +28417,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339668743}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &340119183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 340119184}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &340119184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340119183}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2382, y: 0, z: 629}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341052167
 GameObject:
   m_ObjectHideFlags: 0
@@ -29082,37 +29051,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346090673}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &347489588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 347489589}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &347489589
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347489588}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -417, y: 0, z: 1960}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &348124197
 GameObject:
   m_ObjectHideFlags: 0
@@ -39771,79 +39709,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476455155}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1001 &477083252
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: liftSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: detectionRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: cowAttachOffset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: maxSearchDistance
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_Name
-      value: UFO Final
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 275.8157
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 343.3889
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7832319481119302200, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
 --- !u!1 &478850860
 GameObject:
   m_ObjectHideFlags: 0
@@ -55073,63 +54938,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641507016}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1001 &641721659
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5223580089623097671, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_Name
-      value: Cow
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 332.16867
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.043314338
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 351.0459
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955898648448049601, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 777d8a2989c403d4c827f8c5e1acae2a, type: 3}
 --- !u!1 &641823916
 GameObject:
   m_ObjectHideFlags: 0
@@ -62731,37 +62539,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739566502}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &741234339
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 741234340}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &741234340
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741234339}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2889, y: 0, z: -1125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &742294788
 GameObject:
   m_ObjectHideFlags: 0
@@ -87400,6 +87177,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8436917361676307425, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 316.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436917361676307425, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -53.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436917361676307425, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 376.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8476885974339772762, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
       propertyPath: m_LocalPosition.x
       value: 207.3
@@ -87607,42 +87396,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
       insertIndex: -1
       addedObject: {fileID: 631217172}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1661571605}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1631864715}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1065457048}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 340119184}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1383732897}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 741234340}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1608418855}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2045244364}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1461004266}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1086748855}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 347489589}
-    - targetCorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1582170707}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
 --- !u!1 &1063632151
@@ -87846,37 +87599,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064984517}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1065457047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1065457048}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1065457048
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065457047}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1979, y: 0, z: 1221}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066143729
 GameObject:
   m_ObjectHideFlags: 0
@@ -89551,37 +89273,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085405616}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1086748854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1086748855}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1086748855
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086748854}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 493, y: 0, z: 2543}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1090508202
 GameObject:
   m_ObjectHideFlags: 0
@@ -90203,6 +89894,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f3c5234f7b74876419006939c5c46a58, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6da97e29e6ced3240b5bea694bf5352f, type: 2}
     - target: {fileID: 919132149155446097, guid: f3c5234f7b74876419006939c5c46a58, type: 3}
       propertyPath: m_Name
       value: M_House_Main
@@ -104912,11 +104607,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263146395}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!4 &1264426498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2227897385621604986, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
-  m_PrefabInstance: {fileID: 1060734319}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1264880464
 GameObject:
   m_ObjectHideFlags: 0
@@ -112531,37 +112221,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382087542}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &1383732896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1383732897}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1383732897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383732896}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3031, y: 0, z: -454}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384386175
 GameObject:
   m_ObjectHideFlags: 0
@@ -119464,79 +119123,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441530601}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1001 &1443042856
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 386.40805
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 605.4092
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2012922229962653070, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: itemTable
-      value: 
-      objectReference: {fileID: 11400000, guid: 86c924c34d8c07340946c5ab71221975, type: 2}
-    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: weaponTable
-      value: 
-      objectReference: {fileID: 11400000, guid: 687b1be5f92ec3547bdd4564663e7e04, type: 2}
-    - target: {fileID: 6705544980996240067, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: starterWeaponID
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8790286996824375228, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8790286996824375228, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 02becb8462fca5340b9969c29184bdf7, type: 3}
 --- !u!1 &1443079095
 GameObject:
   m_ObjectHideFlags: 0
@@ -121057,37 +120643,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460054974}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1461004265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1461004266}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1461004266
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461004265}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1853, y: 0, z: 89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461271411
 GameObject:
   m_ObjectHideFlags: 0
@@ -134574,37 +134129,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581983976}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &1582170706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1582170707}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1582170707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582170706}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 0, z: 1960}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584166221
 GameObject:
   m_ObjectHideFlags: 0
@@ -136148,37 +135672,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607414115}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &1608418854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1608418855}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1608418855
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608418854}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3925, y: 0, z: -42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610690191
 GameObject:
   m_ObjectHideFlags: 0
@@ -137897,37 +137390,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629582227}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1631864714
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1631864715}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1631864715
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631864714}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1456, y: 0, z: 1479}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633909339
 GameObject:
   m_ObjectHideFlags: 0
@@ -140473,37 +139935,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661003969}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1661571604
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1661571605}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1661571605
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661571604}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80, y: 0, z: 1287}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662157588
 GameObject:
   m_ObjectHideFlags: 0
@@ -170550,37 +169981,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043646134}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
---- !u!1 &2045244363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045244364}
-  m_Layer: 0
-  m_Name: UFO SpawnPoint (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2045244364
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045244363}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3982, y: 0, z: 1000}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1264426498}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045369179
 GameObject:
   m_ObjectHideFlags: 0
@@ -177175,7 +176575,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 219016307}
   - {fileID: 1060734319}
-  - {fileID: 1443042856}
   - {fileID: 282511444}
   - {fileID: 1614972761}
   - {fileID: 58322014}
@@ -177185,5 +176584,3 @@ SceneRoots:
   - {fileID: 7163994120433110420}
   - {fileID: 8360889053279939709}
   - {fileID: 8902696579872355283}
-  - {fileID: 641721659}
-  - {fileID: 477083252}

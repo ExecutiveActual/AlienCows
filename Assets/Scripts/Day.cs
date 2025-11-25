@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class Day : MonoBehaviour
 {
+
+    
+
+
     [Header("Menu References")]
     public GameObject morningScreen;
     public GameObject dayMenu;
@@ -26,6 +30,8 @@ public class Day : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         // Default startup states
         morningScreen.SetActive(true);
         dayMenu.SetActive(false);
@@ -111,7 +117,9 @@ public class Day : MonoBehaviour
     public void ContinueToNight()
     {
         PlayClick();
-        SceneManager.LoadScene(nightScene);
+
+        GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().AdvanceToNextNight();
+        GameManager_Singleton.Instance.GetComponent<GameManager_SceneChangeEvents>().ChangeScene(nightScene);
     }
 
 
