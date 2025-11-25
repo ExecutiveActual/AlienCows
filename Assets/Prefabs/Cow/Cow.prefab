@@ -329,9 +329,9 @@ MonoBehaviour:
   wanderRadius: 10
   moveSpeed: 1.5
   targetThreshold: 0.5
-  idleProbability: 0.4
-  grazingProbability: 0.4
-  roamingProbability: 0.2
+  idleProbability: 0.031
+  grazingProbability: 0.212
+  roamingProbability: 0.9
   sleepingProbability: 0.25
   OnCowSleep:
     m_PersistentCalls:

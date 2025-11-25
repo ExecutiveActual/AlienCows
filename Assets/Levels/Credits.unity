@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spisey
+  m_text: Sebastian Raft
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3de592067fb8d6841896fbd3349f5e47, type: 2}
   m_sharedMaterial: {fileID: -6353304514981168340, guid: 3de592067fb8d6841896fbd3349f5e47, type: 2}
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4cf505e67ff01439c005744d4efc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenLink
-  url: 
+  url: https://spisey.itch.io/
 --- !u!1 &215410892
 GameObject:
   m_ObjectHideFlags: 0
