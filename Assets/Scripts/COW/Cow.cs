@@ -5,8 +5,7 @@ using System.Collections;
 
 public class Cow : MonoBehaviour
 {
-    [Header("World & Debug")]
-    public WorldClock_ worldClock; // Reference to your world clock
+    [Header("Debug")]
     public TMP_Text debugText;
 
     [Header("Movement Settings")]
@@ -14,26 +13,11 @@ public class Cow : MonoBehaviour
     public float moveSpeed = 1.5f;
     public float targetThreshold = 0.5f;
 
-    [Header("State Probabilities (Daytime Only)")]
-    [Range(0f, 1f)] public float idleProbability = 0.4f;
-    [Range(0f, 1f)] public float grazingProbability = 0.4f;
-    [Range(0f, 1f)] public float roamingProbability = 0.2f;
-
-    [Header("Audio Clips")]
-    public AudioClip idleSound;
-    [Range(0f, 1f)] public float idleVolume = 1f;
-
-    public AudioClip grazingSound;
-    [Range(0f, 1f)] public float grazingVolume = 1f;
-
-    public AudioClip sleepSound;
-    [Range(0f, 1f)] public float sleepVolume = 1f;
-
-    public AudioClip roamingSound;
-    [Range(0f, 1f)] public float roamingVolume = 1f;
-
-    [Header("Audio Settings")]
-    public AudioSource cowAudioSource;
+    [Header("State Probabilities")]
+    [Range(0f, 1f)] public float idleProbability = 0.25f;
+    [Range(0f, 1f)] public float grazingProbability = 0.25f;
+    [Range(0f, 1f)] public float roamingProbability = 0.25f;
+    [Range(0f, 1f)] public float sleepingProbability = 0.25f;
 
     [Header("Unity Events")]
     public UnityEvent OnCowSleep;
@@ -45,7 +29,6 @@ public class Cow : MonoBehaviour
     private Vector3 targetPoint;
     private bool isMoving = false;
     private bool isSleeping = false;
-    private bool wasNightBefore = false;
 
     private enum CowState { Idle, Grazing, Roaming, Sleeping }
     private CowState currentState;
@@ -69,109 +52,51 @@ public class Cow : MonoBehaviour
             if (Camera.main != null)
                 debugText.transform.rotation = Quaternion.LookRotation(debugText.transform.position - Camera.main.transform.position);
         }
-
-        // Detect day/night transitions
-        if (worldClock != null)
-        {
-            bool isNightNow = worldClock.IsNight();
-
-            if (isNightNow && !wasNightBefore)
-            {
-                StopAllCoroutines();
-                StartCoroutine(SleepRoutine());
-            }
-            else if (!isNightNow && wasNightBefore)
-            {
-                StopAllCoroutines();
-                StartCoroutine(CowDecisionLoop());
-            }
-
-            wasNightBefore = isNightNow;
-        }
-
-        // Stop roaming loop sound if cow stops moving
-        if (currentState == CowState.Roaming && cowAudioSource != null)
-        {
-            if (!isMoving && cowAudioSource.isPlaying && cowAudioSource.loop)
-                cowAudioSource.Stop();
-        }
     }
 
     IEnumerator CowDecisionLoop()
     {
         while (true)
         {
-            if (worldClock != null && worldClock.IsNight())
+            float total = idleProbability + grazingProbability + roamingProbability + sleepingProbability;
+            float rand = Random.value * total;
+
+            if (rand < idleProbability)
             {
-                yield return SleepRoutine();
+                SwitchState(CowState.Idle);
+                OnCowIdle?.Invoke();
+                yield return new WaitForSeconds(Random.Range(4f, 8f));
+            }
+            else if (rand < idleProbability + grazingProbability)
+            {
+                SwitchState(CowState.Grazing);
+                OnCowGraze?.Invoke();
+                yield return new WaitForSeconds(Random.Range(6f, 10f));
+            }
+            else if (rand < idleProbability + grazingProbability + roamingProbability)
+            {
+                SwitchState(CowState.Roaming);
+                OnCowRoam?.Invoke();
+                targetPoint = GetRandomPointInRadius();
+                isMoving = true;
+                yield return new WaitForSeconds(Random.Range(4f, 8f));
+                isMoving = false;
             }
             else
             {
-                float rand = Random.value;
-
-                if (rand < idleProbability)
-                {
-                    SwitchState(CowState.Idle);
-                    OnCowIdle?.Invoke();
-                    PlaySound(idleSound, idleVolume, false);
-                    yield return new WaitForSeconds(Random.Range(4f, 8f));
-                }
-                else if (rand < idleProbability + grazingProbability)
-                {
-                    SwitchState(CowState.Grazing);
-                    OnCowGraze?.Invoke();
-                    PlaySound(grazingSound, grazingVolume, false);
-                    yield return new WaitForSeconds(Random.Range(6f, 10f));
-                }
-                else
-                {
-                    SwitchState(CowState.Roaming);
-                    OnCowRoam?.Invoke();
-                    PlaySound(roamingSound, roamingVolume, true); // 🆕 loop = true
-                    targetPoint = GetRandomPointInRadius();
-                    isMoving = true;
-                    yield return new WaitForSeconds(Random.Range(4f, 8f));
-                    isMoving = false;
-                    cowAudioSource.loop = false; // stop loop after done roaming
-                    cowAudioSource.Stop();
-                }
+                SwitchState(CowState.Sleeping);
+                OnCowSleep?.Invoke();
+                isSleeping = true;
+                yield return new WaitForSeconds(Random.Range(8f, 15f));
+                isSleeping = false;
             }
         }
-    }
-
-    IEnumerator SleepRoutine()
-    {
-        SwitchState(CowState.Sleeping);
-        OnCowSleep?.Invoke();
-        PlaySound(sleepSound, sleepVolume, false);
-        isSleeping = true;
-
-        // Cow stays asleep until night ends
-        while (worldClock != null && worldClock.IsNight())
-            yield return null;
-
-        isSleeping = false;
-        StartCoroutine(CowDecisionLoop());
     }
 
     void SwitchState(CowState newState)
     {
         currentState = newState;
         isSleeping = (newState == CowState.Sleeping);
-    }
-
-    void PlaySound(AudioClip clip, float volume, bool loop)
-    {
-        if (cowAudioSource == null) return;
-        cowAudioSource.Stop();
-
-        if (clip != null)
-        {
-            cowAudioSource.clip = clip;
-            cowAudioSource.volume = volume;
-            cowAudioSource.loop = loop;
-            cowAudioSource.Play();
-        }
     }
 
     void MoveTowardsTarget()
