@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbbf317c7d60264bbdc20d7a2848ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackButton
-  sceneToLoad: MainMenu_
+  sceneToLoad: Main Menu
   sfxSource: {fileID: 1014837480}
   hoverSound: {fileID: 8300000, guid: ec534abd1e8007641a353b69b6d0d13e, type: 3}
   clickSound: {fileID: 8300000, guid: 61c43e7771c87544ba8cdff4c74959b1, type: 3}
