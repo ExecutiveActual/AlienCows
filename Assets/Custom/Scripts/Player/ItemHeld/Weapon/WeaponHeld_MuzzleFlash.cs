@@ -4,83 +4,56 @@ using UnityEngine;
 public class WeaponHeld_MuzzleFlash : MonoBehaviour
 {
 
+    GunController gunController;
 
-    [SerializeField] private Transform muzzleFlashTransform;
+    [SerializeField] private MuzzleFlash_Controller muzzleFlash_Controller;
 
-    [SerializeField] private float flashDuration = 0.012f;
-
-    //[SerializeField] private float randomAngleRange = 10f;
-
-    //[SerializeField] private float randomScaleRange = 0.03f;
+    [SerializeField] private Transform muzzleFlashSpawnerTransform;
 
 
 
-    bool isFlashVisible = false;
-
-    Coroutine muzzleFlashCoroutine;
-
-    float muzzleFlashTransform_initialScale;
 
 
 
-    private void Awake()
-    {
-        muzzleFlashTransform_initialScale = muzzleFlashTransform.localScale.x;
-    }
 
     private void Start()
     {
-        muzzleFlashTransform.gameObject.SetActive(false);
+        
+        gunController = GetComponent<GunController>();
 
-        isFlashVisible = false;
+        muzzleFlash_Controller = GetComponentInChildren<MuzzleFlash_Controller>();
 
-        Randomize();
+        muzzleFlash_Controller.transform.SetParent(null, true);
+
+        gunController.UE_OnShoot.AddListener(MuzzleFlash);
+
     }
 
 
-    private void OnShoot()
+    private void OnEnable()
+    {
+        
+    }
+
+    private void OnDisable()
+    {
+        gunController.UE_OnShoot.RemoveListener(MuzzleFlash);
+    }
+
+
+
+    public void MuzzleFlash()
     {
 
-        if (isFlashVisible)
-        {
-            muzzleFlashTransform.gameObject.SetActive(false);
-            isFlashVisible = false;
-        }
+        Debug.Log("Muzzle");
 
-        muzzleFlashCoroutine = null;
-        muzzleFlashCoroutine = StartCoroutine(MuzzleFlashRoutine());
+        muzzleFlash_Controller.transform.position = muzzleFlashSpawnerTransform.position;
 
-    }
+        muzzleFlash_Controller.transform.rotation = muzzleFlashSpawnerTransform.rotation;
 
-
-    private void Randomize()
-    {
-
-        //muzzleFlashTransform.localScale = Vector3.one * (muzzleFlashTransform_initialScale + Random.Range(-randomScaleRange, randomScaleRange));
-
-        //muzzleFlashTransform.localRotation = Quaternion.Euler(
-        //    muzzleFlashTransform.localRotation.x,
-        //    muzzleFlashTransform.localRotation.y,
-        //    Random.Range(-randomAngleRange, randomAngleRange)
-        //    );
+        muzzleFlash_Controller.PerformMuzzleFlash();
 
     }
-
-
-    private IEnumerator MuzzleFlashRoutine()
-    {
-
-        muzzleFlashTransform.gameObject.SetActive(true);
-        isFlashVisible = true;
-
-        yield return new WaitForSeconds(flashDuration);
-
-        muzzleFlashTransform.gameObject.SetActive(false);
-        isFlashVisible = false;
-
-        Randomize();
-    }
-
 
 
 

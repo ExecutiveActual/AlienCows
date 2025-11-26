@@ -59,6 +59,7 @@ public class RaycastShooting_Shotgun : MonoBehaviour
             if (target_HitZone != null)
             {
                 target_HitZone.TakeDamage(damage_PerPellet);
+                target_HitZone.TakeHit(hit);
             }
 
             // Optional: Add impact effects here

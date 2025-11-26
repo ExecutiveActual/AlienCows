@@ -44,6 +44,7 @@ public class RaycastShooting : MonoBehaviour
 
             if (target_HitZone != null)
             {
+                target_HitZone.TakeHit(hit);
                 target_HitZone.TakeDamage(damage);
             }
         }

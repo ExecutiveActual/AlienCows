@@ -8,6 +8,8 @@ public class HitZone : MonoBehaviour
 
     [SerializeField] private float damageMultiplier = 1f;
 
+    public UnityEvent<RaycastHit> UE_OnTakeHit;
+
 
 
     private void Awake()
@@ -28,6 +30,16 @@ public class HitZone : MonoBehaviour
         Debug.Log($"{this}, took {damage} damage!");
 
         healthManager.TakeDamage(damage * damageMultiplier);
+    }
+
+
+    public void TakeHit(RaycastHit hit_Incoming)
+    {
+
+        Debug.Log($"{this} took a hit");
+
+        UE_OnTakeHit?.Invoke(hit_Incoming);
 
     }
+
 }
