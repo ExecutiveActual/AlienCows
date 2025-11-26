@@ -6,13 +6,9 @@ public class WeaponHeld_MuzzleFlash : MonoBehaviour
 
     GunController gunController;
 
-    [SerializeField] private MuzzleFlash_Controller muzzleFlash_Controller;
+    [SerializeField] private FX_MuzzleFlash_Controller muzzleFlash_Controller;
 
     [SerializeField] private Transform muzzleFlashSpawnerTransform;
-
-
-
-
 
 
 
@@ -21,7 +17,7 @@ public class WeaponHeld_MuzzleFlash : MonoBehaviour
         
         gunController = GetComponent<GunController>();
 
-        muzzleFlash_Controller = GetComponentInChildren<MuzzleFlash_Controller>();
+        muzzleFlash_Controller = GetComponentInChildren<FX_MuzzleFlash_Controller>();
 
         muzzleFlash_Controller.transform.SetParent(null, true);
 

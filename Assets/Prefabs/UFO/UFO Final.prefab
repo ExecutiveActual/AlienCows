@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_HitFX
   hitEffectPrefab: {fileID: 4592088531082039171, guid: a700a67149643ee439f05de231a87078, type: 3}
+  hitEffectLookRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &2999239291154428943
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_HitFX
   hitEffectPrefab: {fileID: 4592088531082039171, guid: a700a67149643ee439f05de231a87078, type: 3}
+  hitEffectLookRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &3100742499766433261
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_HitFX
   hitEffectPrefab: {fileID: 3803752839127476638, guid: 822c5075d54df2244b2dd49f416fa4d0, type: 3}
+  hitEffectLookRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &3211578624905085450
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UFO_HitFX
   hitEffectPrefab: {fileID: 3803752839127476638, guid: 822c5075d54df2244b2dd49f416fa4d0, type: 3}
+  hitEffectLookRotation: {x: 0, y: 1, z: 0}
 --- !u!1 &8044064685377255387
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,15 +652,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 849
+      value: -1.4331894
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.1
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -57
+      value: 28.54596
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4d15ba67a3ce78d4db8fcc8e06d962a1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -867,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7194f2a8a1745fe4a873cc8dcab277ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthManager
-  _Health_Max: 500
+  _Health_Max: 1000
   UE_OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []

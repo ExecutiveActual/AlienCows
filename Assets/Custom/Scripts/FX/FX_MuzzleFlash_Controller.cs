@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuzzleFlash_Controller : MonoBehaviour
+public class FX_MuzzleFlash_Controller : MonoBehaviour
 {
-
     [SerializeField] private List<ParticleSystem> particleSystems;
 
 
@@ -40,5 +39,4 @@ public class MuzzleFlash_Controller : MonoBehaviour
         }
 
     }
-
 }
