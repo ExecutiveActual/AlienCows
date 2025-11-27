@@ -40,6 +40,13 @@ public class LoadExitAnimationCredits : MonoBehaviour
             fadeImage.color = new Color(0, 0, 0, 0);
         }
 
+        // Ensure the text is disabled at start
+        if (textToWrite != null)
+        {
+            textToWrite.gameObject.SetActive(false);
+            textToWrite.text = "";
+        }
+
         // Auto-add AudioSource if missing
         if (uiAudioSource == null)
         {
@@ -99,8 +106,22 @@ public class LoadExitAnimationCredits : MonoBehaviour
 
         textToWrite.text = "";
 
-        // Small delay before typing starts
-        yield return new WaitForSeconds(waitBeforeTyping);
+        // Wait before typing starts
+        if (waitBeforeTyping > 0f)
+        {
+            // Enable text a second before typing begins (if waitBeforeTyping > 1)
+            if (waitBeforeTyping > 1f)
+                yield return new WaitForSeconds(waitBeforeTyping - 1f);
+
+            textToWrite.gameObject.SetActive(true);
+
+            // Remaining wait time until typing begins
+            yield return new WaitForSeconds(Mathf.Min(1f, waitBeforeTyping));
+        }
+        else
+        {
+            textToWrite.gameObject.SetActive(true);
+        }
 
         // Typewriter effect
         foreach (char c in sentence.ToCharArray())

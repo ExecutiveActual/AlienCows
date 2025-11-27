@@ -8,7 +8,6 @@ public class PauseMenuManager : MonoBehaviour
     [Header("Panels")]
     public GameObject pauseMenuPanel;
     public GameObject settingsGameManager;
-    public GameObject viewCollectionsManager;
 
     [Header("Main Menu Scene")]
     public string mainMenuSceneName;
@@ -24,7 +23,6 @@ public class PauseMenuManager : MonoBehaviour
     {
         pauseMenuPanel.SetActive(false);
         settingsGameManager.SetActive(false);
-        viewCollectionsManager.SetActive(false);
     }
 
     void Update()
@@ -42,7 +40,6 @@ public class PauseMenuManager : MonoBehaviour
     {
         pauseMenuPanel.SetActive(true);
         settingsGameManager.SetActive(false);
-        viewCollectionsManager.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
 
@@ -53,6 +50,7 @@ public class PauseMenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        // Ensure EventSystem exists
         if (EventSystem.current == null)
         {
             GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
@@ -64,7 +62,6 @@ public class PauseMenuManager : MonoBehaviour
     {
         pauseMenuPanel.SetActive(false);
         settingsGameManager.SetActive(false);
-        viewCollectionsManager.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
 
@@ -83,24 +80,10 @@ public class PauseMenuManager : MonoBehaviour
         settingsGameManager.SetActive(true);
     }
 
-    public void OpenViewCollections()
-    {
-        PlayClickSound();
-        pauseMenuPanel.SetActive(false);
-        viewCollectionsManager.SetActive(true);
-    }
-
     public void BackToPauseMenuFromSettings()
     {
         PlayClickSound();
         settingsGameManager.SetActive(false);
-        pauseMenuPanel.SetActive(true);
-    }
-
-    public void BackToPauseMenuFromCollections()
-    {
-        PlayClickSound();
-        viewCollectionsManager.SetActive(false);
         pauseMenuPanel.SetActive(true);
     }
 

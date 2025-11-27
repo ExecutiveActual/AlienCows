@@ -3,21 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class Day : MonoBehaviour
 {
-
-    
-
-
     [Header("Menu References")]
     public GameObject morningScreen;
     public GameObject dayMenu;
     public GameObject loadoutMenu;
-    public GameObject checkCowsMenu;
 
     [Header("Scene Names (Assign in Inspector)")]
-    public string dayShopScene;     // Visit Shop → Day_Shop
-    public string cowShopScene;     // Buy Cows → CowShop
-    public string nightScene;       // Continue To Night
-                                    // (Check Cows uses a GameObject, not a scene)
+    public string nightScene; // Continue To Night
 
     [Header("Sound Effects")]
     public AudioSource sfxSource;
@@ -36,9 +28,7 @@ public class Day : MonoBehaviour
         morningScreen.SetActive(true);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
-        checkCowsMenu.SetActive(false);
     }
-
 
     // ----------------------------------------------------------
     // SOUND EVENTS
@@ -56,7 +46,6 @@ public class Day : MonoBehaviour
             sfxSource.PlayOneShot(clickSound, clickVolume);
     }
 
-
     // ----------------------------------------------------------
     // MENU FLOW
     // ----------------------------------------------------------
@@ -69,7 +58,6 @@ public class Day : MonoBehaviour
         morningScreen.SetActive(false);
         dayMenu.SetActive(true);
         loadoutMenu.SetActive(false);
-        checkCowsMenu.SetActive(false);
     }
 
     // DayMenu → LoadoutMenu
@@ -80,37 +68,6 @@ public class Day : MonoBehaviour
         morningScreen.SetActive(false);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(true);
-        checkCowsMenu.SetActive(false);
-    }
-
-
-    // ----------------------------------------------------------
-    // DAY MENU BUTTONS
-    // ----------------------------------------------------------
-
-    // Visit Shop → Load Day_Shop scene
-    public void OpenDayShop()
-    {
-        PlayClick();
-        SceneManager.LoadScene(dayShopScene);
-    }
-
-    // Buy Cows → Load CowShop scene
-    public void OpenCowShop()
-    {
-        PlayClick();
-        SceneManager.LoadScene(cowShopScene);
-    }
-
-    // Check Cows → Open GameObject
-    public void OpenCheckCows()
-    {
-        PlayClick();
-
-        morningScreen.SetActive(false);
-        dayMenu.SetActive(false);
-        loadoutMenu.SetActive(false);
-        checkCowsMenu.SetActive(true);
     }
 
     // Continue To Night Scene
@@ -118,16 +75,20 @@ public class Day : MonoBehaviour
     {
         PlayClick();
 
-        GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().AdvanceToNextNight();
-        GameManager_Singleton.Instance.GetComponent<GameManager_SceneChangeEvents>().ChangeScene(nightScene);
-    }
+        GameManager_Singleton.Instance
+            .GetComponent<GameManager_NightCounter>()
+            .AdvanceToNextNight();
 
+        GameManager_Singleton.Instance
+            .GetComponent<GameManager_SceneChangeEvents>()
+            .ChangeScene(nightScene);
+    }
 
     // ----------------------------------------------------------
     // BACK NAVIGATION
     // ----------------------------------------------------------
 
-    // From CheckCows → DayMenu
+    // From Loadout → DayMenu
     public void OnPressedBackToDayMenu()
     {
         PlayClick();
@@ -135,10 +96,9 @@ public class Day : MonoBehaviour
         morningScreen.SetActive(false);
         dayMenu.SetActive(true);
         loadoutMenu.SetActive(false);
-        checkCowsMenu.SetActive(false);
     }
 
-    // From anywhere → MorningScreen (your new request)
+    // From anywhere → MorningScreen
     public void OpenMorningScreen()
     {
         PlayClick();
@@ -146,6 +106,5 @@ public class Day : MonoBehaviour
         morningScreen.SetActive(true);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
-        checkCowsMenu.SetActive(false);
     }
 }
