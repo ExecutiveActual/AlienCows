@@ -172,11 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner_UFO
   waveTable: {fileID: 11400000, guid: 2f6cdeb47598a824dac1a39bac928277, type: 2}
-  ufoPrefab: {fileID: 5714940319943075170, guid: 915af3a3c89a48d4ea0a2cba11eff25d, type: 3}
+  ufoPrefab: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
   SpawnPointParent: {fileID: 2227897385621604986}
   spawnRandomSpread: 5
   startSpawnDelay: 3
-  spawnDelay: 2
+  spawnDelay: 0.1
 --- !u!1 &8841551295238995121
 GameObject:
   m_ObjectHideFlags: 0

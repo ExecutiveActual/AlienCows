@@ -44,8 +44,6 @@ public class WeaponHeld_MuzzleFlash : MonoBehaviour
     public void MuzzleFlash()
     {
 
-        Debug.Log("Muzzle");
-
         muzzleFlash_Controller.transform.position = muzzleFlashSpawnerTransform.position;
 
         muzzleFlash_Controller.transform.rotation = muzzleFlashSpawnerTransform.rotation;

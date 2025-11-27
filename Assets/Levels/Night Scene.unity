@@ -88732,6 +88732,10 @@ PrefabInstance:
       propertyPath: ufoPrefab
       value: 
       objectReference: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
+    - target: {fileID: 4427235149489649399, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
+      propertyPath: spawnDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7708375090788910657, guid: 4190e3e2d2814354ea8c8caf454e5101, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
