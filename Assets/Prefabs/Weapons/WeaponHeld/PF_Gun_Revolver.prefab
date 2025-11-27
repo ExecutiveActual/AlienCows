@@ -412,6 +412,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RaycastShooting
   bulletSpawner: {fileID: 6421166937678293903}
   damage: 70
+  layersToIgnore:
+    serializedVersion: 2
+    m_Bits: 4
 --- !u!114 &8132930773736089925
 MonoBehaviour:
   m_ObjectHideFlags: 0

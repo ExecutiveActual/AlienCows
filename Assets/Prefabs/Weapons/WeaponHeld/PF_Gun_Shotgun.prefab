@@ -360,6 +360,9 @@ MonoBehaviour:
   damage_PerPellet: 14
   pellet_Count: 12
   spread_Angle: 4.3
+  layersToIgnore:
+    serializedVersion: 2
+    m_Bits: 4
 --- !u!114 &-9160570948531534869
 MonoBehaviour:
   m_ObjectHideFlags: 0

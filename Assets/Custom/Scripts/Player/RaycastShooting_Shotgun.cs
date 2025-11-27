@@ -8,6 +8,10 @@ public class RaycastShooting_Shotgun : MonoBehaviour
     [SerializeField] private int pellet_Count = 12;
     [SerializeField] private float spread_Angle = 5f; // Total cone angle in degrees
 
+    [SerializeField] private LayerMask layersToIgnore;
+
+
+
     private void Awake()
     {
         gunController = GetComponent<GunController>();
@@ -53,7 +57,7 @@ public class RaycastShooting_Shotgun : MonoBehaviour
         Debug.DrawRay(bulletSpawner.position, direction * 100f, Color.red, 3f);
 
         RaycastHit hit;
-        if (Physics.Raycast(bulletSpawner.position, direction, out hit))
+        if (Physics.Raycast(bulletSpawner.position, bulletSpawner.forward, out hit, Mathf.Infinity, ~layersToIgnore))
         {
             HitZone target_HitZone = hit.transform.GetComponent<HitZone>();
             if (target_HitZone != null)
@@ -61,9 +65,6 @@ public class RaycastShooting_Shotgun : MonoBehaviour
                 target_HitZone.TakeDamage(damage_PerPellet);
                 target_HitZone.TakeHit(hit);
             }
-
-            // Optional: Add impact effects here
-            // Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
         }
     }
 }
