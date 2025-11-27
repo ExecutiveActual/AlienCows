@@ -241,6 +241,8 @@ public class UFOController_ : MonoBehaviour
             cow.localPosition = cowAttachOffset;
         }
 
+        StopFX();
+
         float timer = 0f;
         while (timer < abductDuration)
         {
