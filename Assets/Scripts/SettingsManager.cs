@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -13,37 +14,57 @@ public class SettingsManager : MonoBehaviour
     public Dropdown qualityDropdown;
     public Toggle fullscreenToggle;
 
-    private Resolution[] resolutions;
+    [Header("UI Scaling")]
+    public CanvasScaler canvasScaler; // Assign your main CanvasScaler here
+
+    private Resolution[] customResolutions;
+
+    private void Awake()
+    {
+        // Clear listeners in case this object is re-enabled
+        if (masterVolumeSlider != null) masterVolumeSlider.onValueChanged.RemoveAllListeners();
+        if (musicVolumeSlider != null) musicVolumeSlider.onValueChanged.RemoveAllListeners();
+        if (sfxVolumeSlider != null) sfxVolumeSlider.onValueChanged.RemoveAllListeners();
+        if (resolutionDropdown != null) resolutionDropdown.onValueChanged.RemoveAllListeners();
+        if (qualityDropdown != null) qualityDropdown.onValueChanged.RemoveAllListeners();
+        if (fullscreenToggle != null) fullscreenToggle.onValueChanged.RemoveAllListeners();
+    }
 
     private void Start()
     {
-        // =========================
-        // Populate Resolution List
-        // =========================
-        resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
+        // =====================================
+        // Define 3 Custom Resolution Options
+        // =====================================
+        customResolutions = new Resolution[3];
+        customResolutions[0] = new Resolution { width = 2560, height = 1440 }; // default
+        customResolutions[1] = new Resolution { width = 1920, height = 1080 };
+        customResolutions[2] = new Resolution { width = 1280, height = 720 };
 
-        var options = new System.Collections.Generic.List<string>();
-        int currentResIndex = 0;
-
-        for (int i = 0; i < resolutions.Length; i++)
+        // =====================================
+        // Populate Resolution Dropdown
+        // =====================================
+        if (resolutionDropdown != null)
         {
-            string option = $"{resolutions[i].width} x {resolutions[i].height}";
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResIndex = i;
-            }
+            resolutionDropdown.ClearOptions();
+            List<string> options = new List<string>();
+            foreach (var res in customResolutions)
+                options.Add($"{res.width} x {res.height}");
+            resolutionDropdown.AddOptions(options);
         }
 
-        resolutionDropdown.AddOptions(options);
+        // =====================================
+        // Populate Quality Dropdown
+        // =====================================
+        if (qualityDropdown != null)
+        {
+            qualityDropdown.ClearOptions();
+            qualityDropdown.AddOptions(new List<string>(QualitySettings.names));
+        }
 
-        // =========================
-        // Load Saved or Defaults
-        // =========================
-        int savedRes = PlayerPrefs.GetInt("ResolutionIndex", currentResIndex);
+        // =====================================
+        // Load Saved Settings
+        // =====================================
+        int savedRes = PlayerPrefs.GetInt("ResolutionIndex", 0); // default 2560x1440
         int savedQuality = PlayerPrefs.GetInt("QualityIndex", QualitySettings.GetQualityLevel());
         bool savedFullscreen = PlayerPrefs.GetInt("Fullscreen", Screen.fullScreen ? 1 : 0) == 1;
 
@@ -51,36 +72,57 @@ public class SettingsManager : MonoBehaviour
         float savedMusic = PlayerPrefs.GetFloat("MusicVol", 0.8f);
         float savedSFX = PlayerPrefs.GetFloat("SFXVol", 0.8f);
 
-        // Apply immediately
+        // Clamp indices for safety (in case prefs are from an older build)
+        if (savedRes < 0 || savedRes >= customResolutions.Length) savedRes = 0;
+        if (savedQuality < 0 || savedQuality >= QualitySettings.names.Length)
+            savedQuality = QualitySettings.GetQualityLevel();
+
+        // =====================================
+        // Apply Loaded Settings
+        // =====================================
         ApplyResolution(savedRes);
         ApplyQuality(savedQuality);
         ApplyFullscreen(savedFullscreen);
+        UpdateCanvasScaler(); // ensure UI scaling matches current resolution
 
-        // UI initialization
-        resolutionDropdown.value = savedRes;
-        qualityDropdown.ClearOptions();
-        qualityDropdown.AddOptions(new System.Collections.Generic.List<string>(QualitySettings.names));
-        qualityDropdown.value = savedQuality;
-        fullscreenToggle.isOn = savedFullscreen;
+        // =====================================
+        // Initialize UI with Saved Values
+        // =====================================
+        if (resolutionDropdown != null) resolutionDropdown.value = savedRes;
+        if (qualityDropdown != null) qualityDropdown.value = savedQuality;
+        if (fullscreenToggle != null) fullscreenToggle.isOn = savedFullscreen;
 
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.SetMasterVolume(savedMaster);
-            AudioManager.Instance.SetMusicVolume(savedMusic);
-            AudioManager.Instance.SetSFXVolume(savedSFX);
-        }
+        if (masterVolumeSlider != null) masterVolumeSlider.value = savedMaster;
+        if (musicVolumeSlider != null) musicVolumeSlider.value = savedMusic;
+        if (sfxVolumeSlider != null) sfxVolumeSlider.value = savedSFX;
 
-        masterVolumeSlider.value = savedMaster;
-        musicVolumeSlider.value = savedMusic;
-        sfxVolumeSlider.value = savedSFX;
+        // =====================================
+        // Force Audio Sync Once (fix mute-on-open)
+        // =====================================
+        OnMasterVolumeChange(savedMaster);
+        OnMusicVolumeChange(savedMusic);
+        OnSFXVolumeChange(savedSFX);
 
-        // Hook up listeners
-        masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChange);
-        musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChange);
-        sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChange);
-        resolutionDropdown.onValueChanged.AddListener(OnResolutionChange);
-        qualityDropdown.onValueChanged.AddListener(OnQualityChange);
-        fullscreenToggle.onValueChanged.AddListener(OnFullscreenToggle);
+        // =====================================
+        // Add Listeners
+        // =====================================
+        if (masterVolumeSlider != null)
+            masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChange);
+
+        if (musicVolumeSlider != null)
+            musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChange);
+
+        if (sfxVolumeSlider != null)
+            sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChange);
+
+        if (resolutionDropdown != null)
+            resolutionDropdown.onValueChanged.AddListener(OnResolutionChange);
+
+        if (qualityDropdown != null)
+            qualityDropdown.onValueChanged.AddListener(OnQualityChange);
+
+        if (fullscreenToggle != null)
+            fullscreenToggle.onValueChanged.AddListener(OnFullscreenToggle);
     }
 
     // =============================
@@ -90,6 +132,7 @@ public class SettingsManager : MonoBehaviour
     {
         if (AudioManager.Instance != null)
             AudioManager.Instance.SetMasterVolume(value);
+
         PlayerPrefs.SetFloat("MasterVol", value);
     }
 
@@ -97,6 +140,7 @@ public class SettingsManager : MonoBehaviour
     {
         if (AudioManager.Instance != null)
             AudioManager.Instance.SetMusicVolume(value);
+
         PlayerPrefs.SetFloat("MusicVol", value);
     }
 
@@ -104,6 +148,7 @@ public class SettingsManager : MonoBehaviour
     {
         if (AudioManager.Instance != null)
             AudioManager.Instance.SetSFXVolume(value);
+
         PlayerPrefs.SetFloat("SFXVol", value);
     }
 
@@ -113,22 +158,24 @@ public class SettingsManager : MonoBehaviour
     public void OnResolutionChange(int index)
     {
         ApplyResolution(index);
+        UpdateCanvasScaler(); // auto-adjust canvas when res changes
+
         PlayerPrefs.SetInt("ResolutionIndex", index);
-        Debug.Log($"[SettingsManager] Resolution changed to {resolutions[index].width}x{resolutions[index].height}");
+        Debug.Log($"[SettingsManager] Resolution set to {customResolutions[index].width}x{customResolutions[index].height}");
     }
 
     public void OnQualityChange(int index)
     {
         ApplyQuality(index);
         PlayerPrefs.SetInt("QualityIndex", index);
-        Debug.Log($"[SettingsManager] Quality changed to {QualitySettings.names[index]}");
+        Debug.Log($"[SettingsManager] Quality set to {QualitySettings.names[index]}");
     }
 
     public void OnFullscreenToggle(bool isFullscreen)
     {
         ApplyFullscreen(isFullscreen);
         PlayerPrefs.SetInt("Fullscreen", isFullscreen ? 1 : 0);
-        Debug.Log($"[SettingsManager] Fullscreen set to: {isFullscreen}");
+        Debug.Log($"[SettingsManager] Fullscreen: {isFullscreen}");
     }
 
     // =============================
@@ -136,23 +183,36 @@ public class SettingsManager : MonoBehaviour
     // =============================
     private void ApplyResolution(int index)
     {
-        if (index < 0 || index >= resolutions.Length) return;
-        Resolution res = resolutions[index];
+        if (index < 0 || index >= customResolutions.Length) return;
+
+        Resolution res = customResolutions[index];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
-        Debug.Log($"[SettingsManager] Applying resolution: {res.width}x{res.height}");
     }
 
     private void ApplyQuality(int index)
     {
         if (index < 0 || index >= QualitySettings.names.Length) return;
+
         QualitySettings.SetQualityLevel(index, true);
-        Debug.Log($"[SettingsManager] Applying quality level: {QualitySettings.names[index]}");
     }
 
     private void ApplyFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-        Debug.Log($"[SettingsManager] Applying fullscreen: {isFullscreen}");
+    }
+
+    // =============================
+    // CANVAS SCALING
+    // =============================
+    private void UpdateCanvasScaler()
+    {
+        if (canvasScaler == null) return;
+
+        // Make sure UI scales nicely across your 3 resolutions
+        canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        canvasScaler.referenceResolution = new Vector2(2560f, 1440f); // your "design" resolution
+        canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+        canvasScaler.matchWidthOrHeight = 0.5f; // 0 = width, 1 = height, 0.5 = balanced
     }
 
     private void OnDestroy()
