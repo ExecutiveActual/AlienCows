@@ -23,6 +23,9 @@ public class WeaponHeld_MuzzleFlash : MonoBehaviour
 
         gunController.UE_OnShoot.AddListener(MuzzleFlash);
 
+
+        GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().GetNightNumberCurrent();
+
     }
 
 

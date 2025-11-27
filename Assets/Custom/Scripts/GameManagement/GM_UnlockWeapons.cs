@@ -32,12 +32,12 @@ public class GM_UnlockWeapons : MonoBehaviour, IGameManagerModule
         {
             Debug.Log("Daytime Unlock time!");
 
-            if (gm_NightCounter.GetCurrentNightNumber() == 3)
+            if (gm_NightCounter.GetNightNumberCurrent() == 3)
             {
                 UnlockWeaponByID(3); // REVOLVER UNLOCKED
             }
 
-            if (gm_NightCounter.GetCurrentNightNumber() == 6)
+            if (gm_NightCounter.GetNightNumberCurrent() == 6)
             {
                 UnlockWeaponByID(6); // RIFLE UNLOCKED
             }

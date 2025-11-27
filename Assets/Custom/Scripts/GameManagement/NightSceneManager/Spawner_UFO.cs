@@ -47,9 +47,9 @@ public class Spawner_UFO : MonoBehaviour
         
         nightCounter = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>();
 
-        Debug.Log($"Night #{nightCounter.GetCurrentNightNumber()}");
+        Debug.Log($"Night #{nightCounter.GetNightNumberCurrent()}");
 
-        spawnAmount = waveTable.amountPerNight[nightCounter.GetCurrentNightNumber() - 1];
+        spawnAmount = waveTable.amountPerNight[nightCounter.GetNightNumberCurrent() - 1];
 
 
         if (spawnCoroutine == null)
