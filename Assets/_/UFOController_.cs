@@ -42,6 +42,8 @@ public class UFOController_ : MonoBehaviour
     private Coroutine abductRoutine;
     private HealthManager healthManager;
 
+    private Cow_Abduction cowAbduction_Curr;
+
     private static readonly HashSet<int> claimedTargets = new HashSet<int>();
     private static readonly object claimLock = new object();
 
@@ -203,18 +205,33 @@ public class UFOController_ : MonoBehaviour
             yield return null;
         }
 
+
+        // Nick
+        if (cow != null)
+        {
+            cowAbduction_Curr = cow.GetComponent<Cow_Abduction>();
+
+            cowAbduction_Curr.StartAbduction();
+        }
+
+
         // Lift cow
         Vector3 attachPoint = transform.position + cowAttachOffset;
         while (cow != null && Vector3.Distance(cow.position, attachPoint) > 0.05f)
         {
+
+            // THIS CODE DOES NOT RUN !!!
             if (healthManager.isDead)
             {
                 StopFX();
                 cow.SetParent(null);
+                Debug.Log("UFO destroyed during abduction, releasing cow.");
                 yield break;
             }
 
+            // THIS WORKS:
             cow.position = Vector3.MoveTowards(cow.position, attachPoint, liftSpeed * Time.deltaTime);
+            if(!cowAbduction_Curr.GetIsAirborne()) cowAbduction_Curr.SetAirborneTrue();
             yield return null;
         }
 
@@ -319,6 +336,14 @@ public class UFOController_ : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (cowAbduction_Curr != null)
+        {
+            cowAbduction_Curr.transform.parent = null;
+            cowAbduction_Curr.StopAbduction();
+
+            cowAbduction_Curr = null;
+        }
+
         ReleaseClaim();
         StopFX();
     }

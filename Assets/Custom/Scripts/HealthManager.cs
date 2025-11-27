@@ -63,7 +63,8 @@ public class HealthManager : MonoBehaviour
         isDead = true;
         UE_OnDeath?.Invoke();
 
-        gameObject.SetActive(false);
+
+        Destroy(gameObject, 0.1f);
     }
 
 }

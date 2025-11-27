@@ -31,6 +31,10 @@ public class NotificationSequence : MonoBehaviour
     [Range(0f, 1f)]
     public float backgroundTargetAlpha = 0.35f; // BG max alpha when fully visible
 
+
+    //private Coroutine notificationCoroutine;
+
+
     private void Start()
     {
         // Initialize visuals
@@ -38,8 +42,33 @@ public class NotificationSequence : MonoBehaviour
         if (iconImage) SetAlpha(iconImage, 0);
         if (uiText) uiText.text = "";
 
+        //notificationCoroutine = StartCoroutine(PlayNotification());
         StartCoroutine(PlayNotification());
     }
+
+
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.L))
+    //    {
+    //        NewNotification("New Notification Triggered!");
+    //    }
+    //}
+
+
+    //public void NewNotification(string text)
+    //{
+
+    //    StopAllCoroutines();
+
+    //    notificationCoroutine = null;
+
+    //    notificationText = text;
+
+    //    notificationCoroutine = StartCoroutine(PlayNotification());
+
+    //}
+
 
     private IEnumerator PlayNotification()
     {

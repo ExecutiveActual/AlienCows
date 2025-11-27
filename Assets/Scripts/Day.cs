@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Day : MonoBehaviour
 {
+
+    public static Day Instance { get; private set; }
+
+
     [Header("Menu References")]
     public GameObject morningScreen;
     public GameObject dayMenu;
@@ -20,6 +25,17 @@ public class Day : MonoBehaviour
     public float clickVolume = 1f;
 
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+
+    }
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -28,6 +44,7 @@ public class Day : MonoBehaviour
         morningScreen.SetActive(true);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
+
     }
 
     // ----------------------------------------------------------

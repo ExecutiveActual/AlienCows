@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaf7851a327a6144823b101e89ad065, type: 3}
+  m_Name: SO_RandomSound_Cow_Abduct
+  m_EditorClassIdentifier: Assembly-CSharp::SO_RandomSound
+  soundClip:
+  - {fileID: 8300000, guid: 5c53784a2a87fa64b97c25c7feeb1802, type: 3}
+  - {fileID: 8300000, guid: ee551c1709247ac4484f47b677361063, type: 3}
+  - {fileID: 8300000, guid: ee1902f64e434bb4e97ba7ca8e99d3b1, type: 3}
+  - {fileID: 8300000, guid: a51db1da16842d94b970efe32a9a0a8d, type: 3}

@@ -29,8 +29,6 @@ public class GameManager_Singleton : MonoBehaviour
 
     }
 
-
-
     private void InitializeGameManagerModules()
     {
 

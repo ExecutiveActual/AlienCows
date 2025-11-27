@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 2220412803607503080}
   - component: {fileID: 709146053208929225}
   - component: {fileID: 9158408967195148438}
+  - component: {fileID: 7098141508121986981}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Cow
@@ -228,7 +229,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.12
+  m_Volume: 0.99
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -407,6 +408,21 @@ MonoBehaviour:
   minInterval: 9
   maxInterval: 25
   sound: {fileID: 11400000, guid: b2255b0949684b94cbf4818da2a89fd8, type: 2}
+--- !u!114 &7098141508121986981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223580089623097671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b179d3b78b0b3ca4a9d2d9867a6dc629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cow_Abduction
+  fallSpeed: 12
+  abductBarksInterval: 1.2
+  cowAbductBarks: {fileID: 11400000, guid: a46f8024dbc6cbd419de0cf72d9a5041, type: 2}
 --- !u!1001 &7577002997747379405
 PrefabInstance:
   m_ObjectHideFlags: 0
