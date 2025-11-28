@@ -61,7 +61,7 @@ public class ItemHeld_SlerpGuide_Manager : MonoBehaviour
         if (SlerpGuide != null)
             SlerpGuide.transform.SetParent(null);
 
-        Debug.Log(SlerpGuide);
+        //Debug.Log(SlerpGuide);
 
         // Set This SlerpTarget
         this_DumbSlerpToTarget.SetSlerpTargetTransform(SlerpGuide.transform);

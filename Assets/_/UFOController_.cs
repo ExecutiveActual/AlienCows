@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +15,10 @@ public class UFOController_ : MonoBehaviour
     public float moveSpeed = 6f;
     public float returnSpeed = 6f;
 
+    [Header("Spawn and Despawn Movement")]
+    public float outOfBounds_YOffset = 300f;
+    public float outOfBounds_MoveSpeed = 10f;
+
     [Header("Zig-Zag Trajectory")]
     public float zigzagAmplitude = 2f;
     public float zigzagFrequency = 2f;
@@ -27,10 +31,12 @@ public class UFOController_ : MonoBehaviour
     public float abductDuration = 10f;
     public Vector3 cowAttachOffset = new Vector3(0f, -0.5f, 0f);
 
-    [Header("FX References")]
+    [Header("Object References")]
     public ParticleSystem abductFX;
+    public Transform meshObject;
 
-    private enum UFOState { Searching, Chasing, Abducting, Returning }
+
+    private enum UFOState { Searching, Chasing, Abducting, Returning, Despawning }
     private UFOState currentState = UFOState.Searching;
 
     private Transform currentTarget;
@@ -42,6 +48,17 @@ public class UFOController_ : MonoBehaviour
     private Coroutine abductRoutine;
     private HealthManager healthManager;
 
+
+    //Despawn Variables
+    private Coroutine despawnCoroutine;
+    private Vector3 despawnStartPos;
+    private Vector3 despawnTargetPos;
+    private Vector3 meshOriginalScale;
+    private float despawnTotalDistance;
+    private float despawnTravelled = 0f;
+    private bool isDespawning = false;
+
+
     private Cow_Abduction cowAbduction_Curr;
 
     private static readonly HashSet<int> claimedTargets = new HashSet<int>();
@@ -52,6 +69,7 @@ public class UFOController_ : MonoBehaviour
     {
         healthManager = GetComponent<HealthManager>();
         healthManager.UE_OnDeath.AddListener(OnUFODestroyed);
+
     }
 
     private void Start()
@@ -74,10 +92,15 @@ public class UFOController_ : MonoBehaviour
 
     private void Update()
     {
-        // Keep UFO fixed at flight height
-        Vector3 pos = transform.position;
-        pos.y = yHeight;
-        transform.position = pos;
+
+        if (currentState != UFOState.Despawning)
+        {
+            // Keep UFO fixed at flight height
+            Vector3 pos = transform.position;
+            pos.y = yHeight;
+            transform.position = pos;
+        }
+        
 
         switch (currentState)
         {
@@ -92,6 +115,9 @@ public class UFOController_ : MonoBehaviour
                 break;
             case UFOState.Returning:
                 HandleReturning();
+                break;
+            case UFOState.Despawning:
+                HandleDespawning();
                 break;
         }
     }
@@ -271,17 +297,90 @@ public class UFOController_ : MonoBehaviour
     // ---------------- RETURNING ----------------
     private void HandleReturning()
     {
-        MoveZigZagTowards(originPosition, returnSpeed);
+        //MoveZigZagTowards(originPosition, returnSpeed);
+
+        transform.position = Vector3.MoveTowards(transform.position, originPosition, returnSpeed * Time.deltaTime);
 
         Vector3 ufoXZ = new Vector3(transform.position.x, 0, transform.position.z);
         Vector3 originXZ = new Vector3(originPosition.x, 0, originPosition.z);
-        if (Vector3.Distance(ufoXZ, originXZ) < 0.3f)
+        if (Vector3.Distance(ufoXZ, originXZ) < 1f)
         {
             transform.position = new Vector3(originPosition.x, yHeight, originPosition.z);
             transform.rotation = originRotation;
-            currentState = UFOState.Searching;
+            currentState = UFOState.Despawning;
+
+            // Important: reset so HandleDespawning() knows to init on first frame
+            isDespawning = false;
+
+            Debug.Log("Done with Return");
         }
     }
+
+    // ---------------- DESPAWNING ----------------
+    // REPLACE your entire HandleDespawning() method with this one
+    private void HandleDespawning()
+    {
+        if (!isDespawning)
+        {
+            // First frame setup
+            isDespawning = true;
+            despawnTravelled = 0f;
+
+            healthManager.SetInvincible(true);
+
+            despawnStartPos = transform.position;
+            despawnTargetPos = GetYOffsetPosition(originPosition, outOfBounds_YOffset);
+            despawnTotalDistance = Vector3.Distance(despawnStartPos, despawnTargetPos);
+            meshOriginalScale = meshObject.localScale;
+
+            if (despawnTotalDistance < 0.01f)
+            {
+                FinishDespawn();
+                return;
+            }
+        }
+
+        // Advance progress
+        despawnTravelled += outOfBounds_MoveSpeed * Time.deltaTime;
+        float t = Mathf.Clamp01(despawnTravelled / despawnTotalDistance);
+
+        // Ease-In Quadratic → starts slow, then WHOOSH upward!
+        float easedT = t * t;
+
+        // Smooth position with acceleration
+        transform.position = Vector3.Lerp(despawnStartPos, despawnTargetPos, easedT);
+
+        // Perfectly synced scale down
+        meshObject.localScale = Vector3.Lerp(meshOriginalScale, Vector3.zero, easedT);
+
+        // Done?
+        if (t >= 1f)
+        {
+            FinishDespawn();
+        }
+    }
+
+    // ADD this helper method (anywhere in the class)
+    private void FinishDespawn()
+    {
+        isDespawning = false;
+        transform.position = despawnTargetPos;
+        meshObject.localScale = Vector3.zero;
+
+        cowAbduction_Curr = null;
+        Debug.LogWarning("DESPAWN IS HAPPENING");
+        GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>().PlayerData_Curr.CowAmount -= 1;
+        Destroy(gameObject);
+    }
+
+
+    private Vector3 GetYOffsetPosition(Vector3 initialPos, float yOffset)
+    {
+
+        return new Vector3(initialPos.x, initialPos.y + yOffset, initialPos.z);
+
+    }
+
 
     // ---------------- UTILITIES ----------------
     private void MoveZigZagTowards(Vector3 target, float speed)

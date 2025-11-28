@@ -15,6 +15,10 @@ public class HealthManager : MonoBehaviour
     public UnityEvent UE_OnDeath;
 
 
+    public bool isInvincible { get; private set; } = false;
+
+    public bool canDie { get; private set; } = true;
+
     public bool isDead { get; private set; }
 
 
@@ -28,16 +32,12 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (isDead)
+        if (isDead || isInvincible)
             return;
-
-        
-
 
         if (amount > Health_Current)
         {
             Health_Current = 0f;
-
             Death();
         }
         else
@@ -48,7 +48,7 @@ public class HealthManager : MonoBehaviour
 
         if (Health_Current <= 0f)
         {
-            if (!isDead)
+            if (canDie && !isDead)
             {
                 Death();
             }
@@ -56,6 +56,30 @@ public class HealthManager : MonoBehaviour
 
         UE_OnTakeDamage?.Invoke(amount);
     }
+
+
+    public void SetCanDie(bool newValue)
+    {
+        canDie = newValue;
+
+        //Checks if it should die immediately
+        if (Health_Current <= 0f)
+        {
+            if (canDie && !isDead)
+            {
+                Death();
+            }
+        }
+    }
+
+
+    public void SetInvincible(bool newValue)
+    {
+        isInvincible = newValue;
+
+        SetCanDie(!newValue);
+    }
+
 
     private void Death()
     {
