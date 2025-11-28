@@ -16,8 +16,8 @@ public class UFOController_ : MonoBehaviour
     public float returnSpeed = 6f;
 
     [Header("Spawn and Despawn Movement")]
-    public float outOfBounds_YOffset = 300f;
-    public float outOfBounds_MoveSpeed = 10f;
+    public float outOfBounds_YOffset = 100f;
+    public float outOfBounds_MoveSpeed = 100f;
 
     [Header("Zig-Zag Trajectory")]
     public float zigzagAmplitude = 2f;
@@ -383,28 +383,29 @@ public class UFOController_ : MonoBehaviour
 
 
     // ---------------- UTILITIES ----------------
-    private void MoveZigZagTowards(Vector3 target, float speed)
-    {
-        Vector3 dir = (new Vector3(target.x, 0, target.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized;
-        Vector3 perp = Vector3.Cross(dir, Vector3.up).normalized;
+    //private void MoveZigZagTowards(Vector3 target, float speed)
+    //{
 
-        float oscillation = Mathf.Sin((Time.time + localPhase) * zigzagFrequency) * zigzagAmplitude;
-        Vector3 approach = new Vector3(target.x, yHeight, target.z) + perp * oscillation + dir * forwardFollowOffset;
+    //    Vector3 dir = (new Vector3(target.x, 0, target.z) - new Vector3(transform.position.x, 0, transform.position.z)).normalized;
+    //    Vector3 perp = Vector3.Cross(dir, Vector3.up).normalized;
 
-        transform.position = Vector3.MoveTowards(transform.position, approach, speed * Time.deltaTime);
+    //    float oscillation = Mathf.Sin((Time.time + localPhase) * zigzagFrequency) * zigzagAmplitude;
+    //    Vector3 approach = new Vector3(target.x, yHeight, target.z) + perp * oscillation + dir * forwardFollowOffset;
 
-        // Rotate only around Y (stay level)
-        if ((approach - transform.position).sqrMagnitude > 0.001f)
-        {
-            Vector3 flatDir = approach - transform.position;
-            flatDir.y = 0f;
-            if (flatDir.sqrMagnitude > 0.001f)
-            {
-                Quaternion targetRot = Quaternion.LookRotation(flatDir.normalized, Vector3.up);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 4f);
-            }
-        }
-    }
+    //    transform.position = Vector3.MoveTowards(transform.position, approach, speed * Time.deltaTime);
+
+    //    // Rotate only around Y (stay level)
+    //    if ((approach - transform.position).sqrMagnitude > 0.001f)
+    //    {
+    //        Vector3 flatDir = approach - transform.position;
+    //        flatDir.y = 0f;
+    //        if (flatDir.sqrMagnitude > 0.001f)
+    //        {
+    //            Quaternion targetRot = Quaternion.LookRotation(flatDir.normalized, Vector3.up);
+    //            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 4f);
+    //        }
+    //    }
+    //}
 
     private void StopFX()
     {

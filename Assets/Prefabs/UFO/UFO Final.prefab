@@ -30717,7 +30717,7 @@ MonoBehaviour:
   maxSearchDistance: 5000
   moveSpeed: 25
   returnSpeed: 21
-  outOfBounds_YOffset: 50
+  outOfBounds_YOffset: 100
   outOfBounds_MoveSpeed: 100
   zigzagAmplitude: 50
   zigzagFrequency: 2

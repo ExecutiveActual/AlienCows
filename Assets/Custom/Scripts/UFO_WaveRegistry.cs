@@ -36,4 +36,13 @@ public class UFO_WaveRegistry : MonoBehaviour
         healthManager.UE_OnDeath.RemoveListener(HandleDeath);
     }
 
+
+    private void OnDestroy()
+    {
+        if (registeredSpawner != null)
+        {
+            Unregister(registeredSpawner);
+        }
+    }
+
 }

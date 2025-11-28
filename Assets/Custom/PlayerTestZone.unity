@@ -463,22 +463,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: liftSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: moveSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: returnSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4068706931397563463, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
-      propertyPath: outOfBounds_YOffset
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 7492351226530281602, guid: b810ba279414aaa449592f23ffe4af47, type: 3}
       propertyPath: m_Name
       value: UFO Final
