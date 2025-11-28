@@ -130,8 +130,7 @@ public class Spawner_UFO : MonoBehaviour
         if (isDoneSpawning && waveRegistry.Count == 0)
         {
             Debug.Log("UFO   All Gone");
-            NightSceneManager nightSceneManager = GetComponentInParent<NightSceneManager>();
-            nightSceneManager.OnAllWavesComplete();
+            GetComponentInParent<NightSceneManager>().OnAllWavesComplete();
         }
     }
 

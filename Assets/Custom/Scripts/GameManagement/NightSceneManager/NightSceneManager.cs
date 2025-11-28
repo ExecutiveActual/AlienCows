@@ -89,31 +89,31 @@ public class NightSceneManager : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
 
-        EnableEndOfNightScreen();
+        //EnableEndOfNightScreen();
 
-        //GameManager_Singleton.Instance.GetComponent<GameManager_SceneChangeEvents>().ChangeScene("Day Scene");
+        GameManager_Singleton.Instance.GetComponent<GameManager_SceneChangeEvents>().ChangeScene("Day Scene");
     }
 
 
-    private void EnableEndOfNightScreen()
-    {
-        endOfNighScreen.SetActive(true);
-        Time.timeScale = 0f;
+    //private void EnableEndOfNightScreen()
+    //{
+    //    endOfNighScreen.SetActive(true);
+    //    Time.timeScale = 0f;
 
-        GameManager_Singleton.Instance
-            .GetComponent<GameManager_UI>()
-            .UE_OnSwitchControlMode_UI?.Invoke();
+    //    GameManager_Singleton.Instance
+    //        .GetComponent<GameManager_UI>()
+    //        .UE_OnSwitchControlMode_UI?.Invoke();
 
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+    //    Cursor.lockState = CursorLockMode.None;
+    //    Cursor.visible = true;
 
-        // Ensure EventSystem exists
-        if (EventSystem.current == null)
-        {
-            GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
-            DontDestroyOnLoad(es);
-        }
-    }
+    //    // Ensure EventSystem exists
+    //    if (EventSystem.current == null)
+    //    {
+    //        GameObject es = new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+    //        DontDestroyOnLoad(es);
+    //    }
+    //}
 
 
 }
