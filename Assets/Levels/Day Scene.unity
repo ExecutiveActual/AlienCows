@@ -132836,8 +132836,13 @@ CanvasRenderer:
   m_GameObject: {fileID: 1592862278}
   m_CullTransparentMesh: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &1593034072
 GameObject:
+=======
+--- !u!114 &1592862282
+MonoBehaviour:
+>>>>>>> Stashed changes
 =======
 --- !u!114 &1592862282
 MonoBehaviour:
@@ -132846,6 +132851,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
@@ -134404,12 +134410,17 @@ MeshFilter:
   m_GameObject: {fileID: 1611361325}
   m_Mesh: {fileID: 4493585093827132993, guid: 77c3a5b80e9fea78b9f7709438040974, type: 3}
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 1592862278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e157edf151acc04a9a295c4c88fae17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextDataUpdate
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1611845400
 GameObject:
