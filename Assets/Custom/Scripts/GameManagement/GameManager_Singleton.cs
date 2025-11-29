@@ -9,6 +9,10 @@ public class GameManager_Singleton : MonoBehaviour
 
     private List<IGameManagerModule> gm_modules = new List<IGameManagerModule>();
 
+    public UnityEvent UE_OnGameOver;
+
+    public bool IsGameOver { get; private set; } = false;
+
 
     private void Awake()
     {
@@ -38,6 +42,18 @@ public class GameManager_Singleton : MonoBehaviour
         }
 
     }
+
+    public void SetGameOver(bool newValue)
+    {
+        IsGameOver = newValue;
+
+        if (IsGameOver)
+        {
+            UE_OnGameOver?.Invoke();
+        }
+
+    }
+
 
     private void OnDestroy()
     {

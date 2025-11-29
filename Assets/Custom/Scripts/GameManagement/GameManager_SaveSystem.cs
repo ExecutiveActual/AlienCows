@@ -16,7 +16,7 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
 
 
 
-    //public UnityEvent UE_OnUpdateSaveData;
+    public UnityEvent UE_OnUpdateSaveData;
 
 
 
@@ -72,7 +72,7 @@ public class GameManager_SaveSystem : MonoBehaviour, IGameManagerModule
 
     private void UpdateSaveData()
     {
-        //UE_OnUpdateSaveData.Invoke();
+        UE_OnUpdateSaveData?.Invoke();
     }
 
 
