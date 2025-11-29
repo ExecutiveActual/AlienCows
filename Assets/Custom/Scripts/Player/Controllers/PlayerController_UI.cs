@@ -39,6 +39,7 @@ public class PlayerController_UI : MonoBehaviour
         Debug.Log("Set ActionMap to UI");
         _input.SwitchCurrentActionMap("UI");
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void SetActionMap_Player()
@@ -46,6 +47,7 @@ public class PlayerController_UI : MonoBehaviour
         Debug.Log("Set ActionMap to Player");
         _input.SwitchCurrentActionMap("Player");
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 

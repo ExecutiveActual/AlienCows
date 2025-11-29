@@ -39,13 +39,7 @@ public class NightSceneManager : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        GameManager_Singleton.Instance
-            .GetComponent<GameManager_UI>()
-            .UE_OnSwitchControlMode_Player?.Invoke();
-
-        Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
-
+        GameManager_Singleton.Instance.GetComponent<GameManager_UI>().UE_OnSwitchControlMode_Player?.Invoke();
 
 
         Debug.Log("Night Scene Loaded!");
