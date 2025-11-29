@@ -38532,6 +38532,8 @@ MonoBehaviour:
   hoverVolume: 0.7
   clickSound: {fileID: 8300000, guid: 61c43e7771c87544ba8cdff4c74959b1, type: 3}
   clickVolume: 1
+  cowsLeftText: {fileID: 278023893}
+  moneyLeftText: {fileID: 445769762}
 --- !u!4 &484117090
 Transform:
   m_ObjectHideFlags: 0

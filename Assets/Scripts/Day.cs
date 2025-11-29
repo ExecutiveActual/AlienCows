@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Day : MonoBehaviour
 {
-
     public static Day Instance { get; private set; }
-
 
     [Header("Menu References")]
     public GameObject morningScreen;
@@ -14,16 +13,20 @@ public class Day : MonoBehaviour
     public GameObject loadoutMenu;
 
     [Header("Scene Names (Assign in Inspector)")]
-    public string nightScene; // Continue To Night
+    public string nightScene; 
 
     [Header("Sound Effects")]
     public AudioSource sfxSource;
     public AudioClip hoverSound;
     public float hoverVolume = 0.7f;
-
     public AudioClip clickSound;
     public float clickVolume = 1f;
 
+    [Header("Morning Screen UI Texts")]
+    public TextMeshProUGUI cowsLeftText;
+    public TextMeshProUGUI moneyLeftText;
+
+    private GameManager_SaveSystem saveSystem;
 
     private void Awake()
     {
@@ -33,23 +36,31 @@ public class Day : MonoBehaviour
             return;
         }
         Instance = this;
-
     }
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         // Default startup states
         morningScreen.SetActive(true);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
 
+        
+        saveSystem = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
+
+        // Initialize morning stats UI
+        UpdateMorningStats();
     }
 
-    // ----------------------------------------------------------
-    // SOUND EVENTS
-    // ----------------------------------------------------------
+    private void OnEnable()
+    {
+        if (morningScreen.activeSelf)
+            UpdateMorningStats();
+    }
+
 
     public void PlayHover()
     {
@@ -63,31 +74,22 @@ public class Day : MonoBehaviour
             sfxSource.PlayOneShot(clickSound, clickVolume);
     }
 
-    // ----------------------------------------------------------
-    // MENU FLOW
-    // ----------------------------------------------------------
-
-    // MorningScreen → DayMenu
     public void ContinueMorning()
     {
         PlayClick();
-
         morningScreen.SetActive(false);
         dayMenu.SetActive(true);
         loadoutMenu.SetActive(false);
     }
 
-    // DayMenu → LoadoutMenu
     public void EnterNight()
     {
         PlayClick();
-
         morningScreen.SetActive(false);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(true);
     }
 
-    // Continue To Night Scene
     public void ContinueToNight()
     {
         PlayClick();
@@ -101,27 +103,41 @@ public class Day : MonoBehaviour
             .ChangeScene(nightScene);
     }
 
-    // ----------------------------------------------------------
-    // BACK NAVIGATION
-    // ----------------------------------------------------------
-
-    // From Loadout → DayMenu
     public void OnPressedBackToDayMenu()
     {
         PlayClick();
-
         morningScreen.SetActive(false);
         dayMenu.SetActive(true);
         loadoutMenu.SetActive(false);
     }
 
-    // From anywhere → MorningScreen
     public void OpenMorningScreen()
     {
         PlayClick();
-
         morningScreen.SetActive(true);
         dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
+        UpdateMorningStats();
+    }
+
+ 
+    private void UpdateMorningStats()
+    {
+        if (saveSystem == null || saveSystem.PlayerData_Curr == null)
+        {
+            Debug.LogWarning("Day.cs: SaveSystem or PlayerData_Curr missing!");
+            return;
+        }
+
+        var data = saveSystem.PlayerData_Curr;
+
+        int cowsLeft = data.CowAmount;
+        int moneyLeft = data.MoneyAmount;
+
+        if (cowsLeftText != null)
+            cowsLeftText.text = $"Cows left in the farm : {cowsLeft}";
+
+        if (moneyLeftText != null)
+            moneyLeftText.text = $"Money leftover : {moneyLeft}";
     }
 }

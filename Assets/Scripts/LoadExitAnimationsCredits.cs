@@ -33,6 +33,8 @@ public class LoadExitAnimationCredits : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         // Ensure fade image starts disabled and transparent
         if (fadeImage != null)
         {
