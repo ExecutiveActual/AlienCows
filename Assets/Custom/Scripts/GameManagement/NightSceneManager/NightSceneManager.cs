@@ -44,7 +44,7 @@ public class NightSceneManager : MonoBehaviour
             .UE_OnSwitchControlMode_Player?.Invoke();
 
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.visible = false;
 
 
 

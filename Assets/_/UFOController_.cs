@@ -58,7 +58,6 @@ public class UFOController_ : MonoBehaviour
     private float despawnTravelled = 0f;
     private bool isDespawning = false;
 
-
     private Cow_Abduction cowAbduction_Curr;
 
     private static readonly HashSet<int> claimedTargets = new HashSet<int>();
