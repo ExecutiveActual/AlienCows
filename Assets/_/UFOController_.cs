@@ -50,13 +50,21 @@ public class UFOController_ : MonoBehaviour
 
 
     //Despawn Variables
-    private Coroutine despawnCoroutine;
     private Vector3 despawnStartPos;
     private Vector3 despawnTargetPos;
     private Vector3 meshOriginalScale;
     private float despawnTotalDistance;
     private float despawnTravelled = 0f;
     private bool isDespawning = false;
+
+    //Spawn Variables
+    private bool isSpawning = false;
+
+    private Vector3 spawnStartPos;
+    private Vector3 spawnTargetPos;
+    private float spawnTotalDistance;
+    private float spawnTravelled = 0f;
+
 
     private Cow_Abduction cowAbduction_Curr;
 
@@ -81,7 +89,10 @@ public class UFOController_ : MonoBehaviour
         transform.position = pos;
 
         localPhase = zigzagPhase + Random.Range(0f, Mathf.PI * 2f);
-        currentState = UFOState.Searching;
+
+        meshOriginalScale = meshObject.localScale;
+
+        currentState = UFOState.Spawning;
 
         if (abductFX != null)
         {
@@ -92,7 +103,7 @@ public class UFOController_ : MonoBehaviour
     private void Update()
     {
 
-        if (currentState != UFOState.Despawning)
+        if (currentState != UFOState.Despawning && currentState != UFOState.Spawning)
         {
             // Keep UFO fixed at flight height
             Vector3 pos = transform.position;
@@ -116,7 +127,7 @@ public class UFOController_ : MonoBehaviour
                 HandleReturning();
                 break;
             case UFOState.Spawning:
-                // Not implemented
+                HandleSpawning();
                 break;
             case UFOState.Despawning:
                 HandleDespawning();
@@ -374,6 +385,57 @@ public class UFOController_ : MonoBehaviour
         GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>().PlayerData_Curr.CowAmount -= 1;
         Destroy(gameObject);
     }
+
+
+    // ---------------- SPAWNING ----------------
+
+    private void HandleSpawning()
+    {
+        if (!isSpawning)
+        {
+            // First frame setup
+            isSpawning = true;
+            spawnTravelled = 0f;
+            healthManager.SetInvincible(true);
+            spawnStartPos = GetYOffsetPosition(originPosition, outOfBounds_YOffset);
+            spawnTargetPos = new Vector3(originPosition.x, yHeight, originPosition.z);
+            spawnTotalDistance = Vector3.Distance(spawnStartPos, spawnTargetPos);
+
+            // Start from invisible
+            meshObject.localScale = Vector3.zero;
+
+            if (spawnTotalDistance < 0.01f)
+            {
+                FinishSpawn();
+                return;
+            }
+        }
+        // Advance progress
+        spawnTravelled += outOfBounds_MoveSpeed * Time.deltaTime;
+        float t = Mathf.Clamp01(spawnTravelled / spawnTotalDistance);
+        // Ease-In Quadratic → starts slow high in the sky, then WHOOSH down!
+        float easedT = t * t;
+        // Smooth position with acceleration
+        transform.position = Vector3.Lerp(spawnStartPos, spawnTargetPos, easedT);
+        // Perfectly synced scale UP
+        meshObject.localScale = Vector3.Lerp(Vector3.zero, meshOriginalScale, easedT);
+        // Done?
+        if (t >= 1f)
+        {
+            FinishSpawn();
+        }
+    }
+
+
+    private void FinishSpawn()
+    {
+        isSpawning = false;
+        transform.position = spawnTargetPos;
+        meshObject.localScale = meshOriginalScale;  // ← Full size!
+        currentState = UFOState.Searching;
+        healthManager.SetInvincible(false);
+    }
+
 
 
     private Vector3 GetYOffsetPosition(Vector3 initialPos, float yOffset)
