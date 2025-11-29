@@ -66,6 +66,9 @@ public class WeaponHeld_Aim : MonoBehaviour
         {
             if (!isAiming)
             {
+
+                GameManager_Singleton.Instance.GetComponent<GameManager_UI>().UE_OnSwitchControlMode_Player?.Invoke();
+
                 slerpGuide_Manager.SetSlerpGuideTarget(slot_Aim.transform);
 
                 camera_ControllerFOV.SetFOV(aimFOV);

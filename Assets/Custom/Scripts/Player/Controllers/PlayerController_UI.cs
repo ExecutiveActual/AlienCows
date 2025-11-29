@@ -10,29 +10,28 @@ public class PlayerController_UI : MonoBehaviour
     GameManager_UI gameManager_UI;
 
 
-
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
     }
 
 
-    private void OnEscape()
+    public void OnEscape()
     {
-
-        //if (_input.currentActionMap == _input.actions.FindActionMap("Player"))
-        //{
-        //    Debug.Log("Set ActionMap to UI");
-        //    _input.SwitchCurrentActionMap("UI");
-        //}
-        //else if(_input.currentActionMap == _input.actions.FindActionMap("UI"))
-        //{
-        //    Debug.Log("Set ActionMap to Player");
-        //    _input.SwitchCurrentActionMap("Player");
-        //}
-
+        if (_input.currentActionMap.name == "Player")
+        {
+            if (Cursor.visible)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
     }
-
 
     public void SetActionMap_UI()
     {
@@ -54,6 +53,8 @@ public class PlayerController_UI : MonoBehaviour
     private void Start()
     {
         SetupGameManagerReferences();
+
+        SetActionMap_Player();
     }
 
     private void SetupGameManagerReferences()
