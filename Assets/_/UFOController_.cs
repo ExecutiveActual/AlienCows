@@ -36,7 +36,7 @@ public class UFOController_ : MonoBehaviour
     public Transform meshObject;
 
 
-    private enum UFOState { Searching, Chasing, Abducting, Returning, Despawning }
+    private enum UFOState { Searching, Chasing, Abducting, Returning,Spawning, Despawning }
     private UFOState currentState = UFOState.Searching;
 
     private Transform currentTarget;
@@ -114,6 +114,9 @@ public class UFOController_ : MonoBehaviour
                 break;
             case UFOState.Returning:
                 HandleReturning();
+                break;
+            case UFOState.Spawning:
+                // Not implemented
                 break;
             case UFOState.Despawning:
                 HandleDespawning();
