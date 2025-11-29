@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class NotificationSequence : MonoBehaviour
+public class Notification : MonoBehaviour
 {
     [Header("UI References")]
     public Image backgroundImage;      // Background (panel)
@@ -23,17 +23,25 @@ public class NotificationSequence : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip startSound;
 
-    [Header("Text Content")]
-    [TextArea] 
-    public string notificationText = "Mission Started";
-
     [Header("Visual Settings")]
     [Range(0f, 1f)]
     public float backgroundTargetAlpha = 0.35f; // BG max alpha when fully visible
 
+    [Header("Night Notification Texts")]
+    [TextArea] public string[] nightMessages = new string[]
+    {
+        "Night 1: The Theatre Awakens...",
+        "Night 2: Shadows grow longer.",
+        "Night 3: The streets remember you.",
+        "Night 4: Whispers in the cinema hall.",
+        "Night 5: Curtains rise for the finale."
+    };
 
-    //private Coroutine notificationCoroutine;
+    private string notificationText = "Mission Started";
 
+    // Reference cache
+    private GameManager_NightCounter nightCounter;
+    private Coroutine notificationCoroutine;
 
     private void Start()
     {
@@ -42,71 +50,67 @@ public class NotificationSequence : MonoBehaviour
         if (iconImage) SetAlpha(iconImage, 0);
         if (uiText) uiText.text = "";
 
-        //notificationCoroutine = StartCoroutine(PlayNotification());
-        StartCoroutine(PlayNotification());
+        // Try to connect to the GameManager and NightCounter
+        if (GameManager_Singleton.Instance)
+            nightCounter = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>();
+
+        // Set text according to current night
+        UpdateNotificationTextFromNight();
+
+        // Begin the cinematic sequence
+        notificationCoroutine = StartCoroutine(PlayNotification());
     }
 
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.L))
-    //    {
-    //        NewNotification("New Notification Triggered!");
-    //    }
-    //}
+    private void UpdateNotificationTextFromNight()
+    {
+        if (nightCounter == null)
+        {
+            notificationText = "Mission Started"; // fallback
+            return;
+        }
 
+        int currentNight = nightCounter.GetNightNumberCurrent();
 
-    //public void NewNotification(string text)
-    //{
-
-    //    StopAllCoroutines();
-
-    //    notificationCoroutine = null;
-
-    //    notificationText = text;
-
-    //    notificationCoroutine = StartCoroutine(PlayNotification());
-
-    //}
-
-
+        // Choose text based on current night (with safety)
+        if (currentNight - 1 >= 0 && currentNight - 1 < nightMessages.Length)
+            notificationText = nightMessages[currentNight - 1];
+        else
+            notificationText = $"Night {currentNight}: Mission Continues...";
+    }
     private IEnumerator PlayNotification()
     {
-        // Delay start
         yield return new WaitForSeconds(startDelay);
 
-        // Fade in background (to 35%)
+        // Fade in background
         yield return StartCoroutine(FadeTo(backgroundImage, fadeDuration, backgroundTargetAlpha));
 
-        // Fade in icon slightly after
+        // Fade in icon
         yield return new WaitForSeconds(iconDelay);
         yield return StartCoroutine(FadeTo(iconImage, fadeDuration, 1f));
 
-        // Wait before text
+        // Wait before text typing
         yield return new WaitForSeconds(textDelay);
 
-        // Play sound
+        // Play notification sound
         if (audioSource && startSound)
             audioSource.PlayOneShot(startSound);
 
-        // Type in text
+        // Type in the text
         yield return StartCoroutine(TypeText());
 
-        // Wait visible
+        // Keep text visible for a while
         yield return new WaitForSeconds(stayDuration);
 
-        // Delete text
+        // Delete text with fade-out sequence
         yield return StartCoroutine(DeleteText());
-
-        // Fade out icon
         yield return StartCoroutine(FadeTo(iconImage, fadeDuration, 0f));
-
-        // Fade out background last (to 0)
         yield return StartCoroutine(FadeTo(backgroundImage, fadeDuration, 0f));
 
         uiText.text = "";
     }
 
+    
     private IEnumerator TypeText()
     {
         uiText.text = "";
@@ -117,6 +121,7 @@ public class NotificationSequence : MonoBehaviour
         }
     }
 
+    
     private IEnumerator DeleteText()
     {
         for (int i = notificationText.Length; i > 0; i--)
@@ -126,6 +131,7 @@ public class NotificationSequence : MonoBehaviour
         }
     }
 
+   
     private IEnumerator FadeTo(Graphic graphic, float duration, float targetAlpha)
     {
         if (graphic == null) yield break;
@@ -137,7 +143,7 @@ public class NotificationSequence : MonoBehaviour
         while (t < duration)
         {
             t += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, t / duration);
+            float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, Mathf.SmoothStep(0, 1, t / duration));
             c.a = newAlpha;
             graphic.color = c;
             yield return null;
@@ -147,6 +153,7 @@ public class NotificationSequence : MonoBehaviour
         graphic.color = c;
     }
 
+ 
     private void SetAlpha(Graphic graphic, float alpha)
     {
         if (graphic == null) return;

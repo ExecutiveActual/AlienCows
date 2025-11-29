@@ -39,6 +39,7 @@ public class Day : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         // Default startup states
         morningScreen.SetActive(true);
