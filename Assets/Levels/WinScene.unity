@@ -1293,21 +1293,13 @@ MonoBehaviour:
   continueButton: {fileID: 89304484}
   cow3DText: {fileID: 744469028}
   cowTextOrigin: {fileID: 744469027}
-  introText: CONGRATULATIONS!!!!!!!! You Saved Your Cows >.<
+  introText: You Win the battle! You saved your cows!
   cowTexts:
-  - Thankyou Owner :D you Saved Us
-  - Yeah You're Our Hero >.<
-  - Seriously Owner You Saved Me :) I want To ThankYou With Something
-  - You want to milk me ?
-  - No Owner Pleaseeee They Scare The Milk Out f Me :(
-  - Okay Owner :D See You Soon..
+  - Thanks for playing
+  - Click the names in the credits for links
   playerResponses:
-  - NEXT
-  - 'Its  Alright Cow No Worries. You''re Safe Now '
-  - Ahh Its Alright Thanks
-  - Its okay baby youre good.. :)
-  - You Want Me To Call Them Back ?
-  - 'Then GO BACKK TO YOUR HOOD BOO '
+  - Continue
+  - Continue (Pet Cow)
   introDelay: 5
   typeSpeed: 0.03
   cowTypeSpeed: 0.05
@@ -1384,7 +1376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SEE YOUHH
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
