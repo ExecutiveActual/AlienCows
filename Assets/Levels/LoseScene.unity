@@ -722,7 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BALL REMOVAL
+  m_text: COW FOOD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246e6d7f931712546aabe6c0b328aa54, type: 2}
   m_sharedMaterial: {fileID: 5958979340407931658, guid: 246e6d7f931712546aabe6c0b328aa54, type: 2}
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LooseScene
   loseText: {fileID: 391463688}
-  loseMessage: 'You Lost THe Battle .. The Council Is Deciding your Fate now '
+  loseMessage: You Lost the Battle ... The Council Is Deciding your Fate now
   typeSpeed: 0.05
   textDisplayDuration: 3
   audioSource: {fileID: 996934661}
