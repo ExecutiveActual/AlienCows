@@ -155660,8 +155660,8 @@ MonoBehaviour:
   buttonHoverSound: {fileID: 8300000, guid: ec534abd1e8007641a353b69b6d0d13e, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 61c43e7771c87544ba8cdff4c74959b1, type: 3}
   musicVolume: 0
-  clickVolume: 1
-  hoverVolume: 1
+  clickVolume: 0.34
+  hoverVolume: 0.12
   newGameSceneName: Night Scene
 --- !u!1 &1857883546
 GameObject:
