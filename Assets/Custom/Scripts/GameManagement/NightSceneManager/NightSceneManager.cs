@@ -16,10 +16,6 @@ public class NightSceneManager : MonoBehaviour
     GameManager_SaveSystem gm_SaveSystemInstance;
 
 
-    [Header("Settings Game Manager")]
-
-    [SerializeField] private GameObject endOfNighScreen;
-
 
 
 
@@ -31,10 +27,6 @@ public class NightSceneManager : MonoBehaviour
         gm_NightCounterInstance = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>();
 
         gm_NightCounterInstance.NightSceneManagerCheckIn(this);
-
-
-        endOfNighScreen.SetActive(false);
-
 
 
         Time.timeScale = 1f;
