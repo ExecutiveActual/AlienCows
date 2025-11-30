@@ -9,7 +9,6 @@ public class Day : MonoBehaviour
 
     [Header("Menu References")]
     public GameObject morningScreen;
-    public GameObject dayMenu;
     public GameObject loadoutMenu;
 
     [Header("Scene Names (Assign in Inspector)")]
@@ -45,7 +44,6 @@ public class Day : MonoBehaviour
 
         // Default startup states
         morningScreen.SetActive(true);
-        dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
 
         
@@ -78,15 +76,13 @@ public class Day : MonoBehaviour
     {
         PlayClick();
         morningScreen.SetActive(false);
-        dayMenu.SetActive(true);
-        loadoutMenu.SetActive(false);
+        loadoutMenu.SetActive(true);
     }
 
     public void EnterNight()
     {
         PlayClick();
         morningScreen.SetActive(false);
-        dayMenu.SetActive(false);
         loadoutMenu.SetActive(true);
     }
 
@@ -106,8 +102,7 @@ public class Day : MonoBehaviour
     public void OnPressedBackToDayMenu()
     {
         PlayClick();
-        morningScreen.SetActive(false);
-        dayMenu.SetActive(true);
+        morningScreen.SetActive(true);
         loadoutMenu.SetActive(false);
     }
 
@@ -115,7 +110,6 @@ public class Day : MonoBehaviour
     {
         PlayClick();
         morningScreen.SetActive(true);
-        dayMenu.SetActive(false);
         loadoutMenu.SetActive(false);
         UpdateMorningStats();
     }
