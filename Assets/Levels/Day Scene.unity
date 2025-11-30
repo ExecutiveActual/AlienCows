@@ -38014,6 +38014,7 @@ MonoBehaviour:
   clickVolume: 1
   cowsLeftText: {fileID: 278023893}
   moneyLeftText: {fileID: 445769762}
+  dayTitleText: {fileID: 1592862280}
 --- !u!4 &484117090
 Transform:
   m_ObjectHideFlags: 0
@@ -131798,7 +131799,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Day 1
+  m_text: 'Day 0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7eacdd4657ae5034399b3b78aaed20fd, type: 2}
   m_sharedMaterial: {fileID: -1089457131873432187, guid: 7eacdd4657ae5034399b3b78aaed20fd, type: 2}

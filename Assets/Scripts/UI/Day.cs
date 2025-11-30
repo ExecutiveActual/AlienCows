@@ -24,6 +24,10 @@ public class Day : MonoBehaviour
     [Header("Morning Screen UI Texts")]
     public TextMeshProUGUI cowsLeftText;
     public TextMeshProUGUI moneyLeftText;
+    public TextMeshProUGUI dayTitleText;
+
+
+    private int nightNumber;
 
     private GameManager_SaveSystem saveSystem;
 
@@ -48,6 +52,8 @@ public class Day : MonoBehaviour
 
         
         saveSystem = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
+
+        nightNumber = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().GetNightNumberCurrent();
 
         // Initialize morning stats UI
         UpdateMorningStats();
@@ -133,5 +139,8 @@ public class Day : MonoBehaviour
 
         if (moneyLeftText != null)
             moneyLeftText.text = $"Money leftover : {moneyLeft}";
+
+        if (dayTitleText != null)
+            dayTitleText.text = $"Day {nightNumber}";
     }
 }
