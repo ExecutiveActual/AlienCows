@@ -6,8 +6,6 @@ public class SettingsManager : MonoBehaviour
 {
     [Header("Audio")]
     public Slider masterVolumeSlider;
-    public Slider musicVolumeSlider;
-    public Slider sfxVolumeSlider;
 
     [Header("Graphics")]
     public Dropdown resolutionDropdown;
@@ -23,8 +21,6 @@ public class SettingsManager : MonoBehaviour
     {
         // Clear listeners in case this object is re-enabled
         if (masterVolumeSlider != null) masterVolumeSlider.onValueChanged.RemoveAllListeners();
-        if (musicVolumeSlider != null) musicVolumeSlider.onValueChanged.RemoveAllListeners();
-        if (sfxVolumeSlider != null) sfxVolumeSlider.onValueChanged.RemoveAllListeners();
         if (resolutionDropdown != null) resolutionDropdown.onValueChanged.RemoveAllListeners();
         if (qualityDropdown != null) qualityDropdown.onValueChanged.RemoveAllListeners();
         if (fullscreenToggle != null) fullscreenToggle.onValueChanged.RemoveAllListeners();
@@ -93,8 +89,6 @@ public class SettingsManager : MonoBehaviour
         if (fullscreenToggle != null) fullscreenToggle.isOn = savedFullscreen;
 
         if (masterVolumeSlider != null) masterVolumeSlider.value = savedMaster;
-        if (musicVolumeSlider != null) musicVolumeSlider.value = savedMusic;
-        if (sfxVolumeSlider != null) sfxVolumeSlider.value = savedSFX;
 
         // =====================================
         // Force Audio Sync Once (fix mute-on-open)
@@ -108,12 +102,6 @@ public class SettingsManager : MonoBehaviour
         // =====================================
         if (masterVolumeSlider != null)
             masterVolumeSlider.onValueChanged.AddListener(OnMasterVolumeChange);
-
-        if (musicVolumeSlider != null)
-            musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChange);
-
-        if (sfxVolumeSlider != null)
-            sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChange);
 
         if (resolutionDropdown != null)
             resolutionDropdown.onValueChanged.AddListener(OnResolutionChange);
