@@ -13,20 +13,6 @@ public class MainMenuManager : MonoBehaviour
     public GameObject newGameConfirmation;
     public GameObject loadGameManager;
 
-    [Header("Audio Sources")]
-    public AudioSource musicSource;
-    public AudioSource sfxSource;
-
-    [Header("Audio Clips")]
-    public AudioClip backgroundMusic;
-    public AudioClip buttonHoverSound;
-    public AudioClip buttonClickSound;
-
-    [Header("Volume Controls")]
-    [Range(0f, 1f)] public float musicVolume = 1f;
-    [Range(0f, 1f)] public float clickVolume = 1f;
-    [Range(0f, 1f)] public float hoverVolume = 1f;
-
     [Header("Scene Settings")]
     public string newGameSceneName;
 
@@ -35,14 +21,9 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         saveSystemInstance = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
-
         EnableOnly(mainMenuManager);
-
-        // Hide panels on start
         if (newGameConfirmation) newGameConfirmation.SetActive(false);
         if (loadGameManager) loadGameManager.SetActive(false);
-
-        PlayBackgroundMusic();
     }
 
     void EnableOnly(GameObject target)
@@ -53,13 +34,8 @@ public class MainMenuManager : MonoBehaviour
         aboutGameManager.SetActive(target == aboutGameManager);
     }
 
-    //---------------------------
-    // MAIN MENU
-    //---------------------------
-
     public void OnStartGamePressed()
     {
-        PlayClickSound();
         EnableOnly(startGameManager);
         newGameConfirmation.SetActive(false);
         loadGameManager.SetActive(false);
@@ -67,104 +43,61 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnSettingsPressed()
     {
-        PlayClickSound();
         EnableOnly(settingsGameManager);
     }
 
     public void OnAboutPressed()
     {
-        PlayClickSound();
         EnableOnly(aboutGameManager);
     }
 
     public void OnCreditsPressed()
     {
-        PlayClickSound();
-        SceneManager.LoadScene("Credits"); // Loads the Credits scene
+        SceneManager.LoadScene("Credits");
     }
 
     public void OnExitGamePressed()
     {
-        PlayClickSound();
         Application.Quit();
     }
 
     public void OnBackToMainMenuPressed()
     {
-        PlayClickSound();
         EnableOnly(mainMenuManager);
     }
 
-    //---------------------------
-    // START GAME OPTIONS
-    //---------------------------
-
     public void OnNewGamePressed()
     {
-        PlayClickSound();
         startGameManager.SetActive(false);
         newGameConfirmation.SetActive(true);
     }
 
     public void OnNewGameYesPressed()
     {
-        PlayClickSound();
         saveSystemInstance.WipeSaveGame();
         SceneManager.LoadScene(newGameSceneName);
     }
 
     public void OnNewGameNoPressed()
     {
-        PlayClickSound();
         newGameConfirmation.SetActive(false);
         startGameManager.SetActive(true);
     }
 
     public void OnLoadGamePressed()
     {
-        PlayClickSound();
         startGameManager.SetActive(false);
         loadGameManager.SetActive(true);
     }
 
     public void OnLoadGameYesPressed()
     {
-        PlayClickSound();
-        Debug.Log("Loading last saved game...");
         SceneManager.LoadScene(newGameSceneName);
     }
 
     public void OnLoadGameNoPressed()
     {
-        PlayClickSound();
         loadGameManager.SetActive(false);
         startGameManager.SetActive(true);
-    }
-
-    //---------------------------
-    // AUDIO
-    //---------------------------
-
-    public void PlayHoverSound()
-    {
-        if (buttonHoverSound && sfxSource)
-            sfxSource.PlayOneShot(buttonHoverSound, hoverVolume);
-    }
-
-    void PlayClickSound()
-    {
-        if (buttonClickSound && sfxSource)
-            sfxSource.PlayOneShot(buttonClickSound, clickVolume);
-    }
-
-    void PlayBackgroundMusic()
-    {
-        if (musicSource && backgroundMusic)
-        {
-            musicSource.clip = backgroundMusic;
-            musicSource.volume = musicVolume;
-            musicSource.loop = true;
-            musicSource.Play();
-        }
     }
 }

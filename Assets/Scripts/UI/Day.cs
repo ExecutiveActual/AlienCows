@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -7,35 +6,23 @@ public class Day : MonoBehaviour
 {
     public static Day Instance { get; private set; }
 
-    [Header("Menu References")]
     public GameObject morningScreen;
     public GameObject loadoutMenu;
 
-    [Header("Scene Names (Assign in Inspector)")]
-    public string nightScene; 
+    public string nightScene;
 
-    [Header("Sound Effects")]
-    public AudioSource sfxSource;
-    public AudioClip hoverSound;
-    public float hoverVolume = 0.7f;
-    public AudioClip clickSound;
-    public float clickVolume = 1f;
-
-    [Header("Morning Screen UI Texts")]
     public TextMeshProUGUI cowsLeftText;
     public TextMeshProUGUI moneyLeftText;
     public TextMeshProUGUI dayTitleText;
 
-
     private int nightNumber;
-
     private GameManager_SaveSystem saveSystem;
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
         Instance = this;
@@ -46,101 +33,69 @@ public class Day : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        // Default startup states
-        morningScreen.SetActive(true);
-        loadoutMenu.SetActive(false);
+        if (morningScreen) morningScreen.SetActive(true);
+        if (loadoutMenu) loadoutMenu.SetActive(false);
 
-        
+        if (GameManager_Singleton.Instance == null) return;
+
         saveSystem = GameManager_Singleton.Instance.GetComponent<GameManager_SaveSystem>();
+        nightNumber = GameManager_Singleton.Instance
+            .GetComponent<GameManager_NightCounter>()
+            .GetNightNumberCurrent();
 
-        nightNumber = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().GetNightNumberCurrent();
-
-        // Initialize morning stats UI
         UpdateMorningStats();
     }
 
     private void OnEnable()
     {
-        if (morningScreen.activeSelf)
+        if (morningScreen && morningScreen.activeSelf)
             UpdateMorningStats();
-    }
-
-
-    public void PlayHover()
-    {
-        if (hoverSound)
-            sfxSource.PlayOneShot(hoverSound, hoverVolume);
-    }
-
-    public void PlayClick()
-    {
-        if (clickSound)
-            sfxSource.PlayOneShot(clickSound, clickVolume);
     }
 
     public void ContinueMorning()
     {
-        PlayClick();
-        morningScreen.SetActive(false);
-        loadoutMenu.SetActive(true);
-    }
-
-    public void EnterNight()
-    {
-        PlayClick();
-        morningScreen.SetActive(false);
-        loadoutMenu.SetActive(true);
+        if (morningScreen) morningScreen.SetActive(false);
+        if (loadoutMenu) loadoutMenu.SetActive(true);
     }
 
     public void ContinueToNight()
     {
-        PlayClick();
+        if (GameManager_Singleton.Instance == null) return;
 
-        GameManager_Singleton.Instance
-            .GetComponent<GameManager_NightCounter>()
-            .AdvanceToNextNight();
+        var counter = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>();
+        var sceneChanger = GameManager_Singleton.Instance.GetComponent<GameManager_SceneChangeEvents>();
 
-        GameManager_Singleton.Instance
-            .GetComponent<GameManager_SceneChangeEvents>()
-            .ChangeScene(nightScene);
+        if (counter != null) counter.AdvanceToNextNight();
+        if (sceneChanger != null) sceneChanger.ChangeScene(nightScene);
     }
 
     public void OnPressedBackToDayMenu()
     {
-        PlayClick();
-        morningScreen.SetActive(true);
-        loadoutMenu.SetActive(false);
+        if (morningScreen) morningScreen.SetActive(true);
+        if (loadoutMenu) loadoutMenu.SetActive(false);
     }
 
     public void OpenMorningScreen()
     {
-        PlayClick();
-        morningScreen.SetActive(true);
-        loadoutMenu.SetActive(false);
+        if (morningScreen) morningScreen.SetActive(true);
+        if (loadoutMenu) loadoutMenu.SetActive(false);
         UpdateMorningStats();
     }
 
- 
     private void UpdateMorningStats()
     {
         if (saveSystem == null || saveSystem.PlayerData_Curr == null)
-        {
-            Debug.LogWarning("Day.cs: SaveSystem or PlayerData_Curr missing!");
             return;
-        }
 
         var data = saveSystem.PlayerData_Curr;
 
-        int cowsLeft = data.CowAmount;
-        int moneyLeft = data.MoneyAmount;
+        if (cowsLeftText)
+            cowsLeftText.text = $"Cows left in the farm : {data.CowAmount}";
 
-        if (cowsLeftText != null)
-            cowsLeftText.text = $"Cows left in the farm : {cowsLeft}";
+        if (moneyLeftText)
+            moneyLeftText.text = $"Money leftover : {data.MoneyAmount}";
 
-        if (moneyLeftText != null)
-            moneyLeftText.text = $"Money leftover : {moneyLeft}";
-
-        if (dayTitleText != null)
+        if (dayTitleText)
             dayTitleText.text = $"Day {nightNumber}";
     }
 }

@@ -1,25 +1,18 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.Events;
 using System.Collections;
 
 public class Cow : MonoBehaviour
 {
-    [Header("Debug")]
-    public TMP_Text debugText;
-
-    [Header("Movement Settings")]
     public float wanderRadius = 10f;
     public float moveSpeed = 1.5f;
     public float targetThreshold = 0.5f;
 
-    [Header("State Probabilities")]
     [Range(0f, 1f)] public float idleProbability = 0.25f;
     [Range(0f, 1f)] public float grazingProbability = 0.25f;
     [Range(0f, 1f)] public float roamingProbability = 0.25f;
     [Range(0f, 1f)] public float sleepingProbability = 0.25f;
 
-    [Header("Unity Events")]
     public UnityEvent OnCowSleep;
     public UnityEvent OnCowGraze;
     public UnityEvent OnCowIdle;
@@ -27,38 +20,30 @@ public class Cow : MonoBehaviour
 
     private Vector3 startPoint;
     private Vector3 targetPoint;
-    private bool isMoving = false;
-    private bool isSleeping = false;
+    private bool isMoving;
+    private bool isSleeping;
 
     private enum CowState { Idle, Grazing, Roaming, Sleeping }
     private CowState currentState;
 
-    void Start()
+    private void Start()
     {
         startPoint = transform.position;
         StartCoroutine(CowDecisionLoop());
     }
 
-    void Update()
+    private void Update()
     {
-        // Handle movement
         if (isMoving && !isSleeping)
             MoveTowardsTarget();
-
-        // Update debug text
-        if (debugText != null)
-        {
-            debugText.text = currentState.ToString();
-            if (Camera.main != null)
-                debugText.transform.rotation = Quaternion.LookRotation(debugText.transform.position - Camera.main.transform.position);
-        }
     }
 
-    IEnumerator CowDecisionLoop()
+    private IEnumerator CowDecisionLoop()
     {
         while (true)
         {
             float total = idleProbability + grazingProbability + roamingProbability + sleepingProbability;
+            if (total <= 0f) total = 1f;
             float rand = Random.value * total;
 
             if (rand < idleProbability)
@@ -93,21 +78,21 @@ public class Cow : MonoBehaviour
         }
     }
 
-    void SwitchState(CowState newState)
+    private void SwitchState(CowState newState)
     {
         currentState = newState;
         isSleeping = (newState == CowState.Sleeping);
     }
 
-    void MoveTowardsTarget()
+    private void MoveTowardsTarget()
     {
         Vector3 direction = (targetPoint - transform.position).normalized;
-        direction.y = 0;
+        direction.y = 0f;
 
         if (direction != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            lookRotation *= Quaternion.Euler(0, -90f, 0);
+            lookRotation *= Quaternion.Euler(0, -90f, 0); // Keep your model offset
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 2f);
         }
 
@@ -120,14 +105,14 @@ public class Cow : MonoBehaviour
         }
     }
 
-    Vector3 GetRandomPointInRadius()
+    private Vector3 GetRandomPointInRadius()
     {
         Vector2 randomCircle = Random.insideUnitCircle * wanderRadius;
         return new Vector3(startPoint.x + randomCircle.x, startPoint.y, startPoint.z + randomCircle.y);
     }
 
 #if UNITY_EDITOR
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(Application.isPlaying ? startPoint : transform.position, wanderRadius);
