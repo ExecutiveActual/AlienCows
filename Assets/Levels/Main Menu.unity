@@ -57436,7 +57436,7 @@ MonoBehaviour:
   - name: DayScene
     clip: {fileID: 8300000, guid: 2a1c4d01c84450d45bf17adee7ba4a64, type: 3}
   - name: MainMenu
-    clip: {fileID: 8300000, guid: 0055ebf364ccd3541afb82f4098be3e0, type: 3}
+    clip: {fileID: 8300000, guid: 9ed13ff7ac8eb40438fb92d931d58f44, type: 3}
   - name: night ambience
     clip: {fileID: 8300000, guid: c48273dbf3096264f8de3712e7c970b6, type: 3}
   sfxSounds:
