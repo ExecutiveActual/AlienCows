@@ -3073,7 +3073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LooseScene
   loseText: {fileID: 391463688}
-  loseMessage: You Lost The Battle ...The Council Is Now Deciding your Fate
+  loseMessage: You lost the battle... The Council is now deciding your fate...
   typeSpeed: 0.05
   textDisplayDuration: 3
   initialDelay: 1
