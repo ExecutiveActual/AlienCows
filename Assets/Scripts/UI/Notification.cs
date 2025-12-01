@@ -20,7 +20,7 @@ public class Notification : MonoBehaviour
     [Range(0f, 1f)]
     public float backgroundTargetAlpha = 0.35f;
 
-    [TextArea] 
+    [TextArea]
     public string[] nightMessages = new string[]
     {
         "Night 1: The Theatre Awakens...",
@@ -66,10 +66,15 @@ public class Notification : MonoBehaviour
     private IEnumerator PlayNotification()
     {
         yield return new WaitForSeconds(startDelay);
+
         yield return StartCoroutine(FadeTo(backgroundImage, fadeDuration, backgroundTargetAlpha));
         yield return new WaitForSeconds(iconDelay);
         yield return StartCoroutine(FadeTo(iconImage, fadeDuration, 1f));
         yield return new WaitForSeconds(textDelay);
+
+        // 🎵 Play Notification Sound right before typing starts
+        AudioManager.Instance.PlaySFX("Notification");
+
         yield return StartCoroutine(TypeText());
         yield return new WaitForSeconds(stayDuration);
         yield return StartCoroutine(DeleteText());

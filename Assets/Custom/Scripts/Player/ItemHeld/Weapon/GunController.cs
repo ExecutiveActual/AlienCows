@@ -72,6 +72,7 @@ public class GunController : MonoBehaviour
         if (magazine_AmmoCurrent < magazine_Capacity && !isReloading)
         {
             reloadCoroutine = StartCoroutine(ReloadRoutine());
+            AudioManager.Instance.PlaySFX("Reload");
         }
     }
 
@@ -90,6 +91,7 @@ public class GunController : MonoBehaviour
         SafetyOff();
 
         UpdateAmmoUI();
+        
     }
 
     private void SafetyOn()
