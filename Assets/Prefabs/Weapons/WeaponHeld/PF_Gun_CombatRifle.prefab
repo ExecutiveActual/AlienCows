@@ -435,8 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba7b1634a91aa640998d43656d4e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunController
-  magazine_Capacity: 30
-  reload_Duration: 1.6
+  magazine_Capacity: 20
+  reload_Duration: 1.89
   UE_OnShoot:
     m_PersistentCalls:
       m_Calls: []
