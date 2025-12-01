@@ -50387,10 +50387,10 @@ MonoBehaviour:
   - Its Your First Night . Stay Alert
   - Night 2
   - Night 3
-  - Night 4
+  - Night 4. Press 2 to equip the Revolver!
   - Night 5
   - Night 6
-  - Night 7
+  - Night 7. Press 3 to equip the Combat Rifle!
   - Night 8
   - Night 9
   - All UFO Gone
@@ -116833,6 +116833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   masterVolumeSlider: {fileID: 1874694729}
+  volumeSetting: {fileID: 0}
   resolutionDropdown: {fileID: 1497511307}
   qualityDropdown: {fileID: 143664738}
   fullscreenToggle: {fileID: 110346339}
