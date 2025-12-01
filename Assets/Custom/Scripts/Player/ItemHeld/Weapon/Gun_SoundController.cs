@@ -46,7 +46,7 @@ public class Gun_SoundController : MonoBehaviour
 
     private void PlayReloadSound()
     {
-        //audioSource.PlayOneShot(sound_Reload.Value);
+        audioSource.PlayOneShot(sound_Reload.Value);
     }
 
 
