@@ -7,6 +7,8 @@ public class SettingsManager : MonoBehaviour
     [Header("Audio")]
     public Slider masterVolumeSlider;
 
+    public SO_SoundVolumeSetting volumeSetting;
+
     [Header("Graphics")]
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
@@ -65,8 +67,6 @@ public class SettingsManager : MonoBehaviour
         bool savedFullscreen = PlayerPrefs.GetInt("Fullscreen", Screen.fullScreen ? 1 : 0) == 1;
 
         float savedMaster = PlayerPrefs.GetFloat("MasterVol", 1f);
-        float savedMusic = PlayerPrefs.GetFloat("MusicVol", 0.8f);
-        float savedSFX = PlayerPrefs.GetFloat("SFXVol", 0.8f);
 
         // Clamp indices for safety (in case prefs are from an older build)
         if (savedRes < 0 || savedRes >= customResolutions.Length) savedRes = 0;
@@ -94,8 +94,6 @@ public class SettingsManager : MonoBehaviour
         // Force Audio Sync Once (fix mute-on-open)
         // =====================================
         OnMasterVolumeChange(savedMaster);
-        OnMusicVolumeChange(savedMusic);
-        OnSFXVolumeChange(savedSFX);
 
         // =====================================
         // Add Listeners
@@ -121,24 +119,11 @@ public class SettingsManager : MonoBehaviour
         if (AudioManager.Instance != null)
             AudioManager.Instance.SetMasterVolume(value);
 
+
+
         PlayerPrefs.SetFloat("MasterVol", value);
     }
 
-    public void OnMusicVolumeChange(float value)
-    {
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.SetMusicVolume(value);
-
-        PlayerPrefs.SetFloat("MusicVol", value);
-    }
-
-    public void OnSFXVolumeChange(float value)
-    {
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.SetSFXVolume(value);
-
-        PlayerPrefs.SetFloat("SFXVol", value);
-    }
 
     // =============================
     // GRAPHICS CONTROLS

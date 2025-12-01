@@ -86,7 +86,7 @@ public class HotbarInventory : MonoBehaviour
         weapon_2 = newItems.weapon_2;
         weapon_3 = newItems.weapon_3;
 
-        Debug.Log(weapon_1);
+        //Debug.Log(weapon_1);
 
         SelectHotbarSlot(1);
     }

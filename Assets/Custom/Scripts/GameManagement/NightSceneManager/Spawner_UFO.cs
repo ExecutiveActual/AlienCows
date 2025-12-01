@@ -47,7 +47,7 @@ public class Spawner_UFO : MonoBehaviour
         
         nightCounter = GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>();
 
-        Debug.Log($"Night #{nightCounter.GetNightNumberCurrent()}");
+        //Debug.Log($"Night #{nightCounter.GetNightNumberCurrent()}");
 
         spawnAmount = waveTable.amountPerNight[nightCounter.GetNightNumberCurrent() - 1];
 
@@ -65,7 +65,7 @@ public class Spawner_UFO : MonoBehaviour
 
     private IEnumerator spawnRoutine()
     {
-        Debug.Log("UFO   Waiting Start");
+        //Debug.Log("UFO   Waiting Start");
 
         yield return new WaitForSeconds(startSpawnDelay);
 
@@ -75,7 +75,7 @@ public class Spawner_UFO : MonoBehaviour
 
             SpawnUFO();
 
-            Debug.Log("UFO   Spawned");
+            //Debug.Log("UFO   Spawned");
 
 
             yield return new WaitForSeconds(spawnDelay);
@@ -84,7 +84,7 @@ public class Spawner_UFO : MonoBehaviour
 
         isDoneSpawning = true;
 
-        Debug.Log("UFO   DOne");
+        //Debug.Log("UFO   DOne");
 
     }
 
@@ -100,7 +100,7 @@ public class Spawner_UFO : MonoBehaviour
     private Transform GetRandomSpawnPoint()
     {
 
-        Debug.Log($"UFO   length: {ufoSpawnPoints.Length}");
+        //Debug.Log($"UFO   length: {ufoSpawnPoints.Length}");
         List<Transform> possibleSpawnPoints = new List<Transform>(ufoSpawnPoints);
         int randomIndex = Random.Range(0, possibleSpawnPoints.Count);
         return possibleSpawnPoints[randomIndex];
@@ -125,11 +125,11 @@ public class Spawner_UFO : MonoBehaviour
     {
         waveRegistry.Remove(oldUFO);
 
-        Debug.Log("UFO   Unregistered");
+        //Debug.Log("UFO   Unregistered");
 
         if (isDoneSpawning && waveRegistry.Count == 0)
         {
-            Debug.Log("UFO   All Gone");
+            //Debug.Log("UFO   All Gone");
             GetComponentInParent<NightSceneManager>().OnAllWavesComplete();
         }
     }

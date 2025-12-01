@@ -34,7 +34,7 @@ public class NightSceneManager : MonoBehaviour
         GameManager_Singleton.Instance.GetComponent<GameManager_UI>().UE_OnSwitchControlMode_Player?.Invoke();
 
 
-        Debug.Log("Night Scene Loaded!");
+        //Debug.Log("Night Scene Loaded!");
     }
 
 
@@ -55,7 +55,7 @@ public class NightSceneManager : MonoBehaviour
     public void OnAllWavesComplete()
     {
 
-        Debug.Log("All Waves Complete!");
+        //Debug.Log("All Waves Complete!");
 
 
         //Check other shit

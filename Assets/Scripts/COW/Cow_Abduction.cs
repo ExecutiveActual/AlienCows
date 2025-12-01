@@ -48,7 +48,7 @@ public class Cow_Abduction : MonoBehaviour
     private void LandCow()
     {
 
-        Debug.Log("Landing");
+        //Debug.Log("Landing");
 
         transform.position = Vector3.MoveTowards(transform.position, target_Landing, fallSpeed * Time.deltaTime); // Lerp Instead
         //transform.Translate(fallSpeed * Time.deltaTime * Vector3.down);
@@ -78,7 +78,7 @@ public class Cow_Abduction : MonoBehaviour
 
     public void SetAirborneTrue()
     {
-        Debug.Log("Airborne");
+        //Debug.Log("Airborne");
 
         isAirborne = true;
 
@@ -100,7 +100,7 @@ public class Cow_Abduction : MonoBehaviour
 
     public void StopAbduction()
     {
-        Debug.Log("Abduction Stopped");
+        //Debug.Log("Abduction Stopped");
 
         isBeingAbducted = false;
     }
