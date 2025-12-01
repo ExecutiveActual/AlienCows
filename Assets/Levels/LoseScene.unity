@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COW FOOD
+  m_text: Battle Lost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246e6d7f931712546aabe6c0b328aa54, type: 2}
   m_sharedMaterial: {fileID: 5958979340407931658, guid: 246e6d7f931712546aabe6c0b328aa54, type: 2}
@@ -3073,7 +3073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LooseScene
   loseText: {fileID: 391463688}
-  loseMessage: You lost the battle... The Council is now deciding your fate...
+  loseMessage: 
   typeSpeed: 0.05
   textDisplayDuration: 3
   initialDelay: 1
