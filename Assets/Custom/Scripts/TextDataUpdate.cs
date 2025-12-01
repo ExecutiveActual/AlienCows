@@ -7,6 +7,7 @@ public class TextDataUpdate : MonoBehaviour
 
     TMP_Text tmpText;
 
+    [SerializeField] private string prefix = "Day ";
 
 
     private void Awake()
@@ -23,10 +24,10 @@ public class TextDataUpdate : MonoBehaviour
     }
 
 
-    private void UpdateTextData()
+    public void UpdateTextData()
     {
 
-        tmpText.text = $"Day {GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().GetNightNumberCurrent()}";
+        tmpText.text = $"{prefix} {GameManager_Singleton.Instance.GetComponent<GameManager_NightCounter>().GetNightNumberCurrent()}";
 
     }
 }
